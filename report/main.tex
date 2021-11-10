@@ -1,0 +1,84 @@
+% -------------------------------- SVILUPPO -------------------------------------
+
+% ---------------- RELAZIONE PROGETTO DI PROGRAMMAZIONE AD OGGETTI (OOP) --------
+\documentclass[a4paper,12pt]{report}
+
+% ----------------------------- PREAMBLE --------------------------------------- 
+
+\usepackage{lmodern}
+\usepackage{alltt, fancyvrb, url}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb,amsthm}
+
+% Questo commentalo se vuoi scrivere in inglese.
+\usepackage[italian]{babel}
+
+\usepackage[italian]{cleveref}
+
+\usepackage{comment}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+
+\usepackage[scaled=.92]{helvet}
+\usepackage[T1]{fontenc}
+
+\usepackage{lscape}
+
+% hyperref settings
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black, %blue
+	filecolor=magenta,      
+	urlcolor=cyan,
+	pdftitle={Sharelatex Example},
+	bookmarks=true,
+	pdfpagemode=FullScreen,
+}
+
+% ----------------------------- PREAMBLE END -----------------------------------
+
+\makeindex
+
+\title{\textbf{Progetto di tecnologie web report}}
+\author{Luca Rengo, Alessandro Pioggia}
+
+\begin{document}
+	
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			{\Huge  \@title }\\[3ex] 
+			{\large  \@author}\\[3ex] 
+			{\large \@date}
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	\thispagestyle{empty}
+	\newpage
+	
+	%\maketitle
+	
+	\tableofcontents
+
+	\newpage
+	
+	% \input: import the commands from filename.tex to target file.
+	
+	% \include: does a \clearpage and does an \input.
+	\section{Dominio applicativo}
+	Non lo so
+	\section{Tecnologie utilizzate}
+	\begin{itemize}
+		\item css : 
+		\item lato server : 
+		\item lato client : 
+	\end{itemize}
+	\section{Applicativo}
+	\subsection{Versione 1 - base(solo componenti obbligatorie)}
+	\subsection{Versione definitiva - con effetti wow}
+	\section{Mockup(se utilizzati)}
+	\section{Guida utente}
+\end{document}
