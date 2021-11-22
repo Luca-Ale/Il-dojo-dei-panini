@@ -1,0 +1,88 @@
+.page-content{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(234, 234, 234), white); /* TODO: modify color */
+}
+
+.login{
+    background-color: white; /* TODO: modify color */
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.333);
+    border-radius: 21px;
+    padding: 9px 9%;
+}
+
+.logo-section{
+    padding: 21px 33%; /* TODO: modify padding and margin */
+    margin-top: 66px;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+}
+
+.login-title{
+    text-align: center;
+    color: red;
+}
+
+.login-type > a{
+    color:#359eca;
+    text-align: center;
+}
+
+.login-type > a:hover{
+    color:#fa1505;
+}
+
+.hr-separator{
+    width: 100%;
+    color: #212121;
+}
+
+.email-username-input{
+    background-color: white;
+    height: 45px;
+    border: 3px solid rgb(222, 222, 222);
+    color: #fa1505;
+    box-shadow: none;
+}
+
+.password-input{
+    background-color: white;
+    height: 45px;
+    border: 3px solid rgb(222, 222, 222);
+    color: #fa1505;
+}
+
+.btn-login{
+    background-color: #fa1505;
+    color: white;
+    height: 45px;
+    width: 100%;
+    font-size: 24px;
+    box-shadow: none;
+}
+
+.btn-login:hover{
+    background: black; /* TODO: modify color */
+    color: white;
+}
+
+.forgot-password-link{
+    text-align: center; /* TODO: fix align */
+    color: #359eca;
+}
+
+.forgot-password-link:hover{
+    color: #fa1505;
+}
+
+.signup-link{
+    text-align: center; /* TODO: fix align */
+    color: #359eca;
+}
+
+.signup-link:hover{
+    color: #fa1505;
+}
