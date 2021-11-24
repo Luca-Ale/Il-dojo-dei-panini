@@ -44,7 +44,7 @@
     background-color: white;
     height: 45px;
     border: 3px solid rgb(222, 222, 222);
-    color: #fa1505;
+    /*color: #fa1505;*/ /* TODO: remove */
     box-shadow: none;
 }
 
@@ -52,7 +52,7 @@
     background-color: white;
     height: 45px;
     border: 3px solid rgb(222, 222, 222);
-    color: #fa1505;
+    /*color: #fa1505;*/ /* TODO: remove */
 }
 
 .btn-login{
