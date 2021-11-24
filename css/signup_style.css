@@ -1,0 +1,85 @@
+.page-content{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(234, 234, 234), white); /* TODO: modify color */
+}
+
+.signup{
+    background-color: white; /* TODO: modify color */
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.333);
+    border-radius: 21px;
+    padding: 9px 9%;
+}
+
+.logo-section{
+    padding: 21px 33%; /* TODO: modify padding and margin */
+    margin-top: 66px;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+}
+
+.signup-title{
+    text-align: center;
+    color: red;
+}
+
+.signup-type > a{
+    color:#359eca;
+    text-align: center;
+}
+
+.signup-type > a:hover{
+    color:#fa1505;
+}
+
+.hr-separator{
+    width: 100%;
+    color: #212121;
+}
+
+.email-username-input{
+    background-color: white;
+    height: 45px;
+    border: 3px solid rgb(222, 222, 222);
+    /*color: #fa1505;*/ /* TODO: remove */
+    box-shadow: none;
+}
+
+.password-input{
+    background-color: white;
+    height: 45px;
+    border: 3px solid rgb(222, 222, 222);
+    /*color: #fa1505;*/ /* TODO: remove */
+}
+
+.password-reinput{
+    background-color: white;
+    height: 45px;
+    border: 3px solid rgb(222, 222, 222);
+}
+
+.btn-signup{
+    background-color: #fa1505;
+    color: white;
+    height: 45px;
+    width: 100%;
+    font-size: 24px;
+    box-shadow: none;
+}
+
+.btn-signup:hover{
+    background: black; /* TODO: modify color */
+    color: white;
+}
+
+.signup-link{
+    text-align: center; /* TODO: fix align */
+    color: #359eca;
+}
+
+.signup-link:hover{
+    color: #fa1505;
+}
