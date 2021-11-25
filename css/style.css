@@ -1,0 +1,17 @@
+body {
+    background-color: orange;
+}
+
+body > section > article {
+    width: 50%;
+    float : left;
+}
+
+body > section > aside {
+    width: 50%;
+    float: right;
+}
+
+div > section{
+    clear: both;
+}
