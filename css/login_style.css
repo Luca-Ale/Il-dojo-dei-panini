@@ -55,6 +55,16 @@
     /*color: #fa1505;*/ /* TODO: remove */
 }
 
+.email-username-input:focus {
+    /* background: ; scegliere un colore */
+    /* border: 1px solid colore; */
+}
+
+.password-input:focus {
+    /* color: ; scegliere un colore */
+    /* border: 1px solid colore; */
+}
+
 .btn-login{
     background-color: #fa1505;
     color: white;
@@ -85,4 +95,11 @@
 
 .signup-link:hover{
     color: #fa1505;
+}
+
+.btn-theme {
+    background-color: black;
+    color: white;
+    box-shadow: none;
+    /* TODO: add position */
 }

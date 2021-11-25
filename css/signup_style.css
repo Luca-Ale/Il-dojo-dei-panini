@@ -61,6 +61,21 @@
     border: 3px solid rgb(222, 222, 222);
 }
 
+.email-username-input:focus {
+    /* background: ; scegliere un colore */
+    /* border: 1px solid colore; */
+}
+
+.password-input:focus {
+    /* background: ; scegliere un colore */
+    /* border: 1px solid colore; */
+}
+
+.password-reinput:focus {
+    /* background: ; scegliere un colore */
+    /* border: 1px solid colore; */
+}
+
 .btn-signup{
     background-color: #fa1505;
     color: white;
