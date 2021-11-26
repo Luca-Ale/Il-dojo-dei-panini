@@ -1,12 +1,12 @@
 .page-content{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, rgb(234, 234, 234), white); /* TODO: modify color */
+    background: linear-gradient(45deg, rgb(0, 0, 0), #172036);  /* #190d0a */
 }
 
 .signup{
-    background-color: white; /* TODO: modify color */
-    box-shadow: 0 3px 12px rgb(0 0 0 / 0.333);
+    background-color: rgb(252, 252, 252, 0.09); /* TODO: modify color */
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.666);
     border-radius: 21px;
     padding: 9px 9%;
 }
@@ -23,62 +23,63 @@
 
 .signup-title{
     text-align: center;
-    color: red;
+    color: #f3360c;
 }
 
 .signup-type > a{
-    color:#359eca;
+    color:#f3360c;
     text-align: center;
 }
 
 .signup-type > a:hover{
-    color:#fa1505;
+    color:#be2e20;
 }
 
 .hr-separator{
     width: 100%;
-    color: #212121;
+    color: white;
 }
 
 .email-username-input{
-    background-color: white;
+    background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
-    border: 3px solid rgb(222, 222, 222);
+    border: none;
     /*color: #fa1505;*/ /* TODO: remove */
+    color: #f3360c;
     box-shadow: none;
 }
 
 .password-input{
-    background-color: white;
+    background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
-    border: 3px solid rgb(222, 222, 222);
+    border: none;
     /*color: #fa1505;*/ /* TODO: remove */
+    color: #f3360c;
+    box-shadow: none;
 }
 
 .password-reinput{
-    background-color: white;
+    background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
-    border: 3px solid rgb(222, 222, 222);
+    border: none;
 }
 
 .email-username-input:focus {
-    /* background: ; scegliere un colore */
+    background: rgb(0, 0, 0, 0.444);
+    border: 1px solid #f3360c; /* #f3360c  #eb5214 */
     /* border: 1px solid colore; */
 }
 
 .password-input:focus {
-    /* background: ; scegliere un colore */
+    /* color: ; scegliere un colore */
     /* border: 1px solid colore; */
-}
-
-.password-reinput:focus {
-    /* background: ; scegliere un colore */
-    /* border: 1px solid colore; */
+    background: rgb(0, 0, 0, 0.444);
+    border: 1px solid #f3360c;
 }
 
 .btn-signup{
-    background-color: #fa1505;
-    color: white;
+    background-color: #f3360c;
+    /*color: white;*/
     height: 45px;
     width: 100%;
     font-size: 24px;
@@ -86,28 +87,28 @@
 }
 
 .btn-signup:hover{
-    background: black; /* TODO: modify color */
-    color: white;
+    background: rgb(0, 0, 0, 0.333); /* TODO: modify color */
+    color: #f3360c;
 }
 
 .login-link{
     text-align: center; /* TODO: fix align */
-    color: #359eca;
+    color: #f3360c;
 }
 
 .login-link:hover{
-    color: #fa1505;
+    color: #be2e20; /* TODO: cambiare colore? */
 }
 
 .img-theme {
-    background-color: red; /* TODO: mettere black */
-    color: white;
+    background-color: white;
+    color: black;
     box-shadow: none;
 
     position: absolute;
     top: 10px;
     right: 10px;
-    
+
     height: 42px;
     width: 42px;
 }
