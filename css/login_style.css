@@ -26,13 +26,17 @@
     color: red;
 }
 
-.login-type > a{
+/*.login-type > a{
     color:#359eca;
     text-align: center;
 }
 
 .login-type > a:hover{
     color:#fa1505;
+}*/
+
+.login-type {
+    text-align: center;
 }
 
 .hr-separator{

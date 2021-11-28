@@ -8,7 +8,7 @@
         <title>Il Dojo dei Panini - Login</title>
         <link id="theme-style" rel="stylesheet" type="text/css" href="../css/login_style.css" />
         <!-- TODO: link al file js. per il login -->
-        <script type="text/javascript" src="../js/login_theme.js"></script> <!-- TODO: cercare di utilizzare un singolo script sia per il login che per il signup. -->
+        <script type="text/javascript" src="../js/login/login_theme.js"></script> <!-- TODO: cercare di utilizzare un singolo script sia per il login che per il signup. -->
     </head>
     <body>
         <div class="page-content d-flex align-items-center">
@@ -19,9 +19,13 @@
                             <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" /> <!-- TODO: aggiungere il logo del dojo oppure l'icona del login -->
                         </div>
                         <h3 class="login-title">Login</h3>
-                        <div class="login-type">
-                            <a href="" class="link buyer-login-link">Acquirente</a> | <!-- TODO: al posto di usare un link, mettere un radio, checkbox, select o altro.. -->
-                            <a href="" class="link seller-login-link">Venditore</a>
+                        <div class="login-type"> <!-- login-type vecchio nome -->
+                            <!-- <a href="" class="link buyer-login-link">Acquirente</a> --> <!-- TODO: al posto di usare un link, mettere un radio, checkbox, select o altro.. -->
+                            <!-- <a href="" class="link seller-login-link">Venditore</a> -->
+                            <input type="radio" name="user" id="acquirente" checked="checked" />
+                            <label for="acquirente">Acquirente</label> |
+                            <input type="radio" name="user" id="venditore" />
+                            <label for="venditore">Venditore</label>
                         </div>
                         <form action="POST">
                             <div class="mb-2 mt-5">
