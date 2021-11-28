@@ -26,13 +26,17 @@
     color: red;
 }
 
-.signup-type > a{
+/*.signup-type > a{
     color:#359eca;
     text-align: center;
 }
 
 .signup-type > a:hover{
     color:#fa1505;
+}*/
+
+.signup-type {
+    text-align: center;
 }
 
 .hr-separator{
@@ -53,6 +57,27 @@
     height: 45px;
     border: 3px solid rgb(222, 222, 222);
     /*color: #fa1505;*/ /* TODO: remove */
+}
+
+.strength-bar-level {
+    width: 25%;
+    display: inline-block;
+    position: absolute; /* TODO: relative */
+    height: 100%;
+    bottom: 3px; /* TODO: 3px? */
+}
+
+.password-strength-bar {
+    background-color: #dcdcdc;
+    height: 3px; /* TODO: modify 3px*/
+    position: relative;
+    border-radius: 0 0 3px 3px; /* TODO: modify 3px 3px*/
+}
+
+.password-strength-status{
+    width: 100%;
+    text-align: center;
+    margin-top: 3px;
 }
 
 .password-reinput{
