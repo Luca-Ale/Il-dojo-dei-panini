@@ -38,7 +38,7 @@
 .email-username-input{
     background-color: white;
     height: 45px;
-    border: 3px solid rgb(222, 222, 222);
+    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
     /*color: #fa1505;*/ /* TODO: remove */
     box-shadow: none;
 }
@@ -46,8 +46,15 @@
 .password-input{
     background-color: white;
     height: 45px;
-    border: 3px solid rgb(222, 222, 222);
+    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
+    
     /*color: #fa1505;*/ /* TODO: remove */
+}
+
+.password-reinput{
+    background-color: white;
+    height: 45px;
+    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
 }
 
 .strength-bar-level {
@@ -69,12 +76,6 @@
     width: 100%;
     text-align: center;
     margin-top: 3px;
-}
-
-.password-reinput{
-    background-color: white;
-    height: 45px;
-    border: 3px solid rgb(222, 222, 222);
 }
 
 .email-username-input:focus {

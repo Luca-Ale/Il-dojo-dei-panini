@@ -31,8 +31,8 @@
                             </div>
                             <div class="mb-3">
                                 <input type="password" class="form-control password-input" placeholder="Password" id="password" oninput="passwordStrengthChecker()" /> <!-- TODO: add password icon -->
-                                <!-- <div class="password-strength-bar" id="password-strength-bar"></div>
-                                <p class="password-strength-status" id="password-strength-status">{Password Status}</p> --> <!-- TODO: uncomment when finished -->
+                                <!-- <div class="password-strength-bar" id="password-strength-bar"></div> --> <!-- TODO: uncomment when finished -->
+                                <p class="password-strength-status" id="password-strength-status"></p> 
                                 <!-- <img src="../icons/signup/eye-regular.svg" class="password-visibility" alt="Password-visibility" /> --> <!-- TODO: uncomment when fixed --> 
                             </div>
                             
@@ -51,7 +51,7 @@
         </div>
         <input type="image" src="../icons/theme/lightbulb-solid.svg" class="btn img-theme" id="icon_theme" onclick="swapTheme()" alt="Theme" />
 
-        <script type="text/javascript" src="../js/signup/password_strength_checker.js"></script> <!-- !Questo deve stare in fondo al file, altrimenti non funziona perchè non trova il div. -->
+        <script type="text/javascript" src="../js/signup/password_strength_checker2.js"></script> <!-- !Questo deve stare in fondo al file, altrimenti non funziona perchè non trova il div. -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>

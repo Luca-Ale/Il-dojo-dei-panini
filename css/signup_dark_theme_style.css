@@ -54,6 +54,13 @@
     box-shadow: none;
 }
 
+.password-reinput{
+    background-color: rgb(0, 0, 0, 0.333);
+    height: 45px;
+    border: none;
+    color: #f3360c;
+}
+
 .strength-bar-level {
     width: 25%;
     display: inline-block;
@@ -74,13 +81,6 @@
     text-align: center;
     margin-top: 3px;
     color: #fa1505;
-}
-
-.password-reinput{
-    background-color: rgb(0, 0, 0, 0.333);
-    height: 45px;
-    border: none;
-    color: #f3360c;
 }
 
 .email-username-input:focus {
