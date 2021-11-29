@@ -5,14 +5,12 @@ function swapTheme(){
 
     let icon_theme = document.getElementById("icon_theme");
     
-    console.log(style_path); //TODO: remove, solo per testare.
-    
     if(style_path == "signup_style.css"){
         style.href = "../css/signup_dark_theme_style.css";
-        icon_theme.src = "../icons/lightbulb-solid.svg";
+        icon_theme.src = "../icons/theme/lightbulb-solid.svg";
 
     } else {
         style.href = "../css/signup_style.css";
-        icon_theme.src = "../icons/lightbulb-regular.svg";
+        icon_theme.src = "../icons/theme/lightbulb-regular.svg";
     }
 }
