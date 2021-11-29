@@ -26,15 +26,6 @@
     color: #f3360c;
 }
 
-/*.login-type > a{
-    color:#f3360c;
-    text-align: center;
-}
-
-.login-type > a:hover{
-    color:#be2e20;
-}*/
-
 .login-type {
     text-align: center;
     color: #fa1505;
@@ -49,8 +40,7 @@
     background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
     border: none;
-    /*color: #fa1505;*/ /* TODO: remove */
-    color: #f3360c;
+    color: #fa1505;
     box-shadow: none;
 }
 
@@ -58,27 +48,24 @@
     background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
     border: none;
-    /*color: #fa1505;*/ /* TODO: remove */
-    color: #f3360c;
+    color: #fa1505;
     box-shadow: none;
 }
 
 .email-username-input:focus {
+    color: #fa1505;
     background: rgb(0, 0, 0, 0.444);
     border: 1px solid #f3360c; /* #f3360c  #eb5214 */
-    /* border: 1px solid colore; */
 }
 
 .password-input:focus {
-    /* color: ; scegliere un colore */
-    /* border: 1px solid colore; */
+    color: #fa1505;
     background: rgb(0, 0, 0, 0.444);
     border: 1px solid #f3360c;
 }
 
 .btn-login{
     background-color: #f3360c;
-    /*color: white;*/
     height: 45px;
     width: 100%;
     font-size: 24px;

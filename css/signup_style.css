@@ -26,15 +26,6 @@
     color: red;
 }
 
-/*.signup-type > a{
-    color:#359eca;
-    text-align: center;
-}
-
-.signup-type > a:hover{
-    color:#fa1505;
-}*/
-
 .signup-type {
     text-align: center;
 }
@@ -87,18 +78,18 @@
 }
 
 .email-username-input:focus {
-    /* background: ; scegliere un colore */
-    /* border: 1px solid colore; */
+    color: #fa1505; /* TODO: remove? */
+    border: 1px solid #fa1505;
 }
 
 .password-input:focus {
-    /* background: ; scegliere un colore */
-    /* border: 1px solid colore; */
+    color: #fa1505; /* TODO: remove? */
+    border: 1px solid #fa1505;
 }
 
 .password-reinput:focus {
-    /* background: ; scegliere un colore */
-    /* border: 1px solid colore; */
+    color: #fa1505; /* TODO: remove? */
+    border: 1px solid #fa1505;
 }
 
 .btn-signup{
@@ -125,7 +116,7 @@
 }
 
 .img-theme {
-    background-color: red; /* TODO: mettere black */
+    background-color: rgb(53, 53, 53); /* TODO: mettere black */
     color: white;
     box-shadow: none;
 
@@ -135,4 +126,12 @@
     
     height: 42px;
     width: 42px;
+}
+
+.password-visibility {
+    width: 24px;
+    height: 24px;
+
+    color: #80808080;
+
 }
