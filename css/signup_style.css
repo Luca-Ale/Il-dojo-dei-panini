@@ -35,12 +35,22 @@
     color: #212121;
 }
 
-.email-username-input{
+.username-input{
     background-color: white;
     height: 45px;
     border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
     /*color: #fa1505;*/ /* TODO: remove */
     box-shadow: none;
+    margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+}
+
+.email-input{
+    background-color: white;
+    height: 45px;
+    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
+    /*color: #fa1505;*/ /* TODO: remove */
+    box-shadow: none;
+    margin-bottom: 3px; /* TODO: fix distanza tra email e username */
 }
 
 .password-input{
@@ -57,28 +67,18 @@
     border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
 }
 
-.strength-bar-level {
-    width: 25%;
-    display: inline-block;
-    position: absolute; /* TODO: relative */
-    height: 100%;
-    bottom: 3px; /* TODO: 3px? */
-}
-
-.password-strength-bar {
-    background-color: #dcdcdc;
-    height: 3px; /* TODO: modify 3px*/
-    position: relative;
-    border-radius: 0 0 3px 3px; /* TODO: modify 3px 3px*/
-}
-
 .password-strength-status{
     width: 100%;
     text-align: center;
     margin-top: 3px;
 }
 
-.email-username-input:focus {
+.username-input:focus {
+    color: #fa1505; /* TODO: remove? */
+    border: 1px solid #fa1505;
+}
+
+.email-input:focus {
     color: #fa1505; /* TODO: remove? */
     border: 1px solid #fa1505;
 }
@@ -133,6 +133,55 @@
     width: 24px;
     height: 24px;
 
-    color: #80808080;
+    opacity: 0.7;
+
+    float: right;
+
+    position: relative; /* TODO: fix issue with positioning when typing password */
+    bottom: 48px;
+    right: 12px;
+
+    overflow: auto;
+    max-height: 100%;
 
 }
+
+.password-visibility-confirmation {
+    width: 24px;
+    height: 24px;
+
+    opacity: 0.7;
+
+    float: right;
+
+    position: relative;
+    top: 38px; 
+    right: -12px;
+
+    overflow: auto;
+    max-height: 100%;
+
+}
+
+/*.password-visibility {
+    width: 24px;
+    height: 24px;
+
+    opacity: 0.7;
+
+    position: fixed;
+
+
+}
+
+.password-visibility-confirmation {
+    width: 24px;
+    height: 24px;
+
+    opacity: 0.7;
+
+    float: right;
+
+    position: fixed;
+
+}*/

@@ -36,13 +36,24 @@
     color: white;
 }
 
-.email-username-input{
+.username-input{
     background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
     border: none;
     /*color: #fa1505;*/ /* TODO: remove */
     color: #f3360c;
     box-shadow: none;
+    margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+}
+
+.email-input{
+    background-color: rgb(0, 0, 0, 0.333);
+    height: 45px;
+    border: none;
+    /*color: #fa1505;*/ /* TODO: remove */
+    color: #f3360c;
+    box-shadow: none;
+    margin-bottom: 3px; /* TODO: fix distanza tra email e username */
 }
 
 .password-input{
@@ -61,21 +72,6 @@
     color: #f3360c;
 }
 
-.strength-bar-level {
-    width: 25%;
-    display: inline-block;
-    position: absolute; /* TODO: relative */
-    height: 100%;
-    bottom: 3px; /* TODO: 3px? */
-}
-
-.password-strength-bar {
-    background-color: #dcdcdc;
-    height: 3px; /* TODO: modify 3px*/
-    position: relative;
-    border-radius: 0 0 3px 3px; /* TODO: modify 3px 3px*/
-}
-
 .password-strength-status{
     width: 100%;
     text-align: center;
@@ -83,7 +79,13 @@
     color: #fa1505;
 }
 
-.email-username-input:focus {
+.username-input:focus {
+    color: #fa1505;
+    background: rgb(0, 0, 0, 0.444);
+    border: 1px solid #f3360c; /* #f3360c  #eb5214 */
+}
+
+.email-input:focus {
     color: #fa1505;
     background: rgb(0, 0, 0, 0.444);
     border: 1px solid #f3360c; /* #f3360c  #eb5214 */
@@ -134,4 +136,38 @@
 
     height: 42px;
     width: 42px;
+}
+
+.password-visibility {
+    width: 24px;
+    height: 24px;
+
+    /*color: #80808080;*/
+
+    opacity: 0.7;
+    filter: invert();
+
+    float: right;
+
+    position: relative;
+    bottom: 48px;
+    right: 12px;
+
+}
+
+.password-visibility-confirmation {
+    width: 24px;
+    height: 24px;
+
+    /*color: #80808080;*/
+
+    opacity: 0.7;
+    filter: invert();
+
+    float: right;
+
+    position: relative;
+    top: 38px; /* TODO: controllare se è alla stessa altezza dell'altro */
+    right: -12px;
+
 }
