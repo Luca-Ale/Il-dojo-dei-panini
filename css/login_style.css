@@ -104,3 +104,20 @@
     height: 42px;
     width: 42px;
 }
+
+.password-visibility {
+    width: 24px;
+    height: 24px;
+
+    opacity: 0.7;
+
+    float: right;
+
+    position: relative; /* TODO: fix issue with positioning when typing password */
+    bottom: 33px;
+    right: 12px;
+
+    overflow: auto;
+    max-height: 100%;
+
+}
