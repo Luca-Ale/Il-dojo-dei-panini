@@ -42,6 +42,24 @@
     border: none;
     color: #fa1505;
     box-shadow: none;
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.email-username-input::-webkit-input-placeholder {
+    position: relative;
+    right: 55px;
+}
+
+.img-email {
+    width: 24px;
+    height: 24px;
+
+    filter: invert();
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .password-input{
@@ -50,6 +68,24 @@
     border: none;
     color: #fa1505;
     box-shadow: none;
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.password-input::-webkit-input-placeholder {
+    position: relative;
+    right: 81px;
+}
+
+.img-password {
+    width: 24px;
+    height: 24px;
+
+    filter: invert();
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .email-username-input:focus {
