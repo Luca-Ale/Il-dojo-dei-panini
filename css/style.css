@@ -15,3 +15,89 @@ body > section > aside {
 div > section{
     clear: both;
 }
+
+/* ======================== SLIDER RECENSIONI ======================== */
+
+.reviews-section {
+    background-color: red; /* TODO: change color */
+}
+
+.reviews-section .carousel-item {
+    margin-top: 3rem;
+    padding: 9rem 3.14rem;
+    background-color: red;
+    border-radius: 0.9rem;
+    text-align: center;
+}
+
+.reviews-section .carousel-caption img {
+    max-width: 6rem;
+    border-radius: 51%;
+    padding: 0.333rem;
+}
+
+.reviews-section .carousel-item .carousel-caption p {
+    font-size: 1.3415rem;
+    line-height: 2.22rem;
+    padding: 0 11.1% 0.666rem;
+}
+
+.reviews-section .carousel-indicators {
+    bottom: -2.777rem;
+}
+
+.reviews-section .carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 55%;
+    border: none;
+    margin-right: 1.11rem;
+    opacity: 0.333;
+}
+
+.reviews-section .carousel-indicators button.active {
+    opacity: 0.999;
+}
+
+/* ======================== SLIDER RECENSIONI FINE ======================== */
+
+/* ======================== CARDS PANINI ======================== */
+
+/* TODO: allinearle sulla sinistra (una card affianco all'altra) */
+/* TODO: cambiare colore pulsanti */
+
+.food .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 0.999rem;
+}
+
+.food .card img {
+    border-radius: 0.999rem;
+    object-fit: cover;
+}
+
+.food .card p {
+    display: block;
+    font-size: 1.222rem;
+    font-weight: 777;
+    color: grey;
+    padding-bottom: 0.999rem;
+    border-bottom: 0.0666rem solid white;
+}
+
+.food .card .prezzo del {
+    color: red;
+    margin-left: 0.555rem;
+}
+
+.food .card .prezzo {
+    color: green;
+}
+
+/* ======================== CARDS PANINI FINE ======================== */
+
+/* ======================== INIZIO ======================== */
+
+/* ======================== FINE ======================== */
