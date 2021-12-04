@@ -1,5 +1,6 @@
 body {
     background-color: orange;
+    /* TODO: font-family */
 }
 
 body > section > article {
@@ -97,6 +98,45 @@ div > section{
 }
 
 /* ======================== CARDS PANINI FINE ======================== */
+
+/* ======================== INIZIO MAPPA ======================== */
+
+/* TODO: settare il paragrafo next to the map. */
+
+.p-map {
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* TODO: scegliere una font-family */
+    font-size: medium;
+}
+
+/* ======================== FINE MAPPA ======================== */
+
+/* ======================== INIZIO PRESENTAZIONE ======================== */
+
+
+
+/* ======================== FINE PRESENTAZIONE ======================== */
+
+
+/* ======================== INIZIO FOOTER ======================== */
+
+.hr {
+    width: 125px;
+    height: 125px;
+}
+
+.page-footer {
+    color: white;
+}
+
+.footer-copyright {
+    background-color: black;
+}
+
+/* ======================== FINE FOOTER ======================== */
+
+
 
 /* ======================== INIZIO ======================== */
 
