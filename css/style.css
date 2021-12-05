@@ -1,26 +1,83 @@
 body {
-    background-color: orange;
+    /* background-color: orange; */
     /* TODO: font-family */
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    color: rgb(33, 33, 33);
 }
 
-body > section > article {
-    width: 50%;
-    float : left;
+/* ======================== INIZIO NAVBAR ======================== */
+
+.logo-img {
+    width: 48px;
+    height: 48px;
 }
 
-body > section > aside {
-    width: 50%;
-    float: right;
+.navbar {
+    padding: .999rem;
 }
 
-div > section{
-    clear: both;
+.navbar li {
+    padding-right: 1.2em;
 }
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-55%);
+}
+
+.carousel-caption h1 {
+    font-size: 555%; /* TODO: prima era 333 */
+    text-transform: capitalize;
+    text-shadow: 3px 3px 9px rgb(0, 0, 0);
+}
+
+.carousel-caption h3 {
+    font-size: 333%; /* TODO: prima era 222 */
+    font-weight: 333;
+    text-shadow: 1px 1px 9px rgb(0, 0, 0);
+    text-transform: lowercase;
+}
+
+/* ======================== FINE NAVBAR ======================== */
+
+/* ======================== INIZIO PRESENTAZIONE ======================== */
+
+.section-presentazione{
+    background-color: white; /* TODO: cambiare tipo di rosso o mettere bianco */
+    color: rgb(33, 33, 33); /* TODO: RGB(33, 33, 33) OPPURE WHITE */
+}
+
+.presentazione {
+    width: 77%;
+    margin: 0 auto;
+    padding: top 3rem;
+}
+
+.presentazione hr {
+    border-top: 2px solid rgb(34, 34, 34);
+    width: 88%;
+    margin-top: 0.333rem;
+    margin-bottom: 0.999rem;
+}
+
+/* ======================== FINE PRESENTAZIONE ======================== */
 
 /* ======================== SLIDER RECENSIONI ======================== */
 
 .reviews-section {
     background-color: red; /* TODO: change color */
+}
+
+.reviews-section h2 {
+    color: white;
 }
 
 .reviews-section .carousel-item {
@@ -105,19 +162,12 @@ div > section{
 
 .p-map {
     text-align: center;
-    color: white;
+    color: rgb(33, 33, 33); /* TODO: white */
     font-family: Verdana, Geneva, Tahoma, sans-serif; /* TODO: scegliere una font-family */
     font-size: medium;
 }
 
 /* ======================== FINE MAPPA ======================== */
-
-/* ======================== INIZIO PRESENTAZIONE ======================== */
-
-
-
-/* ======================== FINE PRESENTAZIONE ======================== */
-
 
 /* ======================== INIZIO FOOTER ======================== */
 

@@ -11,13 +11,10 @@
         <title>Il Dojo dei Panini | Homepage</title>
     </head>
     <body> <!-- TODO: ordine delle sezioni: NAVBAR, PRESENTAZIONE, PANINI, RECENSIONI, CARTINA, CONTATTI/FOOTER -->
-        <header>
-            <h1>Il Dojo dei Panini</h1>
-        </header>
         <!-- NAVIGATION BAR -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- TODO: md -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- TODO: md , bg-dark o bg-light -->
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a> <!-- TODO: logo -->
+              <a class="navbar-brand" href="#"><img src="../imgs/logo.png" class="d-inline-block align-top logo-img" alt="Logo Dojo dei Panini" /></a> <!-- TODO: logo -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -38,22 +35,21 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">Menù</a> <!-- TODO: add link -->
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                </ul>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- TODO: metterli sulla destra -->
+                  <li class="nav-item">
+                    <a href="#"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a href="#"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#"><i class="fas fa-lightbulb"></i><span class="sr-only">Theme</span></a> <!-- TODO: meglio usare l'immagine. -->
                   </li>
                 </ul>
-                <form class="d-flex">
+
+                <form class="d-flex"> <!-- TODO: remove? -->
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
@@ -61,32 +57,33 @@
             </div>
           </nav>
 
-          <!-- SLIDER IMMAGINI -->
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <!-- SLIDER IMMAGINI DOJO -->
+          <div id="carouselBackground" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselBackground" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselBackground" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselBackground" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="../mockup/img/dojo_4.jpg" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
                 <div class="carousel-caption">
                     <h1 class="display-2">Il Dojo dei Panini</h1>
+                    <h3>dal 1924</h3>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="../mockup/img/dojo_2.jpg" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
+                <img src="../imgs/Dojo/dojo_wallpaper.jpg" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
               </div>
               <div class="carousel-item">
-                <img src="../mockup/img/dojo_3.jpg" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
+                <img src="../imgs/Dojo/samurai_dojo.jpg" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBackground" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBackground" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -102,11 +99,11 @@
 
                 <div class="row">
                   <div class="col-sm-12 col-lg-10 offset-lg-1">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="2" aria-label="Slide 3"></button>
                       </div>
                       <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -131,11 +128,11 @@
                           </div>    
                         </div>
                       </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselReviews" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                       </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselReviews" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>
@@ -165,7 +162,7 @@
                 <div class="row pt-5">
                   <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
                     <div class="card">
-                      <img src="../imgs/panino_gourmet.png" alt="Panino Gourmet" class="img fluid" /> <!-- TODO: add image -->
+                      <img src="../imgs/Food/panino_gourmet.png" alt="Panino Gourmet" class="img fluid" /> <!-- TODO: add image -->
                       <div class="pt-3">
                         <h4>Panino Gourmet</h4> <!-- TOOD: -->
                         <p>Tempo: 5 - 10 minuti</p>
@@ -179,7 +176,7 @@
                 <div class="row pt-5">
                   <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
                     <div class="card">
-                      <img src="../imgs/sandwich_vegetariano.jpg" alt="Sandwich Vegetariano" class="img fluid" /> <!-- TODO: add image -->
+                      <img src="../imgs/Food/sandwich_vegetariano.jpg" alt="Sandwich Vegetariano" class="img fluid" /> <!-- TODO: add image -->
                       <div class="pt-3">
                         <h4>Sandwich Vegetariano</h4> <!-- TOOD: -->
                         <p>Tempo: 7 - 9 minuti</p>
@@ -193,7 +190,7 @@
                 <div class="row pt-5">
                   <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
                     <div class="card">
-                      <img src="../imgs/panino_con_spalla.jpg" alt="Panino con spalla" class="img fluid" /> <!-- TODO: add image -->
+                      <img src="../imgs/Food/panino_con_spalla.jpg" alt="Panino con spalla" class="img fluid" /> <!-- TODO: add image -->
                       <div class="pt-3">
                         <h4>Panino con spalla</h4> <!-- TOOD: -->
                         <p>Tempo: 3 - 7 minuti</p>
@@ -230,28 +227,30 @@
             </section>
 
           <!-- SECTION PRESENTAZIONE -->
-          <div class="container-fluid padding">
-            <div class="row presentazione text-center">
-              <div class="col-12">
-                <h1 class="display-4">Il Dojo dei Panini</h1>
-              </div>
-              <hr>
-              <div class="col-12">
-                <p class="lead">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
-                    Proin facilisis ligula fringilla laoreet eleifend. 
-                    Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
-                    Fusce id sapien non orci pellentesque venenatis quis ac magna. 
-                    Nullam dictum aliquet nibh, nec aliquam ligula gravida at. 
-                    Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui.
-                    Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
-                    Proin egestas ut diam vel tincidunt. 
-                    Aliquam id sollicitudin leo, commodo pretium metus.
-                </p>
+          <section class="section-presentazione">
+            <div class="container-fluid padding">
+              <div class="row presentazione text-center">
+                <div class="col-12">
+                  <h1 class="display-4">Il Dojo dei Panini</h1>
+                </div>
+                <hr>
+                <div class="col-12">
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
+                      Proin facilisis ligula fringilla laoreet eleifend. 
+                      Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
+                      Fusce id sapien non orci pellentesque venenatis quis ac magna. 
+                      Nullam dictum aliquet nibh, nec aliquam ligula gravida at. 
+                      Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui.
+                      Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
+                      Proin egestas ut diam vel tincidunt. 
+                      Aliquam id sollicitudin leo, commodo pretium metus.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
 
 
           <!-- TODO: SECTION CONTATTI?, tipo social, ecc.. -->
