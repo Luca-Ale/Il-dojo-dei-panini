@@ -70,51 +70,98 @@ body {
 
 /* ======================== FINE PRESENTAZIONE ======================== */
 
-/* ======================== SLIDER RECENSIONI ======================== */
+/* ======================== INIZIO ABOUT SECTION ======================== */
 
-.reviews-section {
-    background-color: red; /* TODO: change color */
+.about {
+    background-color: #e11c11; /* TODO: oppure bianco */
 }
 
-.reviews-section h2 {
+.about h2 {
+    color: white; /* TODO: oppure rgb(33, 33, 33) */
+}
+
+.about p {
+    color: white; /* TODO: oppure rgb(33, 33, 33) */
+}
+
+.about-section .card .img {
+    border-radius: 0.666rem;
+}
+
+.about-food {
+    padding-top: 3.33rem;
+}
+
+.about-food h2{
     color: white;
 }
 
-.reviews-section .carousel-item {
-    margin-top: 3rem;
+.about-food p{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about-food {
+    font-size: 0.9rem;
+    color: white;
+    line-height: 33px;
+    position: relative;
+    margin-left: 99px;
+}
+
+.about-food li {
+    font-size: large;
+}
+
+/* ======================== FINE ABOUT SECTION ======================== */
+
+/* ======================== SLIDER RECENSIONI ======================== */
+
+.reviews-section {
+    background-color: #e11c11;
+}
+
+.reviews .reviews-section h2 {
+    color: white;
+}
+
+.reviews .reviews-section .carousel-caption p{
+    color:rgb(33, 33, 33);
+}
+
+.reviews .reviews-section .carousel-caption h5{
+    color:rgb(33, 33, 33);
+}
+
+.reviews .reviews-section .carousel-item {
+    margin-top: 3.33rem;
     padding: 9rem 3.14rem;
-    background-color: red;
-    border-radius: 0.9rem;
-    text-align: center;
+    background-color: white;
+
 }
 
-.reviews-section .carousel-caption img {
-    max-width: 6rem;
-    border-radius: 51%;
-    padding: 0.333rem;
+.reviews .reviews-section .carousel-caption img {
+    /*border-radius: 55%;*/
+    padding: 0.31415rem;
 }
 
-.reviews-section .carousel-item .carousel-caption p {
-    font-size: 1.3415rem;
+.reviews .reviews-section .carousel-item .carousel-caption p {
+    font-size: 1.314rem;
     line-height: 2.22rem;
     padding: 0 11.1% 0.666rem;
 }
 
-.reviews-section .carousel-indicators {
-    bottom: -2.777rem;
-}
-
-.reviews-section .carousel-indicators button {
+.reviews .reviews-section .carousel-indicators button {
     width: 15px;
     height: 15px;
     outline: none;
     border-radius: 55%;
     border: none;
-    margin-right: 1.11rem;
-    opacity: 0.333;
+    margin-right: 0.999rem;
+    opacity: 0.222;
 }
 
-.reviews-section .carousel-indicators button.active {
+.reviews .reviews-section .carousel-indicators button.active {
     opacity: 0.999;
 }
 
@@ -124,6 +171,10 @@ body {
 
 /* TODO: allinearle sulla sinistra (una card affianco all'altra) */
 /* TODO: cambiare colore pulsanti */
+
+.food {
+    /* background-color: red; */
+}
 
 .food .card{
     border: none;
@@ -159,6 +210,10 @@ body {
 /* ======================== INIZIO MAPPA ======================== */
 
 /* TODO: settare il paragrafo next to the map. */
+
+.map h2{
+    text-align: center;
+}
 
 .p-map {
     text-align: center;

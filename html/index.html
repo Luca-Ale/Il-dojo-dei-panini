@@ -10,7 +10,7 @@
 
         <title>Il Dojo dei Panini | Homepage</title>
     </head>
-    <body> <!-- TODO: ordine delle sezioni: NAVBAR, PRESENTAZIONE, PANINI, RECENSIONI, CARTINA, CONTATTI/FOOTER -->
+    <body> <!-- TODO: ordine delle sezioni: NAVBAR, PRESENTAZIONE, ABOUT, PANINI, RECENSIONI, CARTINA, CONTATTI/FOOTER -->
         <!-- NAVIGATION BAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- TODO: md , bg-dark o bg-light -->
             <div class="container-fluid">
@@ -24,13 +24,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a> <!-- TODO: add link -->
+                    <a class="nav-link" href="../html/shop.html">Shop</a> <!-- TODO: add link -->
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About</a> <!-- TODO: add link -->
+                    <a class="nav-link" href="../html/about.html">About</a> <!-- TODO: add link -->
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contatti</a> <!-- TODO: add link -->
+                    <a class="nav-link" href="../html/contatti.html">Contatti</a> <!-- TODO: add link -->
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Menù</a> <!-- TODO: add link -->
@@ -39,10 +39,10 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- TODO: metterli sulla destra -->
                   <li class="nav-item">
-                    <a href="#"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
+                    <a href="../html/shop.html"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
+                    <a href="../html/login.html"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
                   </li>
                   <li class="nav-item">
                     <a href="#"><i class="fas fa-lightbulb"></i><span class="sr-only">Theme</span></a> <!-- TODO: meglio usare l'immagine. -->
@@ -69,7 +69,7 @@
                 <img src="../mockup/img/dojo_4.jpg" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
                 <div class="carousel-caption">
                     <h1 class="display-2">Il Dojo dei Panini</h1>
-                    <h3>dal 1924</h3>
+                    <h3>dal 1924</h3> <!-- TODO: oppure scrivere qualcosaltro. -->
                 </div>
               </div>
               <div class="carousel-item">
@@ -108,23 +108,23 @@
                       <div class="carousel-inner">
                         <div class="carousel-item active">
                           <div class="carousel-caption">
-                            <img src="..." class="d-block w-100" alt="..."> <!-- TODO: add alt -->
+                            <img src="../imgs/Review/5_star_review.jpg" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
                               <p>Il miglior dojo d'Italia.</p>
                               <h5>Gigio Menestrelli</h5>
                           </div>
                         </div>
                         <div class="carousel-item">
                           <div class="carousel-caption">
-                            <img src="..." class="d-block w-100" alt="..."> <!-- TODO: add alt -->
-                            <p></p> <!-- TODO: recensione -->
-                            <h5></h5> <!-- TODO: autore -->
+                            <img src="../icons/michelin_stars.png" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in felis a sem pretium aliquet. </p> <!-- TODO: recensione -->
+                            <h5>Pippo Pluto</h5> <!-- TODO: autore -->
                           </div>
                         </div>
                         <div class="carousel-item">
                           <div class="carousel-caption">
-                            <img src="..." class="d-block w-100" alt="..."> <!-- TODO: add alt -->
-                            <p></p> <!-- TODO: recensione -->
-                            <h5></h5> <!-- TODO: autore -->
+                            <img src="../icons/tripadvisor_logo.png" class="d-block w-100" alt="..."> <!-- TODO: add alt -->
+                            <p>Quisque eu ultrices erat. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p> <!-- TODO: recensione -->
+                            <h5>Paperino</h5> <!-- TODO: autore -->
                           </div>    
                         </div>
                       </div>
@@ -166,36 +166,29 @@
                       <div class="pt-3">
                         <h4>Panino Gourmet</h4> <!-- TOOD: -->
                         <p>Tempo: 5 - 10 minuti</p>
-                        <p class="prezzo">$9.99 <del>$12.99</del></p>
-                        <input type="button" class="btn btn-primary" value="Ordina" />
+                        <p class="prezzo">$9.99 <del>$12.99</del> <input type="button" class="btn btn-success" value="Ordina" /></p>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="row pt-5">
                   <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
                     <div class="card">
                       <img src="../imgs/Food/sandwich_vegetariano.jpg" alt="Sandwich Vegetariano" class="img fluid" /> <!-- TODO: add image -->
                       <div class="pt-3">
                         <h4>Sandwich Vegetariano</h4> <!-- TOOD: -->
                         <p>Tempo: 7 - 9 minuti</p>
-                        <p class="prezzo">$7.99 <del>$9.99</del></p>
-                        <input type="button" class="btn btn-primary" value="Ordina" />
+                        <p class="prezzo">$7.99 <del>$9.99</del> <input type="button" class="btn btn-success" value="Ordina" /></p>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="row pt-5">
                   <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
                     <div class="card">
                       <img src="../imgs/Food/panino_con_spalla.jpg" alt="Panino con spalla" class="img fluid" /> <!-- TODO: add image -->
                       <div class="pt-3">
                         <h4>Panino con spalla</h4> <!-- TOOD: -->
                         <p>Tempo: 3 - 7 minuti</p>
-                        <p class="prezzo">$3.99 <del>$7.99</del></p>
-                        <input type="button" class="btn btn-primary" value="Ordina" />
+                        <p class="prezzo">$3.99 <del>$7.99</del> <input type="button" class="btn btn-success" value="Ordina" /></p>
                       </div>
                     </div>
                   </div>
@@ -208,7 +201,8 @@
           <div class="container-fluid"> <!-- TODO: remove width dall'iframe e togliere row o sistemare le posizioni e le distribuzioni delle colonne della grigla. -->
             <!-- TODO: mappa sulla sinistra e testo a destra della mappa. -->
             <section class="map">
-              <!-- <div class="row"> -->
+              <div class="row">
+                <h2>Dove ci troviamo? <i class="fas fa-map-marked-alt"></i></h2>
                 <iframe class="well well-sm col-xs-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1238.9642814976892!2d12.234307279230064!3d44.14768737363995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4c8a9e0b5cb%3A0xbbd5902e81162eed!2sUniversit%C3%A0%20di%20Bologna%20-%20Dipartimento%20di%20Informatica%20-%20Ingegneria%20E%20Scienze%20Informatiche!5e0!3m2!1sit!2sit!4v1638652999771!5m2!1sit!2sit" width="680" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 <div class="col-xs-8">
                   <p class="p-map">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -223,7 +217,7 @@
                     Aliquam id sollicitudin leo, commodo pretium metus.</p>
                 </div>
                 </div>
-              <!-- </div> -->
+              </div>
             </section>
 
           <!-- SECTION PRESENTAZIONE -->
@@ -255,8 +249,94 @@
 
           <!-- TODO: SECTION CONTATTI?, tipo social, ecc.. -->
 
+          <!-- ABOUT US SECTION -->
+          <section class="about">
+            <div class="about-section wrapper">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                    <div class="card border-0">
+                      <img src="../imgs/Dojo/restaurant2.jpg" alt="" class="img-fluid" />
+                      <img src="../imgs/Dojo/restaurant.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-12 text-section">
+                    <h2>I nostri ristoranti</h2>
+                    <p>Sparsi per tutta l'Italia ed il Giappone. <br>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
+                      Proin facilisis ligula fringilla laoreet eleifend. 
+                      Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
+                      Fusce id sapien non orci pellentesque venenatis quis ac magna.
+                      Nullam dictum aliquet nibh, nec aliquam ligula gravida at. <br>
+                      Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui. <br>
+                      Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
+                      Proin egestas ut diam vel tincidunt. 
+                      Aliquam id sollicitudin leo, commodo pretium metus.</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="container about-food">
+                <div class="row align-items-center">
+                  <div class="col-lg-5 col-md-12 text-section mg-lg-0 mb-5">
+                    <h2>Le nostre pietanze</h2> <!-- TODO: chiamarle in modo migliore -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <!-- TODO: forse mettere qualcos'altro di un po' più carino. -->
+                      Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
+                      Proin facilisis ligula fringilla laoreet eleifend. 
+                      Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
+                      Fusce id sapien non orci pellentesque venenatis quis ac magna.
+                      Nullam dictum aliquet nibh, nec aliquam ligula gravida at. <br>
+                      Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui. <br>
+                      Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
+                      Proin egestas ut diam vel tincidunt. 
+                      Aliquam id sollicitudin leo, commodo pretium metus.s</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
+                        Proin facilisis ligula fringilla laoreet eleifend. 
+                        Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
+                        Fusce id sapien non orci pellentesque venenatis quis ac magna.
+                        Nullam dictum aliquet nibh, nec aliquam ligula gravida at. <br>
+                        Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui. <br>
+                        Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
+                        Proin egestas ut diam vel tincidunt. 
+                        Aliquam id sollicitudin leo, commodo pretium metus.s</p>
+
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                          Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
+                          Proin facilisis ligula fringilla laoreet eleifend. 
+                          Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
+                          Fusce id sapien non orci pellentesque venenatis quis ac magna.
+                          Nullam dictum aliquet nibh, nec aliquam ligula gravida at. <br>
+                          Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui. <br>
+                          Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
+                          Proin egestas ut diam vel tincidunt. 
+                          Aliquam id sollicitudin leo, commodo pretium metus.s</p>
+
+                      <h2>I nostri ingredienti speciali: </h2>
+                    <ul class="py-1">
+                      <li>Tanto amore</li>
+                      <li>Tanta passione</li>
+                      <li>Tanto impegno</li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-7 col-md-12">
+                    <div class="card border-0">
+                      <img src="../imgs/Food/focaccia_sandwiches.jpg" alt="" class="img-fluid" />
+                      <img src="../imgs/Food/sushi.jpg" alt="" class="img-fluid" />
+                      <img src="../imgs/Food/toasts.jpg" alt="" class="img-fluid" />
+                      <img src="../imgs/Food/pizze_classiche_gourmet.jpg" alt="" class="img-fluid" />
+                      <img src="../imgs/Food/contorni_insalate.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <!-- TODO: FOOTER -->
-          <footer class="page-footer bg-dark">
+          <footer class="page-footer bg-dark"> <!-- TODO: aggiungere una colonna per delle informazioni generali? -->
             <div class="bg-dark">
               <div class="container">
                 <div class="row py-4 d-flex align-items-center">
@@ -269,19 +349,11 @@
                 <div class="col-md-3 mx-auto mb-4">
                   <h6 class="text-uppercase font-weight-bold">Contattateci</h6>
                   <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
-                  <p class="mt-2">
-                    Lorem Ipsum.
-                  </p>
-                </div>
-
-                <div class="col-md-2 mx-auto mb-4">
-                  <h6 class="text-uppercase font-weight-bold">Menù</h6>
-                  <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
-
                   <ul class="list-unstyled">
-                    <li class="my-2"><a href=""></a></li>
-                    <li class="my-2"><a href=""></a></li>
-                    <li class="my-2"><a href=""></a></li>
+                    <li class="my-2"><i class="fas fa-home">Via Cesare Pavese, 50, Cesena (Italy)</i></li>
+                    <li class="my-2"><i class="fas fa-envelope"> dojopanini@gmail.com</i></li> <!-- <img src="../icons/envelope-open-solid.svg" width="24" height="24" alt="" /> -->
+                    <li class="my-2"><i class="fas fa-phone">(+39) 333 666 999</i></li>
+                    <li class="my-2"><i class="fas fa-fax"></i>1-333-222-6666</li>
                   </ul>
                 </div>
 
@@ -290,20 +362,34 @@
                   <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
 
                   <ul class="list-unstyled">
-                    <li class="my-2"><a href=""></a></li>
-                    <li class="my-2"><a href=""></a></li>
-                    <li class="my-2"><a href=""></a></li>
+                    <li class="my-2"><a href="../html/shop.html">Panini</a></li>
+                    <li class="my-2"><a href="../html/shop.html">Bibite</a></li>
+                    <li class="my-2"><a href="../html/shop.html">Pizze</a></li>
+                    <li class="my-2"><a href="../html/shop.html">Vegetariano</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-md-2 mx-auto mb-4">
+                  <h6 class="text-uppercase font-weight-bold">I nostri social</h6>
+                  <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
+
+                  <ul class="list-unstyled">
+                    <li class="my-2"><a href="https://github.com/Luca-Ale/Il-dojo-dei-panini"><i class="fab fa-github"></i></a></li>
+                    <li class="my-2"><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li class="my-2"><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li class="my-2"><a href=""><i class="fab fa-facebook"></i></a></li>
                   </ul>
                 </div>
 
                 <div class="col-md-3 mx-auto mb-4">
-                  <h6 class="text-uppercase font-weight-bold">Contattateci</h6>
+                  <h6 class="text-uppercase font-weight-bold">Metodi di pagamento</h6>
                   <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
 
                   <ul class="list-unstyled">
-                    <li class="my-2"><i class="fas fa-home"></i></li>
-                    <li class="my-2"><i class="fas fa-envelope"> dojopanini@gmail.com</i></li> <!-- <img src="../icons/envelope-open-solid.svg" width="24" height="24" alt="" /> -->
-                    <li class="my-2"><i class="fas fa-phone">(+39) 333 666 999</i></li>
+                    <li class="my-2"><i class="fab fa-paypal"></i></li>
+                    <li class="my-2"><i class="fab fa-cc-visa"></i></li> <!-- <img src="../icons/envelope-open-solid.svg" width="24" height="24" alt="" /> -->
+                    <li class="my-2"><i class="fab fa-cc-mastercard"></i></li>
+                    <li class="my-2"><i class="fab fa-bitcoin"></i></li>
                   </ul>
                 </div>
               </div>
