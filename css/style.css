@@ -138,9 +138,9 @@ body {
 /* TODO: allinearle sulla sinistra (una card affianco all'altra) */
 /* TODO: cambiare colore pulsanti */
 
-.food {
+/*.food {*/
     /* background-color: red; */
-}
+/*}*/
 
 .food .card{
     border: none;
