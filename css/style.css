@@ -115,57 +115,23 @@ body {
 
 /* ======================== FINE ABOUT SECTION ======================== */
 
-/* ======================== SLIDER RECENSIONI ======================== */
+/* ======================== INIZIO RECENSIONI ======================== */
 
-.reviews-section {
-    background-color: #e11c11;
+.just-content-start img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 75%;
 }
 
-.reviews .reviews-section h2 {
-    color: white;
+.review .fa-star, .fa-star-half-alt {
+    color: #ffbf00;
 }
 
-.reviews .reviews-section .carousel-caption p{
-    color:rgb(33, 33, 33);
+.review .fa-quote-left {
+    font-size: 3rem;
 }
 
-.reviews .reviews-section .carousel-caption h5{
-    color:rgb(33, 33, 33);
-}
-
-.reviews .reviews-section .carousel-item {
-    margin-top: 3.33rem;
-    padding: 9rem 3.14rem;
-    background-color: white;
-
-}
-
-.reviews .reviews-section .carousel-caption img {
-    /*border-radius: 55%;*/
-    padding: 0.31415rem;
-}
-
-.reviews .reviews-section .carousel-item .carousel-caption p {
-    font-size: 1.314rem;
-    line-height: 2.22rem;
-    padding: 0 11.1% 0.666rem;
-}
-
-.reviews .reviews-section .carousel-indicators button {
-    width: 15px;
-    height: 15px;
-    outline: none;
-    border-radius: 55%;
-    border: none;
-    margin-right: 0.999rem;
-    opacity: 0.222;
-}
-
-.reviews .reviews-section .carousel-indicators button.active {
-    opacity: 0.999;
-}
-
-/* ======================== SLIDER RECENSIONI FINE ======================== */
+/* ======================== FINE RECENSIONI ======================== */
 
 /* ======================== CARDS PANINI ======================== */
 
