@@ -1,7 +1,6 @@
 
 body {
-    background-color: white;
-    background-image: linear-gradient(#fff, rgb(12, 0, 0),  #c40a0a ); /* TODO: update background color */
+    background: linear-gradient(-100deg, white 50%, red 50%); /* TODO: oppure -120deg? oppure usare altri gradi? ; invertire il rosso ed il bianco? */
 
     font-family: century-gothic, sans-serif;
     font-weight: 400;
