@@ -144,6 +144,7 @@
     width: 42px;
 }
 
+/* TODO: fix issue with positioning when typing password */
 .password-visibility {
     width: 24px;
     height: 24px;
@@ -153,11 +154,13 @@
 
     float: right;
 
-    position: relative; /* TODO: fix issue with positioning when typing password */
+    position: relative; 
     bottom: 33px;
     right: 12px;
 
     overflow: auto;
     max-height: 100%;
+
+    cursor: pointer;
 
 }
