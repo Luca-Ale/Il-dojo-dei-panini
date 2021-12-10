@@ -44,6 +44,24 @@
     color: #f3360c;
     box-shadow: none;
     margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.username-input::-webkit-input-placeholder {
+    position: relative;
+    right: 89px;
+}
+
+.img-user {
+    width: 24px;
+    height: 24px;
+
+    filter: invert();
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .email-input{
@@ -54,6 +72,24 @@
     color: #f3360c;
     box-shadow: none;
     margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.email-input::-webkit-input-placeholder {
+    position: relative;
+    right: 105px;
+}
+
+.img-email {
+    width: 24px;
+    height: 24px;
+
+    filter: invert();
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .password-input{
@@ -63,6 +99,24 @@
     /*color: #fa1505;*/ /* TODO: remove */
     color: #f3360c;
     box-shadow: none;
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.password-input::-webkit-input-placeholder {
+    position: relative;
+    right: 89px;
+}
+
+.img-password {
+    width: 24px;
+    height: 24px;
+
+    filter: invert();
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .password-reinput{
@@ -70,6 +124,24 @@
     height: 45px;
     border: none;
     color: #f3360c;
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.password-reinput::-webkit-input-placeholder {
+    position: relative;
+    right: 59px;
+}
+
+.img-password-confirmation {
+    width: 24px;
+    height: 24px;
+
+    filter: invert();
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .password-strength-status{
@@ -142,32 +214,33 @@
     width: 24px;
     height: 24px;
 
-    /*color: #80808080;*/
-
     opacity: 0.7;
     filter: invert();
 
     float: right;
 
     position: relative;
-    bottom: 48px;
+    bottom: 76px;
     right: 12px;
+
+    cursor: pointer;
 
 }
 
+/* TODO: controllare se è alla stessa altezza dell'altro */
 .password-visibility-confirmation {
     width: 24px;
     height: 24px;
 
-    /*color: #80808080;*/
-
     opacity: 0.7;
     filter: invert();
 
     float: right;
 
     position: relative;
-    top: 38px; /* TODO: controllare se è alla stessa altezza dell'altro */
-    right: -12px;
+    bottom: 33px; 
+    right: 12px;
+
+    cursor: pointer;
 
 }

@@ -42,6 +42,22 @@
     /*color: #fa1505;*/ /* TODO: remove */
     box-shadow: none;
     margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.username-input::-webkit-input-placeholder {
+    position: relative;
+    right: 85px;
+}
+
+.img-user {
+    width: 24px;
+    height: 24px;
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .email-input{
@@ -51,6 +67,22 @@
     /*color: #fa1505;*/ /* TODO: remove */
     box-shadow: none;
     margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.email-input::-webkit-input-placeholder {
+    position: relative;
+    right: 105px;
+}
+
+.img-email {
+    width: 24px;
+    height: 24px;
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .password-input{
@@ -59,12 +91,44 @@
     border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
     
     /*color: #fa1505;*/ /* TODO: remove */
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.password-input::-webkit-input-placeholder {
+    position: relative;
+    right: 89px;
+}
+
+.img-password {
+    width: 24px;
+    height: 24px;
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .password-reinput{
     background-color: white;
     height: 45px;
     border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
+
+    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+}
+
+.password-reinput::-webkit-input-placeholder {
+    position: relative;
+    right: 59px;
+}
+
+.img-password-confirmation {
+    width: 24px;
+    height: 24px;
+
+    position: relative;
+    bottom: 36px;
+    left: 12px;
 }
 
 .password-strength-status{
@@ -129,6 +193,7 @@
     width: 42px;
 }
 
+/* TODO: fix issue with positioning when typing password */
 .password-visibility {
     width: 24px;
     height: 24px;
@@ -137,12 +202,14 @@
 
     float: right;
 
-    position: relative; /* TODO: fix issue with positioning when typing password */
-    bottom: 48px;
+    position: relative; 
+    bottom: 76px;
     right: 12px;
 
-    overflow: auto;
-    max-height: 100%;
+    /*overflow: auto;
+    max-height: 100%;*/
+
+    cursor: pointer;
 
 }
 
@@ -155,13 +222,17 @@
     float: right;
 
     position: relative;
-    top: 38px; 
-    right: -12px;
+    bottom: 33px; 
+    right: 12px;
 
-    overflow: auto;
-    max-height: 100%;
+    /*overflow: auto;
+    max-height: 100%;*/
+
+    cursor: pointer;
 
 }
+
+/* TODO: remove */
 
 /*.password-visibility {
     width: 24px;
