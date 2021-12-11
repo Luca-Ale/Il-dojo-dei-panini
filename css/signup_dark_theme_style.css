@@ -244,3 +244,22 @@
     cursor: pointer;
 
 }
+
+.exclamation-icon {
+    color: orange;
+
+    position: relative;
+    bottom: 33px;
+
+    /*left: 310px; se lo volessi mettere sulla destra */
+    right: 50px;
+}
+
+.exclamation-confirmation-icon {
+    color: orange;
+
+    position: relative;
+    bottom: 33px;
+
+    right: 50px;
+}
