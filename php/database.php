@@ -7,7 +7,8 @@ class DatabaseHelper{
     }
 
     public function insertNewCostumer($CF_CLIENTE, $nome, $cognome, $username, $mail, $password) {
-        $stmt = $this -> db -> prepare("insert into clienti values ($CF_CLIENTE, $nome, $cognome, $username, $mail, $password)");
+        $stmt = $this -> db -> prepare("insert into clienti values (?, ?, ?, ?, ?, ?)");
+        $stmt -> bind_param('ssssss', $CF_CLIENTE, $nome, $cognome, $username, $mail, $password);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -23,7 +24,8 @@ class DatabaseHelper{
     }
 
     public function insertProductOnMenu($codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti) {
-        $stmt = $this -> db -> prepare("insert into prodotti values ($codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti)");
+        $stmt = $this -> db -> prepare("insert into prodotti values (?, ?, ?, ?, ?)");
+        $stmt -> bind_param('isiis', $codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
@@ -37,6 +39,12 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getShoppingCartProducts() {
+        $stmt = $this -> db -> prepare("SELECT * from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prod;");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     
 }
 ?>

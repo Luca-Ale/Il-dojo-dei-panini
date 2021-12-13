@@ -8,7 +8,7 @@
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <title>Il Dojo dei Panini | Base</title>
+        <title><?php echo $templateParams["titolo"];?></title>
     </head>
     <body>
         <header>
@@ -25,7 +25,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../php/carrello.php">Shop</a> <!-- TODO: add link -->
+                    <a class="nav-link" href="../html/shop.html">Shop</a> <!-- TODO: add link -->
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="../html/about.html">About</a> <!-- TODO: add link -->
@@ -40,7 +40,7 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- TODO: metterli sulla destra -->
                   <li class="nav-item">
-                    <a href="../php/carrello.php"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
+                    <a href="../html/shop.html"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
                   </li>
                   <li class="nav-item">
                     <a href="../html/login.html"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
@@ -60,7 +60,11 @@
         </header>
 
         <main>
-            <p>Lorem ipsum.</p>
+        <?php
+        if(isset($templateParams["nome"])){
+            require($templateParams["nome"]);
+        }
+        ?>
         </main>
 
         <!-- TODO: FOOTER -->
