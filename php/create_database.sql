@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Dic 02, 2021 alle 16:28
+-- Creato il: Dic 15, 2021 alle 15:59
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 7.3.31
 
@@ -41,6 +41,7 @@ CREATE TABLE `clienti` (
 --
 
 INSERT INTO `clienti` (`CF_cliente`, `nome`, `cognome`, `username`, `mail`, `password`) VALUES
+('ABCDEFGHIJKLMNOP', '', '', '', '', ''),
 ('CRLRSN59C04H294E', 'Carletto', 'Rossinbaldi', '', 'carlettorossimbaldi@gmail.com', '1234'),
 ('CRMCLB92A52A944L', 'Carmelo', 'Casalbottoni', '', 'carmelospyder@gmail.com', 'password'),
 ('CRMSRN84A52H501D', 'Carmela', 'Speranza', '', 'carmelasperanza@gmail.com', 'caramellagommosa'),
