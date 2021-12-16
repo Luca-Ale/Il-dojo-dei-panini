@@ -31,7 +31,7 @@ class DatabaseHelper{
     }
 
     public function getShoppingCartProducts() {
-        $stmt = $this -> db -> prepare("SELECT * FROM carrello AS c, prodotti AS p WHERE p.codice_prodotto = c.cod_prod;"); // serve il ; nella query ? Nelle altre non serve.
+        $stmt = $this -> db -> prepare("SELECT * FROM carrello AS c, prodotti AS p WHERE p.codice_prodotto = c.cod_prodotto;"); // serve il ; nella query ? Nelle altre non serve.
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
@@ -43,7 +43,6 @@ class DatabaseHelper{
         } else {
             $table = "users";
         }
-
         $stmt = $this->db->prepare("SELECT * FROM ? WHERE username = ? OR email = ? AND password = ? AND ATTIVO = 0");  // ATTIVO = 0 per assicurarci che non era già loggato.
         $stmt->bind_param("ssss", $table, $username, $username, $password); // metto username due volte perchè posso usare sia la username che l'email per loggare. (però c'è solo un campo nel login sia per uno che per l'altro)
         $stmt->execute();
@@ -86,7 +85,7 @@ class DatabaseHelper{
     }
 
     public function getShoppingCartTotal() {
-        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prod;");
+        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prodotto;");
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
