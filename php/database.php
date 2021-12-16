@@ -38,22 +38,18 @@ class DatabaseHelper{
     }
 
     public function checkLogin($username, $password){
-        const $admin = "admin";
-        if(substr($admin, 0) === $username){
-            $stmt = $this->db->prepare("SELECT * FROM admin WHERE username = ? OR email = ? AND password = ?"); 
-            $stmt->bind_param("sss", $username, $username, $password); // metto username due volte perchè posso usare sia la username che l'email per loggare.
-            $stmt->execute();
-            $result = $stmt->get_result();
-            return $result->fetch_all(MYSQLI_ASSOC);
-            
+        if(substr("admin", 0) === $username){
+            $table = "admin";
         } else {
-            
-            $stmt = $this->db->prepare("SELECT * FROM users WHERE username = ? OR email = ? AND password = ?"); 
-            $stmt->bind_param("sss", $username, $username, $password); // metto username due volte perchè posso usare sia la username che l'email per loggare.
-            $stmt->execute();
-            $result = $stmt->get_result();
-            return $result->fetch_all(MYSQLI_ASSOC);
+            $table = "users";
         }
+
+        $stmt = $this->db->prepare("SELECT * FROM ? WHERE username = ? OR email = ? AND password = ?"); 
+        $stmt->bind_param("ssss", $table, $username, $username, $password); // metto username due volte perchè posso usare sia la username che l'email per loggare. (però c'è solo un campo nel login sia per uno che per l'altro)
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+
     }
 	
 	public function updatePassword($username, $email, $newPassword){
