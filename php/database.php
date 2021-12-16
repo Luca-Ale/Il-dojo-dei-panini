@@ -51,17 +51,17 @@ class DatabaseHelper{
 
     }
 
-    public function isUserLoggedIn($username){
-        $stmt = $this->db->prepare("SELECT * FROM users WHERE ATTIVO = 1 AND username = ?"); 
-        $stmt->bind_param("s", $username);
+    public function isUserLoggedIn($username, $password){
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE ATTIVO = 1 AND username = ? AND password=?"); 
+        $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function isAdminLoggedIn($username){
-        $stmt = $this->db->prepare("SELECT * FROM admin WHERE ATTIVO = 1 AND username = ?"); 
-        $stmt->bind_param("s", $username);
+    public function isAdminLoggedIn($username, $password){
+        $stmt = $this->db->prepare("SELECT * FROM admin WHERE ATTIVO = 1 AND username = ? AND password=?"); 
+        $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
