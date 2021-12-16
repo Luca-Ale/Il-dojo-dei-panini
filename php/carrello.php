@@ -5,6 +5,7 @@ require_once 'bootstrap.php';
 $templateParams["titolo"] = "carrello";
 $templateParams["nome"] = "carrello-tmplt.php";
 $templateParams["product"] = $dbh->getShoppingCartProducts();
+$templateParams["total"] = $dbh->getShoppingCartTotal();
 
 require 'template/base.php';
 ?>
