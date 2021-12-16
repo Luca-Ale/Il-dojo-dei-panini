@@ -37,19 +37,35 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function checkLogin($username, $password){
+    public function login($username, $password){
         if(substr("admin", 0) === $username){
             $table = "admin";
         } else {
             $table = "users";
         }
 
-        $stmt = $this->db->prepare("SELECT * FROM ? WHERE username = ? OR email = ? AND password = ?"); 
+        $stmt = $this->db->prepare("SELECT * FROM ? WHERE username = ? OR email = ? AND password = ? AND ATTIVO = 0");  // ATTIVO = 0 per assicurarci che non era già loggato.
         $stmt->bind_param("ssss", $table, $username, $username, $password); // metto username due volte perchè posso usare sia la username che l'email per loggare. (però c'è solo un campo nel login sia per uno che per l'altro)
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
 
+    }
+
+    public function isUserLoggedIn($username){
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE ATTIVO = 1 AND username = ?"); 
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function isAdminLoggedIn($username){
+        $stmt = $this->db->prepare("SELECT * FROM admin WHERE ATTIVO = 1 AND username = ?"); 
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 	
 	public function updatePassword($username, $email, $newPassword){
