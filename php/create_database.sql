@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Creato il: Dic 16, 2021 alle 14:52
+-- Host: 127.0.0.1
+-- Creato il: Dic 16, 2021 alle 16:51
 -- Versione del server: 10.4.21-MariaDB
--- Versione PHP: 8.0.12
+-- Versione PHP: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,9 +31,6 @@ USE `dojo`;
 
 CREATE TABLE IF NOT EXISTS `admin` (
   `AdminID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `CF_venditore` varchar(16) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `nome` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `cognome` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `username` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
@@ -45,9 +42,23 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Dump dei dati per la tabella `admin`
 --
 
-INSERT INTO `admin` (`AdminID`, `CF_venditore`, `nome`, `cognome`, `username`, `email`, `password`, `ATTIVO`) VALUES
-(1, 'PGGLSN00D21H294W', 'Alessandro', 'Pioggia', 'alepipita', 'alexpioggia@gmail.com', '5678', 0),
-(2, 'RNGLCU00D01H294G', 'Luca', 'Rengo', 'lukarengo', 'lr@gmail.com', '1234', 0);
+INSERT INTO `admin` (`AdminID`, `username`, `email`, `password`, `ATTIVO`) VALUES
+(1, 'alepipita', 'alexpioggia@gmail.com', '5678', 0),
+(2, 'lukarengo', 'lr@gmail.com', '1234', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `carrello`
+--
+
+CREATE TABLE IF NOT EXISTS `carrello` (
+  `cod_prodotto` int(8) NOT NULL,
+  `cod_utente` int(10) NOT NULL,
+  `quantita` int(5) NOT NULL,
+  KEY `cod_prodotto` (`cod_prodotto`),
+  KEY `cod_utente` (`cod_utente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -128,9 +139,6 @@ CREATE TABLE IF NOT EXISTS `recensioni` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `UserID` int(10) NOT NULL AUTO_INCREMENT,
-  `CF_cliente` varchar(16) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `nome` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `cognome` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `username` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
@@ -142,16 +150,23 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dump dei dati per la tabella `users`
 --
 
-INSERT INTO `users` (`UserID`, `CF_cliente`, `nome`, `cognome`, `username`, `email`, `password`, `ATTIVO`) VALUES
-(1, 'ABCDEFGHIJKLMNOP', '', '', '', '', '', 0),
-(2, 'CRLRSN59C04H294E', 'Carletto', 'Rossinbaldi', '', 'carlettorossimbaldi@gmail.com', '1234', 0),
-(3, 'CRMCLB92A52A944L', 'Carmelo', 'Casalbottoni', '', 'carmelospyder@gmail.com', 'password', 0),
-(4, 'CRMSRN84A52H501D', 'Carmela', 'Speranza', '', 'carmelasperanza@gmail.com', 'caramellagommosa', 0),
-(5, 'GRGRLL03H65H504S', 'George', 'Orwell', '', 'georgy@gmail.com', 'mipiacelamalinconia213', 0);
+INSERT INTO `users` (`UserID`, `username`, `email`, `password`, `ATTIVO`) VALUES
+(1, '', '', '', 0),
+(2, '', 'carlettorossimbaldi@gmail.com', '1234', 0),
+(3, '', 'carmelospyder@gmail.com', 'password', 0),
+(4, '', 'carmelasperanza@gmail.com', 'caramellagommosa', 0),
+(5, '', 'georgy@gmail.com', 'mipiacelamalinconia213', 0);
 
 --
 -- Limiti per le tabelle scaricate
 --
+
+--
+-- Limiti per la tabella `carrello`
+--
+ALTER TABLE `carrello`
+  ADD CONSTRAINT `cod_prodotto` FOREIGN KEY (`cod_prodotto`) REFERENCES `prodotti` (`codice_prodotto`),
+  ADD CONSTRAINT `cod_utente` FOREIGN KEY (`cod_utente`) REFERENCES `users` (`UserID`);
 
 --
 -- Limiti per la tabella `ordini`
