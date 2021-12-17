@@ -24,7 +24,7 @@
                             <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
                         </div>
                         <h3 class="signup-title">Sign up</h3>
-                        <form action="POST">
+                        <form action="signup.php" method="POST">
                         <?php if(isset($templateParams["erroresignup"])): ?>
                             <p><?php echo $templateParams["erroresignup"]; ?></p>
                         <?php endif; ?>
