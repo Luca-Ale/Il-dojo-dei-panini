@@ -25,6 +25,9 @@
                         </div>
                         <h3 class="login-title">Login</h3>
                         <form action="POST">
+                        <?php if(isset($templateParams["errorelogin"])): ?>
+                            <p><?php echo $templateParams["errorelogin"]; ?></p>
+                        <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control email-username-input" placeholder="Username | Email" />
                                 <img src="../icons/envelope-open-solid.svg" alt="Email Icon" class="img-email" />
