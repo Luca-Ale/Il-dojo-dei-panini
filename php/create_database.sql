@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 16, 2021 alle 19:30
+-- Creato il: Dic 17, 2021 alle 15:08
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -151,11 +151,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`UserID`, `username`, `email`, `password`, `attivo`) VALUES
-(1, '', '', '', 0),
-(2, '', 'carlettorossimbaldi@gmail.com', '1234', 0),
-(3, '', 'carmelospyder@gmail.com', 'password', 0),
-(4, '', 'carmelasperanza@gmail.com', 'caramellagommosa', 0),
-(5, '', 'georgy@gmail.com', 'mipiacelamalinconia213', 0);
+(1, 'tom', 'tom22@gmail.com', 'tom_e_jerry11', 0),
+(2, 'camaleonte', 'carlettorossimbaldi@gmail.com', '1234', 0),
+(3, 'carmiSpii33', 'carmelospyder@gmail.com', 'password', 0),
+(4, 'spera_carmela', 'carmelasperanza@gmail.com', 'caramellagommosa', 0),
+(5, 'george1984', 'georgy@gmail.com', 'mipiacelamalinconia213', 0);
 
 --
 -- Limiti per le tabelle scaricate
