@@ -25,6 +25,9 @@
                         </div>
                         <h3 class="signup-title">Sign up</h3>
                         <form action="POST">
+                        <?php if(isset($templateParams["erroresignup"])): ?>
+                            <p><?php echo $templateParams["erroresignup"]; ?></p>
+                        <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control username-input" placeholder="Username" />
                                 <img src="../icons/user-solid.svg" alt="User icon" class="img-user" />
