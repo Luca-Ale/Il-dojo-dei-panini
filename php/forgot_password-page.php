@@ -24,7 +24,7 @@
                             <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
                         </div>
                         <h3 class="signup-title">Password dimenticata</h3>
-                        <form action="forgot_password.php" method="POST">
+                        <form action="forgot-password.php" method="POST">
                         <?php if(isset($templateParams["erroreforgotpassword"])): ?>
                             <p><?php echo $templateParams["erroreforgotpassword"]; ?></p>
                         <?php endif; ?>

@@ -16,8 +16,8 @@ if(isUserLoggedIn()){
     $templateParams["nome"] = "index.php"; //TODO: modificare
 } else {
     $templateParams["titolo"] = "Il Dojo dei Panini | Login";
-    $templateParams["nome"] = "login-page.php";
+    $templateParams["nome"] = "../html/login.html";
 }
 
-require 'login-page.php';
+require '../html/index.html'; //TODO: modificare
 ?>
