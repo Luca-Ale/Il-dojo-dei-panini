@@ -13,6 +13,10 @@ function isUserLoggedIn(){
     return !empty($_SESSION['UserID']);
 }
 
+function isAdminLoggedIn(){
+    return !empty($_SESSION['AdminID']);
+}
+
 function registerLoggedUser($user){
     $_SESSION["UserID"] = $user["UserID"];
     $_SESSION["username"] = $user["username"];
