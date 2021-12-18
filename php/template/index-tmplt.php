@@ -385,3 +385,4 @@
                 </div>
               </div>
             </section>
+            <script type="text/javascript" src="../js/index/index_theme.js"></script> <!-- Questo non va perchè il base non ha le stesse cose dell'index. -->

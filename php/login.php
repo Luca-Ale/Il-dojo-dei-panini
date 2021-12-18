@@ -24,13 +24,12 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 }
 
 if(isUserLoggedIn()){
-    $templateParams["titolo"] = "Il Dojo dei Panini | Benvenuto Utente";
-    $templateParams["nome"] = "index.php"; //TODO: modificare
+    header("Refresh:0; url=../html/index.html"); // carico il index.html al posto del index.php perchè al momento ha dei problemi con gli stili e gli scripts.
 } else {
-    $templateParams["titolo"] = "Il Dojo dei Panini | Login";
-    $templateParams["nome"] = "login-page.php"; //TODO: modificare
+    if(isAdminLoggedIn()){
+        //TODO: aggiungere schermata per l'admin
+    }
 }
 
-//require '../html/index.html'; //TODO: modificare
-require 'template/base.php';
+require 'login-page.php'; //TODO: qui potrei direttamente caricare login.html
 ?>
