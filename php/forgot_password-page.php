@@ -29,13 +29,13 @@
                             <p><?php echo $templateParams["erroreforgotpassword"]; ?></p>
                         <?php endif; ?>
                             <div class="mb-2 mt-5">
-                                <input type="text" class="form-control username-input" placeholder="Username" />
+                                <input type="text" class="form-control username-input" placeholder="Username" name="username"/>
                                 <img src="../icons/user-solid.svg" alt="User icon" class="img-user" />
-                                <input type="email" class="form-control email-input" placeholder="Email" />
+                                <input type="email" class="form-control email-input" placeholder="Email" name="email"/>
                                 <img src="../icons/envelope-open-solid.svg" alt="Email Icon" class="img-email" />
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control new-password-input" placeholder="New Password" id="password" oninput="passwordStrengthChecker()"/>
+                                <input type="password" class="form-control new-password-input" placeholder="New Password" id="password" oninput="passwordStrengthChecker()" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
                                 <i class="fas fa-exclamation-circle exclamation-icon" id="exclamation-circle"></i>
                                 <p class="password-strength-status" id="password-strength-status"></p> 
@@ -43,7 +43,7 @@
                             </div>
                             
                             <div class="mb-3">
-                                <input type="password" class="form-control password-reinput" placeholder="Confirm Password" id="confirm-password" oninput="passwordMatching()"/>
+                                <input type="password" class="form-control password-reinput" placeholder="Confirm Password" id="confirm-password" oninput="passwordMatching()" name="confirm-password"/>
                                 <img src="../icons/signup/eye-regular.svg" class="password-visibility-confirmation" id="password-visibility-confirmation" alt="Password-visibility-confirmation" onclick="toggleVisibilityConfirmation()" />
                                 <img src="../icons/unlock-alt-solid.svg" alt="Passowrd Confirmation Icon" class="img-password-confirmation" />
                                 <i class="fas fa-exclamation-circle exclamation-confirmation-icon" id="exclamation-circle-confirmation"></i>

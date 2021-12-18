@@ -29,11 +29,11 @@
                             <p><?php echo $templateParams["errorelogin"]; ?></p>
                         <?php endif; ?>
                             <div class="mb-2 mt-5">
-                                <input type="text" class="form-control email-username-input" placeholder="Username | Email" />
+                                <input type="text" class="form-control email-username-input" placeholder="Username | Email" name="username"/>
                                 <img src="../icons/envelope-open-solid.svg" alt="Email Icon" class="img-email" />
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control password-input" id="password" placeholder="Password" />
+                                <input type="password" class="form-control password-input" id="password" placeholder="Password" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
                                 <img src="../icons/signup/eye-regular.svg" class="password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()" />
                                 <!-- <span id="password-visibility" class="password-visibility">
