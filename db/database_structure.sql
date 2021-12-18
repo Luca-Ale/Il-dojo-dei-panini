@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 17, 2021 alle 15:08
+-- Creato il: Dic 18, 2021 alle 19:21
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -36,15 +36,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `password` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `attivo` tinyint(1) NOT NULL,
   PRIMARY KEY (`AdminID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dump dei dati per la tabella `admin`
---
-
-INSERT INTO `admin` (`AdminID`, `username`, `email`, `password`, `attivo`) VALUES
-(1, 'alepipita', 'alexpioggia@gmail.com', '5678', 0),
-(2, 'lukarengo', 'lr@gmail.com', '1234', 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -103,18 +95,6 @@ CREATE TABLE IF NOT EXISTS `prodotti` (
   PRIMARY KEY (`codice_prodotto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dump dei dati per la tabella `prodotti`
---
-
-INSERT INTO `prodotti` (`codice_prodotto`, `nome`, `prezzo`, `quantita_disponibile`, `ingredienti`) VALUES
-(0, 'Cola', 2, 300, 'segreto'),
-(1, 'samurai treccia', 8, 100, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai'),
-(2, 'patatine fritte', 4, 200, 'patate, olio di semi, sale, pepe'),
-(3, 'Pizza', 5, 200, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva'),
-(4, 'katanaburger', 8, 5, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini'),
-(5, 'PANINOZZO', 10, 200, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d');
-
 -- --------------------------------------------------------
 
 --
@@ -144,18 +124,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `attivo` tinyint(1) NOT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dump dei dati per la tabella `users`
---
-
-INSERT INTO `users` (`UserID`, `username`, `email`, `password`, `attivo`) VALUES
-(1, 'tom', 'tom22@gmail.com', 'tom_e_jerry11', 0),
-(2, 'camaleonte', 'carlettorossimbaldi@gmail.com', '1234', 0),
-(3, 'carmiSpii33', 'carmelospyder@gmail.com', 'password', 0),
-(4, 'spera_carmela', 'carmelasperanza@gmail.com', 'caramellagommosa', 0),
-(5, 'george1984', 'georgy@gmail.com', 'mipiacelamalinconia213', 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Limiti per le tabelle scaricate
