@@ -40,7 +40,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function login($username, $password){
+    public function login($username, $password){ //TODO: remove?
         if(substr("admin", 0) === $username){
             $table = "admin";
         } else {
@@ -54,7 +54,7 @@ class DatabaseHelper{
 
     }
 
-    public function isUserLoggedIn($username, $password){
+    public function checkUserLogin($username, $password){
         $stmt = $this->db->prepare("SELECT * FROM users WHERE attivo = 1 AND username = ? AND password=?"); 
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
@@ -62,7 +62,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function isAdminLoggedIn($username, $password){
+    public function checkAdminLogin($username, $password){
         $stmt = $this->db->prepare("SELECT * FROM admin WHERE attivo = 1 AND username = ? AND password=?"); 
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();

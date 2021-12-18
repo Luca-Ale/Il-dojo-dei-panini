@@ -20,6 +20,12 @@ function isAdminLoggedIn(){
 function registerLoggedUser($user){
     $_SESSION["UserID"] = $user["UserID"];
     $_SESSION["username"] = $user["username"];
-    $_SESSION["email"] = $user["email"];
+    $_SESSION["email"] = $user["email"]; //TODO: remove?
+}
+
+function registerLoggedAdmin($admin){
+    $_SESSION["AdminID"] = $admin["AdminID"];
+    $_SESSION["username"] = $admin["username"];
+    $_SESSION["email"] = $admin["email"]; //TODO: remove?
 }
 ?>
