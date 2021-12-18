@@ -7,6 +7,8 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
     if(count($login_result) == 0){
         //Login fallito
         $templateParams["errorelogin"] = "Errore! Controllare username o password!";
+    } else {
+        registerLoggedUser($login_result[0]);
     }
 
 }
@@ -19,5 +21,6 @@ if(isUserLoggedIn()){
     $templateParams["nome"] = "../html/login.html";
 }
 
-require '../html/index.html'; //TODO: modificare
+//require '../html/index.html'; //TODO: modificare
+require 'template/base.php';
 ?>
