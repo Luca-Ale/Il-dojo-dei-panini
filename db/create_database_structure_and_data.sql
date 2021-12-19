@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 18, 2021 alle 19:19
+-- Creato il: Dic 19, 2021 alle 19:01
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -43,8 +43,8 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`AdminID`, `username`, `email`, `password`, `attivo`) VALUES
-(1, 'alepipita', 'alexpioggia@gmail.com', '5678', 0),
-(2, 'lukarengo', 'lr@gmail.com', '1234', 0);
+(1, 'admin Ale', 'alexpioggia@gmail.com', '5678', 1),
+(2, 'admin Luca', 'lr@gmail.com', '1234', 1);
 
 -- --------------------------------------------------------
 
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `attivo` tinyint(1) NOT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dump dei dati per la tabella `users`

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 18, 2021 alle 19:21
+-- Creato il: Dic 19, 2021 alle 19:02
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -28,8 +28,8 @@ USE `dojo`;
 --
 
 INSERT INTO `admin` (`AdminID`, `username`, `email`, `password`, `attivo`) VALUES
-(1, 'alepipita', 'alexpioggia@gmail.com', '5678', 0),
-(2, 'lukarengo', 'lr@gmail.com', '1234', 0);
+(1, 'admin Ale', 'alexpioggia@gmail.com', '5678', 1),
+(2, 'admin Luca', 'lr@gmail.com', '1234', 1);
 
 --
 -- Dump dei dati per la tabella `prodotti`
