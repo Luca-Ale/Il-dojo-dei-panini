@@ -3,7 +3,7 @@ require_once 'bootstrap.php';
 
 if(isset($_POST["username"]) && isset($_POST["password"])){
     //$login_result = $dbh->login($_POST["username"], $_POST["password"]); //TODO: remove
-    if(substr("admin", 0) === $_POST["username"]){
+    if(str_starts_with($_POST["username"], "admin")){
         $login_result = $dbh->checkAdminLogin($_POST["username"], $_POST["password"]);
     } else {
         $login_result = $dbh->checkUserLogin($_POST["username"], $_POST["password"]);
@@ -13,7 +13,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
         //Login fallito
         $templateParams["errorelogin"] = "Errore! Controllare username o password!";
     } else {
-        if(substr("admin", 0) === $_POST["username"]){
+        if(str_starts_with($_POST["username"], "admin")){
             registerLoggedAdmin($login_result[0]);
         } else {
             registerLoggedUser($login_result[0]);
@@ -28,8 +28,11 @@ if(isUserLoggedIn()){
 } else {
     if(isAdminLoggedIn()){
         //TODO: aggiungere schermata per l'admin
+    } /*else {
+        //require 'login-page.php';
     }
 }
 
 require 'login-page.php'; //TODO: qui potrei direttamente caricare login.html
+//TODO: require 'template/base.php';
 ?>
