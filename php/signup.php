@@ -6,16 +6,17 @@ if(isset($_POST["username"]) && isset($_POST["username"]) && isset($_POST["email
         $result_signup = $dbh->registerNewUser($_POST["username"], $_POST["email"], $_POST["password"]);
 
         if($result_signup == false){ //TODO: forse questo controllo non serve nemmeno?
-            $templateParams["erroresignup"] = "Errore nella registrazione. Dati errati!";
+            $templateParams["msgsignup"] = "Errore nella registrazione. Dati errati!";
             
         } else {
             //header("Refresh:0; url=template/base.php");
             //$templateParams["nome"] = "";
 
             //TODO: o alla pagina di login o ad una pagina del tipo "UTENTE CREATO CORRETTAMENTE".
+            $templateParams["msgsignup"] = "Utente creato correttamente!";
         }
     } else {
-        $templateParams["erroresignup"] = "Errore. Le passwords non combaciano";
+        $templateParams["msgsignup"] = "Errore. Le passwords non combaciano";
     }
 }
 
