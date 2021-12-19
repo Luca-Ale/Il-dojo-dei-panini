@@ -79,10 +79,10 @@ class DatabaseHelper{
 	}
 
     public function registerNewUser($username, $email, $password) {
-        $stmt = $this->db->prepare("INSERT INTO users (UserID, username, email, password, attivo) VALUES (NULL, ?, ?, ?, 0)"); //TODO: Oppure 1?
+        $stmt = $this->db->prepare("INSERT INTO users (UserID, username, email, password, attivo) VALUES (NULL, ?, ?, ?, 1)");
         $stmt->bind_param("sss", $username, $email, $password);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        return $stmt->execute(); // Non restituisco il $result perchè non mi andava
+        //$result = $stmt->get_result();
 
         //return $result->fetch_all(MYSQLI_ASSOC); //TODO: remove, non serve
     }
