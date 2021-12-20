@@ -85,16 +85,28 @@ class DatabaseHelper{
     }
 
     public function getShoppingCartTotal() {
-        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prodotto;");
+        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as pwhere p.codice_prodotto = c.cod_prodotto;");
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function deleteFromShoppingCart() {
-        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prod;");
+    /*
+    Query funzionante ma devo decidere come metterla
+    public function getShoppingCartTotal($userID) {
+        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prodotto AND c.cod_utente = ?;");
+        $stmt -> bind_param('i', $userID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    */
+
+    public function deleteFromShoppingCart($userID) {
+        $stmt = $this -> db -> prepare("DELETE from carrello WHERE cod_utente=?");
+        $stmt -> bind_param('i', $userID);
         $stmt->execute();
     }
-    
+
 }
 ?>
