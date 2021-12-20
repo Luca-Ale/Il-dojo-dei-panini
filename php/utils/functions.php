@@ -29,6 +29,10 @@ function registerLoggedAdmin($admin){
     $_SESSION["email"] = $admin["email"]; //TODO: remove?
 }
 
+function getEmptyProduct(){
+    return array("codice_prodotto" => "", "nomeprodotto" => "", "prezzoprodotto" => "", "quantita_disponibile" => "", "ingredienti" => "", "img" => "");
+}
+
 function getAction($action){
     $result = "";
     switch($action){
