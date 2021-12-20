@@ -2,8 +2,11 @@
 class DatabaseHelper{
     private $db;
 
-    public function __construct($servername, $username, $password, $dbname){
-        $this->db = new mysqli($servername, $username, $password, $dbname);
+    public function __construct($servername, $username, $password, $dbname, $port){
+        $this->db = new mysqli($servername, $username, $password, $dbname, $port);
+        if($this->db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
     }
 
     public function getMenuByPriceOrder() {
@@ -37,13 +40,13 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function login($username, $password){
+    public function login($username, $password){ //TODO: remove?
         if(substr("admin", 0) === $username){
             $table = "admin";
         } else {
             $table = "users";
         }
-        $stmt = $this->db->prepare("SELECT * FROM ? WHERE username = ? OR email = ? AND password = ? AND ATTIVO = 0");  // ATTIVO = 0 per assicurarci che non era già loggato.
+        $stmt = $this->db->prepare("SELECT * FROM ? WHERE username = ? OR email = ? AND password = ? AND attivo = 0");  // ATTIVO = 0 per assicurarci che non era già loggato.
         $stmt->bind_param("ssss", $table, $username, $username, $password); // metto username due volte perchè posso usare sia la username che l'email per loggare. (però c'è solo un campo nel login sia per uno che per l'altro)
         $stmt->execute();
         $result = $stmt->get_result();
@@ -51,16 +54,16 @@ class DatabaseHelper{
 
     }
 
-    public function isUserLoggedIn($username, $password){
-        $stmt = $this->db->prepare("SELECT * FROM users WHERE ATTIVO = 1 AND username = ? AND password=?"); 
+    public function checkUserLogin($username, $password){
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE attivo = 1 AND username = ? AND password=?"); 
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function isAdminLoggedIn($username, $password){
-        $stmt = $this->db->prepare("SELECT * FROM admin WHERE ATTIVO = 1 AND username = ? AND password=?"); 
+    public function checkAdminLogin($username, $password){
+        $stmt = $this->db->prepare("SELECT * FROM admin WHERE attivo = 1 AND username = ? AND password=?"); 
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -75,13 +78,13 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
 	}
 
-    public function registerNewUser($username, $email, $password, $attivo) { //TODO: attivo forse non serve.
-        $stmt = $this->db->prepare("INSERT INTO users (ID, CF_cliente, nome, cognome, username, email, password, ATTIVO) VALUES (NULL, NULL, NULL, NULL, ?, ?, ?, ?)"); //TODO: CF_cliente, nome, cognome sono di default NULL in realtà.
-        $stmt->bind_param('sssi', $username, $email, $password, $attivo);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    public function registerNewUser($username, $email, $password) {
+        $stmt = $this->db->prepare("INSERT INTO users (UserID, username, email, password, attivo) VALUES (NULL, ?, ?, ?, 1)");
+        $stmt->bind_param("sss", $username, $email, $password);
+        return $stmt->execute(); // Non restituisco il $result perchè non mi andava
+        //$result = $stmt->get_result();
 
-        return $result->fetch_all(MYSQLI_ASSOC);
+        //return $result->fetch_all(MYSQLI_ASSOC); //TODO: remove, non serve
     }
 
     public function getShoppingCartTotal() {

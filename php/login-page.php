@@ -24,7 +24,10 @@
                             <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
                         </div>
                         <h3 class="login-title">Login</h3>
-                        <form action="../php/login.php" method="POST">
+                        <form action="login.php" method="POST">
+                        <?php if(isset($templateParams["errorelogin"])): ?>
+                            <p style="color:red"><?php echo $templateParams["errorelogin"]; ?></p>
+                        <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control email-username-input" placeholder="Username | Email" name="username"/>
                                 <img src="../icons/envelope-open-solid.svg" alt="Email Icon" class="img-email" />
@@ -32,7 +35,7 @@
                             <div class="mb-3">
                                 <input type="password" class="form-control password-input" id="password" placeholder="Password" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
-                                <img src="../icons/signup/eye-regular.svg" class="password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()"/>
+                                <img src="../icons/signup/eye-regular.svg" class="password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()" />
                                 <!-- <span id="password-visibility" class="password-visibility">
                                     <i class="fas fa-eye"></i>
                                 </span> -->

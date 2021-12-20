@@ -24,7 +24,10 @@
                             <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
                         </div>
                         <h3 class="signup-title">Sign up</h3>
-                        <form action="../php/signup.php" method="POST">
+                        <form action="signup.php" method="POST">
+                        <?php if(isset($templateParams["msgsignup"])): ?>
+                            <p style="color:red"><?php echo $templateParams["msgsignup"]; ?></p>
+                        <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control username-input" placeholder="Username" name="username"/>
                                 <img src="../icons/user-solid.svg" alt="User icon" class="img-user" />
@@ -36,7 +39,7 @@
                                 <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
                                 <i class="fas fa-exclamation-circle exclamation-icon" id="exclamation-circle"></i>
                                 <p class="password-strength-status" id="password-strength-status"></p> 
-                                <img src="../icons/signup/eye-regular.svg" class="password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()"/>
+                                <img src="../icons/signup/eye-regular.svg" class="password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()" />
                             </div>
                             
                             <div class="mb-3">
