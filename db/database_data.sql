@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 19, 2021 alle 19:02
+-- Creato il: Dic 20, 2021 alle 22:11
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -35,13 +35,13 @@ INSERT INTO `admin` (`AdminID`, `username`, `email`, `password`, `attivo`) VALUE
 -- Dump dei dati per la tabella `prodotti`
 --
 
-INSERT INTO `prodotti` (`codice_prodotto`, `nome`, `prezzo`, `quantita_disponibile`, `ingredienti`) VALUES
-(0, 'Cola', 2, 300, 'segreto'),
-(1, 'samurai treccia', 8, 100, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai'),
-(2, 'patatine fritte', 4, 200, 'patate, olio di semi, sale, pepe'),
-(3, 'Pizza', 5, 200, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva'),
-(4, 'katanaburger', 8, 5, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini'),
-(5, 'PANINOZZO', 10, 200, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d');
+INSERT INTO `prodotti` (`codice_prodotto`, `nome`, `prezzo`, `quantita_disponibile`, `ingredienti`, `img`) VALUES
+(1, 'Cola', 2, 300, 'segreto', ''),
+(2, 'samurai treccia', 8, 100, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai', ''),
+(3, 'patatine fritte', 4, 200, 'patate, olio di semi, sale, pepe', ''),
+(4, 'Pizza', 5, 200, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva', ''),
+(5, 'katanaburger', 8, 5, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini', ''),
+(6, 'PANINOZZO', 10, 200, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d', '');
 
 --
 -- Dump dei dati per la tabella `users`

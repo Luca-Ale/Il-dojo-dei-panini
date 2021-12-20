@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 18, 2021 alle 19:21
+-- Creato il: Dic 20, 2021 alle 22:11
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -45,11 +45,11 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 CREATE TABLE IF NOT EXISTS `carrello` (
-  `cod_prodotto` int(8) NOT NULL,
+  `cod_prodotto` int(8) UNSIGNED NOT NULL,
   `cod_utente` int(10) NOT NULL,
   `quantita` int(5) NOT NULL,
-  KEY `cod_prodotto` (`cod_prodotto`),
-  KEY `cod_utente` (`cod_utente`)
+  KEY `cod_utente` (`cod_utente`),
+  KEY `cod_prodotto` (`cod_prodotto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -73,11 +73,11 @@ CREATE TABLE IF NOT EXISTS `ordini` (
 --
 
 CREATE TABLE IF NOT EXISTS `prod-ordine` (
-  `codice_prodotto` int(8) NOT NULL,
+  `codice_prodotto` int(8) UNSIGNED NOT NULL,
   `codice_ordine` int(8) NOT NULL,
   `quantita_ordinata` int(5) NOT NULL,
-  KEY `codice_prodotto` (`codice_prodotto`),
-  KEY `codice_ordine` (`codice_ordine`)
+  KEY `codice_ordine` (`codice_ordine`),
+  KEY `codice_prodotto` (`codice_prodotto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -87,11 +87,12 @@ CREATE TABLE IF NOT EXISTS `prod-ordine` (
 --
 
 CREATE TABLE IF NOT EXISTS `prodotti` (
-  `codice_prodotto` int(8) NOT NULL,
+  `codice_prodotto` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `nome` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `prezzo` int(4) NOT NULL,
   `quantita_disponibile` int(5) NOT NULL,
   `ingredienti` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `img` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`codice_prodotto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

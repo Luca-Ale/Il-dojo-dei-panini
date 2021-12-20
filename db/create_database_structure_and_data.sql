@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 19, 2021 alle 19:01
+-- Creato il: Dic 20, 2021 alle 22:11
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -53,11 +53,11 @@ INSERT INTO `admin` (`AdminID`, `username`, `email`, `password`, `attivo`) VALUE
 --
 
 CREATE TABLE IF NOT EXISTS `carrello` (
-  `cod_prodotto` int(8) NOT NULL,
+  `cod_prodotto` int(8) UNSIGNED NOT NULL,
   `cod_utente` int(10) NOT NULL,
   `quantita` int(5) NOT NULL,
-  KEY `cod_prodotto` (`cod_prodotto`),
-  KEY `cod_utente` (`cod_utente`)
+  KEY `cod_utente` (`cod_utente`),
+  KEY `cod_prodotto` (`cod_prodotto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -81,11 +81,11 @@ CREATE TABLE IF NOT EXISTS `ordini` (
 --
 
 CREATE TABLE IF NOT EXISTS `prod-ordine` (
-  `codice_prodotto` int(8) NOT NULL,
+  `codice_prodotto` int(8) UNSIGNED NOT NULL,
   `codice_ordine` int(8) NOT NULL,
   `quantita_ordinata` int(5) NOT NULL,
-  KEY `codice_prodotto` (`codice_prodotto`),
-  KEY `codice_ordine` (`codice_ordine`)
+  KEY `codice_ordine` (`codice_ordine`),
+  KEY `codice_prodotto` (`codice_prodotto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -95,25 +95,26 @@ CREATE TABLE IF NOT EXISTS `prod-ordine` (
 --
 
 CREATE TABLE IF NOT EXISTS `prodotti` (
-  `codice_prodotto` int(8) NOT NULL,
+  `codice_prodotto` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `nome` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `prezzo` int(4) NOT NULL,
   `quantita_disponibile` int(5) NOT NULL,
   `ingredienti` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `img` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`codice_prodotto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dump dei dati per la tabella `prodotti`
 --
 
-INSERT INTO `prodotti` (`codice_prodotto`, `nome`, `prezzo`, `quantita_disponibile`, `ingredienti`) VALUES
-(0, 'Cola', 2, 300, 'segreto'),
-(1, 'samurai treccia', 8, 100, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai'),
-(2, 'patatine fritte', 4, 200, 'patate, olio di semi, sale, pepe'),
-(3, 'Pizza', 5, 200, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva'),
-(4, 'katanaburger', 8, 5, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini'),
-(5, 'PANINOZZO', 10, 200, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d');
+INSERT INTO `prodotti` (`codice_prodotto`, `nome`, `prezzo`, `quantita_disponibile`, `ingredienti`, `img`) VALUES
+(1, 'Cola', 2, 300, 'segreto', ''),
+(2, 'samurai treccia', 8, 100, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai', ''),
+(3, 'patatine fritte', 4, 200, 'patate, olio di semi, sale, pepe', ''),
+(4, 'Pizza', 5, 200, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva', ''),
+(5, 'katanaburger', 8, 5, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini', ''),
+(6, 'PANINOZZO', 10, 200, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d', '');
 
 -- --------------------------------------------------------
 
@@ -144,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `attivo` tinyint(1) NOT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dump dei dati per la tabella `users`
