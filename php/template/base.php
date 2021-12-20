@@ -25,7 +25,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../html/shop.html">Shop</a> <!-- TODO: add link -->
+                    <a class="nav-link" href="shop.php">Shop</a> <!-- TODO: add link -->
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="../html/about.html">About</a> <!-- TODO: add link -->
