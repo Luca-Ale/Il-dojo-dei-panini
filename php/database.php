@@ -5,7 +5,7 @@ class DatabaseHelper{
     public function __construct($servername, $username, $password, $dbname, $port){
         $this->db = new mysqli($servername, $username, $password, $dbname, $port);
         if($this->db->connect_error){
-            die("Connection failed: " . $db->connect_error);
+            //die("Connection failed: " . $db->connect_error);
         }
     }
 
@@ -81,14 +81,11 @@ class DatabaseHelper{
     public function registerNewUser($username, $email, $password) {
         $stmt = $this->db->prepare("INSERT INTO users (UserID, username, email, password, attivo) VALUES (NULL, ?, ?, ?, 1)");
         $stmt->bind_param("sss", $username, $email, $password);
-        return $stmt->execute(); // Non restituisco il $result perchè non mi andava
-        //$result = $stmt->get_result();
-
-        //return $result->fetch_all(MYSQLI_ASSOC); //TODO: remove, non serve
+        $stmt->execute(); 
     }
 
     public function getShoppingCartTotal() {
-        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as pwhere p.codice_prodotto = c.cod_prodotto;");
+        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prodotto;");
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
@@ -105,10 +102,22 @@ class DatabaseHelper{
     }
     */
 
-    public function deleteFromShoppingCart($userID) {
+    public function deleteAllFromShoppingCart($userID) {
         $stmt = $this -> db -> prepare("DELETE from carrello WHERE cod_utente=?");
         $stmt -> bind_param('i', $userID);
         $stmt->execute();
+    }
+
+    public function addToShoppingCart($cod_prodotto, $userID, $quantity) {
+        $stmt = $this->db->prepare("INSERT INTO carrello VALUES (?, ?, ?)");
+        $stmt->bind_param("iii", $cod_prodotto, $userID, $quantity);
+        $stmt->execute(); 
+    }
+
+    public function deleteFromShoppingCart($cod_prodotto, $userID) {
+        $stmt = $this->db->prepare("DELETE from carrello WHERE cod_prodotto=? AND cod_utente=?");
+        $stmt->bind_param("iii", $cod_prodotto, $userID);
+        $stmt->execute(); 
     }
 
 }

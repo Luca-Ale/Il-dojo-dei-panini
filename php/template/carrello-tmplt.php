@@ -5,7 +5,7 @@
         </tr>
         <?php foreach($templateParams["product"] as $prod): ?>
         <tr>
-            <th id="<?php echo $prod["nome"]; ?>"><?php echo $prod["nome"]; ?><th id="<?php echo $prod["quantità"]; ?>"><?php echo $prod["quantità"]; ?><th id="<?php echo $prod["prezzo"]; ?>"><?php echo $prod["prezzo"]; ?><th><a href="rimozione.php">Rimuovi dal carrello</th></td>
+            <th id="<?php echo $prod["nome"]; ?>"><?php echo $prod["nome"]; ?><th id="<?php echo $prod["quantita"]; ?>"><?php echo $prod["quantita"]; ?><th id="<?php echo $prod["prezzo"]; ?>"><?php echo $prod["prezzo"]; ?><th><a href="rimozione.php">Rimuovi dal carrello</th></td>
         </tr>
         <?php endforeach; ?>
     </table>
