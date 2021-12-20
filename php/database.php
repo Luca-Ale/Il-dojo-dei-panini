@@ -17,12 +17,30 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function insertProductOnMenu($codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti) {
-        $stmt = $this -> db -> prepare("INSERT INTO prodotti VALUES (?, ?, ?, ?, ?)");
-        $stmt -> bind_param('isiis', $codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti);
+    public function insertProductOnMenu($codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti, $img) {
+        $stmt = $this -> db -> prepare("INSERT INTO prodotti VALUES (NULL, ?, ?, ?, ?, ?)");
+        $stmt -> bind_param('isiiss', $codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti, $img);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getProductById($codProdotto){
+        $query = "SELECT codice_prodotto, nome, prezzo, quantita_disponibile, ingredienti, img FROM prodotti WHERE codice_prodotto = ? GROUP BY codice_prodotto";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $codProdotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function updateProduct($codProdotto, $nome, $prezzo, $quantita, $ingredienti, $img){
+        $query = "UPDATE prodotti SET nome = ?, prezzo = ?, quantita_disponibile = ?, ingredienti = ?, img = ?  WHERE codice_prodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('siisi',$nome, $prezzo, $quantita, $ingredienti, $img, $codProdotto);
+        
+        return $stmt->execute();
     }
 
     public function deleteProductOnMenuByCode($codice) {
