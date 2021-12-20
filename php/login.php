@@ -28,7 +28,7 @@ if(isUserLoggedIn()){
 } else {
     if(isAdminLoggedIn()){
         //TODO: aggiungere schermata per l'admin
-    } /*else {
+    } else {
         //require 'login-page.php';
     }
 }
