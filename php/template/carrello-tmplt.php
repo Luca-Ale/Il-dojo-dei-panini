@@ -11,4 +11,5 @@
     </table>
     <?php echo "totale carrello: "; echo $templateParams["total"][0]["totale"];?>
     <a href="svuota_carrello.php">svuota il carrello
+    <a href="#">procedi con l'acquisto
 </section>
