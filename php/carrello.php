@@ -7,7 +7,7 @@ if (isUserLoggedIn()) {
     $templateParams["product"] = $dbh->getShoppingCartProducts($_SESSION["UserID"]);
     $templateParams["titolo"] = "carrello";
     $templateParams["nome"] = "carrello-tmplt.php";
-    $templateParams["total"] = $dbh->getShoppingCartTotal();
+    $templateParams["total"] = $dbh->getShoppingCartTotal($_SESSION["UserID"]);
 }
 
 require 'template/base.php';
