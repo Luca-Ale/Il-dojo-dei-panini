@@ -20,13 +20,13 @@ function isAdminLoggedIn(){
 function registerLoggedUser($user){
     $_SESSION["UserID"] = $user["UserID"];
     $_SESSION["username"] = $user["username"];
-    $_SESSION["email"] = $user["email"]; //TODO: remove?
+    $_SESSION["email"] = $user["email"]; //TODO: remove? no
 }
 
 function registerLoggedAdmin($admin){
     $_SESSION["AdminID"] = $admin["AdminID"];
     $_SESSION["username"] = $admin["username"];
-    $_SESSION["email"] = $admin["email"]; //TODO: remove?
+    $_SESSION["email"] = $admin["email"]; //TODO: remove? no
 }
 
 function getEmptyProduct(){

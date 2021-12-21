@@ -24,7 +24,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 }
 
 if(isUserLoggedIn()){
-    header("Refresh:0; url=../html/index.html"); // carico il index.html al posto del index.php perchè al momento ha dei problemi con gli stili e gli scripts.
+    header("Refresh:0; url=../html/index.php"); // carico il index.html al posto del index.php perchè al momento ha dei problemi con gli stili e gli scripts.
 } else {
     if(isAdminLoggedIn()){
         //TODO: aggiungere schermata per l'admin

@@ -58,7 +58,7 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function login($username, $password){ //TODO: remove?
+    public function login($username, $password){ //TODO: remove? ah boh
         if(substr("admin", 0) === $username){
             $table = "admin";
         } else {
