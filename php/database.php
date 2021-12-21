@@ -51,8 +51,9 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function getShoppingCartProducts() {
-        $stmt = $this -> db -> prepare("SELECT * FROM carrello AS c, prodotti AS p WHERE p.codice_prodotto = c.cod_prodotto;"); // serve il ; nella query ? Nelle altre non serve.
+    public function getShoppingCartProducts($userID) {
+        $stmt = $this -> db -> prepare("SELECT * FROM carrello AS c, prodotti AS p WHERE p.codice_prodotto = c.cod_prodotto AND c.cod_utente = ?;"); // serve il ; nella query ? Nelle altre non serve. Non è obbligatorio, serve in caso si debbano fare query a cascata. Diciamo che è una buona abitudine metterlo ma non è indispensabile.
+        $stmt->bind_param('i', $userID);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);

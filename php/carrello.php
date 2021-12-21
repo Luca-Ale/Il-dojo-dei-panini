@@ -2,10 +2,13 @@
 require_once 'bootstrap.php';
 
 //Base Template
-$templateParams["titolo"] = "carrello";
-$templateParams["nome"] = "carrello-tmplt.php";
-$templateParams["product"] = $dbh->getShoppingCartProducts();
-$templateParams["total"] = $dbh->getShoppingCartTotal();
+
+if (isUserLoggedIn()) {
+    $templateParams["product"] = $dbh->getShoppingCartProducts($_SESSION["UserID"]);
+    $templateParams["titolo"] = "carrello";
+    $templateParams["nome"] = "carrello-tmplt.php";
+    $templateParams["total"] = $dbh->getShoppingCartTotal();
+}
 
 require 'template/base.php';
 ?>
