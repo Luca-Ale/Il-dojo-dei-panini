@@ -125,7 +125,7 @@ class DatabaseHelper{
 
     public function deleteFromShoppingCart($cod_prodotto, $userID) {
         $stmt = $this->db->prepare("DELETE from carrello WHERE cod_prodotto=? AND cod_utente=?");
-        $stmt->bind_param("iii", $cod_prodotto, $userID);
+        $stmt->bind_param("ii", $cod_prodotto, $userID);
         $stmt->execute(); 
     }
 
