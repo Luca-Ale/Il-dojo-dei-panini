@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Creato il: Dic 20, 2021 alle 22:11
--- Versione del server: 10.4.21-MariaDB
--- Versione PHP: 8.0.12
+-- Host: 127.0.0.1
+-- Creato il: Dic 21, 2021 alle 18:11
+-- Versione del server: 10.4.22-MariaDB
+-- Versione PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -60,6 +60,18 @@ CREATE TABLE IF NOT EXISTS `carrello` (
   KEY `cod_prodotto` (`cod_prodotto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dump dei dati per la tabella `carrello`
+--
+
+INSERT INTO `carrello` (`cod_prodotto`, `cod_utente`, `quantita`) VALUES
+(1, 1, 10),
+(5, 1, 1),
+(1, 5, 6),
+(2, 5, 6),
+(3, 5, 6),
+(4, 5, 6);
+
 -- --------------------------------------------------------
 
 --
@@ -109,12 +121,12 @@ CREATE TABLE IF NOT EXISTS `prodotti` (
 --
 
 INSERT INTO `prodotti` (`codice_prodotto`, `nome`, `prezzo`, `quantita_disponibile`, `ingredienti`, `img`) VALUES
-(1, 'Cola', 2, 300, 'segreto', ''),
-(2, 'samurai treccia', 8, 100, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai', ''),
-(3, 'patatine fritte', 4, 200, 'patate, olio di semi, sale, pepe', ''),
-(4, 'Pizza', 5, 200, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva', ''),
-(5, 'katanaburger', 8, 5, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini', ''),
-(6, 'PANINOZZO', 10, 200, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d', '');
+(1, 'Cola', 2, 300, 'segreto', 'cocacola.jpg'),
+(2, 'samurai treccia', 8, 100, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai', 'panino_con_spalla.jpg'),
+(3, 'patatine fritte', 4, 200, 'patate, olio di semi, sale, pepe', 'patatinefritte.jpg'),
+(4, 'Pizza', 5, 200, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva', 'pizze_classiche_gourmet.jpg\r\n'),
+(5, 'katanaburger', 8, 5, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini', 'panino_gourmet.png\r\n'),
+(6, 'PANINOZZO', 10, 200, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d', 'toasts.jpg');
 
 -- --------------------------------------------------------
 
@@ -145,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `attivo` tinyint(1) NOT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dump dei dati per la tabella `users`
