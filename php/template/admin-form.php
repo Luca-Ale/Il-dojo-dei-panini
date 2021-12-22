@@ -15,7 +15,7 @@ $azione = getAction($templateParams["azione"])
             <label for="prezzoprodotto">Prezzo:</label><input type="text" id="prezzoprodotto" name="prezzoprodotto" value="<?php echo $prodotto["prezzo"]; ?>" /> 
         </li>
         <li>
-            <label for="quantitaprodotto">Quantità:</label><input type="text" id="quantitaprodotto" name="quantitaprodotto"><?php echo $prodotto["quantita_disponibile"]; ?>
+            <label for="quantitaprodotto">Quantità:</label><input type="text" id="quantitaprodotto" name="quantitaprodotto" value="<?php echo $prodotto["quantita_disponibile"]; ?>">
         </li>
         <li>
             <label for="ingredientiprodotto">Ingredienti:</label><textarea id="ingredientiprodotto" name="ingredientiprodotto"><?php echo $prodotto["ingredienti"]; ?></textarea>
