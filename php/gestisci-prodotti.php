@@ -1,7 +1,7 @@
 <?php
 require_once 'bootstrap.php';
 
-if(!isUserLoggedIn() || !isset($_GET["action"]) || ($_GET["action"]!=1 && $_GET["action"]!=2 && $_GET["action"]!=3) || ($_GET["action"]!=1 && !isset($_GET["id"]))){
+if(!isAdminLoggedIn() || !isset($_GET["action"]) || ($_GET["action"]!=1 && $_GET["action"]!=2 && $_GET["action"]!=3) || ($_GET["action"]!=1 && !isset($_GET["id"]))){
     header("location: login.php");
 }
 
@@ -11,10 +11,13 @@ if($_GET["action"]!=1){
         $templateParams["prodotto"] = null;
     }
     else{
-        //TODO:
+        // ACTION 2
+        $templateParams["prodotto"] = $risultato[0];
+        var_dump($risultato[0]); //TODO: remove
     }
 }
 else{
+    // ACTION 1
     $templateParams["prodotto"] = getEmptyProduct(); 
 }
 
