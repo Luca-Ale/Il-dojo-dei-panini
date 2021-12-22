@@ -33,6 +33,7 @@ if(isUserLoggedIn()){
             $templateParams["formmsg"] = $_GET["formmsg"];
         }
     } else {
+        $templateParams["titolo"] = "Il Dojo dei Panini | Login";
         $templateParams["nome"] = "login-page.php";
     }
 }
