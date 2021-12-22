@@ -9,23 +9,23 @@ $azione = getAction($templateParams["azione"])
     <?php else: ?>
     <ul>
         <li>
-            <label for="nomeprodotto">Nome:</label><input type="text" id="nomeprodotto" name="nomeprodotto" value="<?php echo $prodotto["nome"]; ?>" /> 
+            <label for="nomeprodotto">Nome:</label><input type="text" id="nomeprodotto" name="nome" value="<?php echo $prodotto["nome"]; ?>" /> 
         </li>
         <li>
-            <label for="prezzoprodotto">Prezzo:</label><input type="text" id="prezzoprodotto" name="prezzoprodotto" value="<?php echo $prodotto["prezzo"]; ?>" /> 
+            <label for="prezzoprodotto">Prezzo:</label><input type="text" id="prezzoprodotto" name="prezzo" value="<?php echo $prodotto["prezzo"]; ?>" /> 
         </li>
         <li>
-            <label for="quantitaprodotto">Quantità:</label><input type="text" id="quantitaprodotto" name="quantitaprodotto" value="<?php echo $prodotto["quantita_disponibile"]; ?>">
+            <label for="quantitaprodotto">Quantità:</label><input type="text" id="quantitaprodotto" name="quantita_disponibile" value="<?php echo $prodotto["quantita_disponibile"]; ?>">
         </li>
         <li>
-            <label for="ingredientiprodotto">Ingredienti:</label><textarea id="ingredientiprodotto" name="ingredientiprodotto"><?php echo $prodotto["ingredienti"]; ?></textarea>
+            <label for="ingredientiprodotto">Ingredienti:</label><textarea id="ingredientiprodotto" name="ingredienti"><?php echo $prodotto["ingredienti"]; ?></textarea>
         </li>
         <li>
             <?php if($templateParams["azione"]!=3): ?>
-            <label for="imgprodotto">Immagine Prodotto</label><input type="file" name="imgprodotto" id="imgprodotto" />
+            <label for="imgprodotto">Immagine Prodotto</label><input type="file" name="img" id="imgprodotto" />
             <?php endif; ?>
             <?php if($templateParams["azione"]!=1): ?>
-            <img src="<?php echo IMG_DIR.$prodotto["img"]; ?>" alt="" />
+            <img width="360" height="360" src="<?php echo IMG_DIR.$prodotto["img"]; ?>" alt="" />
             <?php endif; ?>
         </li>
         <li>
@@ -34,7 +34,7 @@ $azione = getAction($templateParams["azione"])
         </li>
     </ul>
         <?php if($templateParams["azione"]!=1): ?>
-        <input type="hidden" name="idprodotto" value="<?php echo $prodotto["codice_prodotto"]; ?>" />
+        <input type="hidden" name="codice_prodotto" value="<?php echo $prodotto["codice_prodotto"]; ?>" />
         <input type="hidden" name="oldimg" value="<?php echo $prodotto["img"]; ?>" />
         <?php endif;?>
 
