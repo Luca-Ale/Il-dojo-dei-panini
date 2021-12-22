@@ -23,16 +23,19 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 }
 
 if(isUserLoggedIn()){
-    header("Refresh:0; url=carrello.php"); // carico il index.html al posto del index.php perchè al momento ha dei problemi con gli stili e gli scripts.
+    header("Refresh:0; url=carrello.php");
 } else {
     if(isAdminLoggedIn()){
-        //TODO: aggiungere schermata per l'admin
-        header("Refresh:0; url=../php/login-home-admin.php");
+        $templateParams["nome"] = "login-home-admin.php";
+        $templateParams["prodotti"] = $dbh->getAllProducts();
+        if(isset($_GET["formmsg"])){
+            $templateParams["formmsg"] = $_GET["formmsg"];
+        }
     } else {
-        //require 'login-page.php';
+        $templateParams["nome"] = "login-page.php";
     }
 }
 
-require 'login-page.php'; //TODO: qui potrei direttamente caricare login.html
-//TODO: require 'template/base.php';
+//require 'login-page.php'; //TODO: remove?
+require 'template/base.php';
 ?>
