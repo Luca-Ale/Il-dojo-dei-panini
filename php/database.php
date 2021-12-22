@@ -20,9 +20,9 @@ class DatabaseHelper{
     public function insertProductOnMenu($nome, $prezzo, $quantitaDisponibile, $ingredienti, $img) { // Ho rimosso il $codice come parametro
         $stmt = $this -> db -> prepare("INSERT INTO prodotti VALUES (NULL, ?, ?, ?, ?, ?)");
         $stmt -> bind_param('siiss', $nome, $prezzo, $quantitaDisponibile, $ingredienti, $img);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_all(MYSQLI_ASSOC);
+        return $stmt->execute();
+        //$result = $stmt->get_result();
+        //return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function getProductById($codProdotto){
