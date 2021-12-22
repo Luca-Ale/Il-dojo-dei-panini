@@ -18,7 +18,7 @@
                                 <h4><?php echo $prod["nome"]?></h4> 
                                 <p>Ingredienti : <?php echo $prod["ingredienti"]?></p>
                                 <p class="prezzo">Prezzo : <?php echo $prod["prezzo"]?>$</p>
-                                <input type="button" class="btn btn-success" value="Aggiungi al carrello" />
+                                <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="Aggiungi al carrello" /></a>
                             </div>
                             </div>
                         </div>

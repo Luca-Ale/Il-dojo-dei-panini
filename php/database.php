@@ -123,11 +123,33 @@ class DatabaseHelper{
         $stmt->execute(); 
     }
 
+    public function addQuantityToShoppingCart($cod_prodotto, $userID) {
+        $stmt = $this->db->prepare("UPDATE carrello SET quantita = (quantita + 1) WHERE cod_prodotto=? AND cod_utente=?");
+        $stmt->bind_param("ii", $cod_prodotto, $userID);
+        $stmt->execute(); 
+    }
+
+    public function removeQuantityFromShoppingCart() {
+        $stmt = $this->db->prepare("");
+        $stmt->bind_param("iii", $cod_prodotto, $userID, $quantity);
+        $stmt->execute(); 
+    }
+
     public function deleteFromShoppingCart($cod_prodotto, $userID) {
         $stmt = $this->db->prepare("DELETE from carrello WHERE cod_prodotto=? AND cod_utente=?");
         $stmt->bind_param("ii", $cod_prodotto, $userID);
         $stmt->execute(); 
     }
+
+    public function isProductAlreadyOnShoppingCart($cod_prodotto, $cod_utente) {
+        $stmt = $this -> db -> prepare("SELECT * from carrello WHERE cod_prodotto=? AND cod_utente=?");
+        $stmt->bind_param('ii', $cod_prodotto, $cod_utente);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    
 
 }
 ?>
