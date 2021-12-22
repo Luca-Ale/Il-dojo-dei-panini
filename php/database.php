@@ -129,12 +129,6 @@ class DatabaseHelper{
         $stmt->execute(); 
     }
 
-    public function removeQuantityFromShoppingCart() {
-        $stmt = $this->db->prepare("");
-        $stmt->bind_param("iii", $cod_prodotto, $userID, $quantity);
-        $stmt->execute(); 
-    }
-
     public function deleteFromShoppingCart($cod_prodotto, $userID) {
         $stmt = $this->db->prepare("DELETE from carrello WHERE cod_prodotto=? AND cod_utente=?");
         $stmt->bind_param("ii", $cod_prodotto, $userID);
@@ -149,7 +143,23 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    
+    public function createOrder($UserID) {
+        $stmt = $this->db->prepare("INSERT INTO ordini VALUES(NULL, ?, CURRENT_TIMESTAMP)");
+        $stmt->bind_param("i", $UserID);
+        $stmt->execute(); 
+    }
 
+    public function getLastOrderID() {
+        $stmt = $this -> db -> prepare("SELECT MAX(codice_prodotto) from ordini");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function addProductToOrder($codice_prodotto, $codice_ordine, $quantita_ordine) {
+        $stmt = $this->db->prepare("INSERT INTO prod-ordine VALUES(?, ?, ?)");
+        $stmt->bind_param("iii", $codice_prodotto, $codice_ordine, $quantita_ordine);
+        $stmt->execute();
+    }
 }
 ?>
