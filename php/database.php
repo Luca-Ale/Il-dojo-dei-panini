@@ -17,9 +17,9 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function insertProductOnMenu($codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti, $img) {
+    public function insertProductOnMenu($nome, $prezzo, $quantitaDisponibile, $ingredienti, $img) { // Ho rimosso il $codice come parametro
         $stmt = $this -> db -> prepare("INSERT INTO prodotti VALUES (NULL, ?, ?, ?, ?, ?)");
-        $stmt -> bind_param('isiiss', $codice, $nome, $prezzo, $quantitaDisponibile, $ingredienti, $img);
+        $stmt -> bind_param('siiss', $nome, $prezzo, $quantitaDisponibile, $ingredienti, $img);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
@@ -35,10 +35,19 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getAllProducts(){
+        $query = "SELECT codice_prodotto, nome, prezzo, quantita_disponibile, ingredienti, img FROM prodotti";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function updateProduct($codProdotto, $nome, $prezzo, $quantita, $ingredienti, $img){
         $query = "UPDATE prodotti SET nome = ?, prezzo = ?, quantita_disponibile = ?, ingredienti = ?, img = ?  WHERE codice_prodotto = ?";
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('siisi',$nome, $prezzo, $quantita, $ingredienti, $img, $codProdotto);
+        $stmt->bind_param('siissi',$nome, $prezzo, $quantita, $ingredienti, $img, $codProdotto);
         
         return $stmt->execute();
     }
@@ -46,9 +55,9 @@ class DatabaseHelper{
     public function deleteProductOnMenuByCode($codice) {
         $stmt = $this -> db -> prepare("DELETE FROM prodotti WHERE codice_prodotto = ?");
         $stmt->bind_param('i', $codice);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_all(MYSQLI_ASSOC);
+        return $stmt->execute();
+        //$result = $stmt->get_result();
+        //return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function getShoppingCartProducts($userID) {
