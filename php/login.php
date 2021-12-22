@@ -27,6 +27,7 @@ if(isUserLoggedIn()){
 } else {
     if(isAdminLoggedIn()){
         //TODO: aggiungere schermata per l'admin
+        header("Refresh:0; url=../php/login-home-admin.php");
     } else {
         //require 'login-page.php';
     }
