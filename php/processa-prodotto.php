@@ -14,7 +14,7 @@ if($_POST["action"] == 1){
     list($result, $msg) = uploadImage(IMG_DIR, $_FILES["img"]);
     if($result != 0){
         $imgprodotto = $msg;
-        $id = $dbh->insertProductOnMenu($nomeprodotto, $prezzoprodotto, $quantitaprodotto, $ingredientiProdotto, $imgprodotto); //TODO: rename id
+        $id = $dbh->insertProductOnMenu($nomeProdotto, $prezzoProdotto, $quantitaProdotto, $ingredientiProdotto, $imgprodotto); //TODO: rename id
         
     }
     header("location: login.php?formmsg=".$msg);
@@ -32,11 +32,11 @@ if($_POST["action"] == 2){
         if($result == 0){
             header("location: login.php?formmsg=".$msg);
         }
-        $imgprodotto = $msg;
+        $imgProdotto = $msg;
 
     }
     else{
-        $imgprodotto = $_POST["oldimg"];
+        $imgProdotto = $_POST["oldimg"];
     }
     $dbh->updateProduct($codiceProdotto, $nomeProdotto, $prezzoProdotto, $quantitaProdotto, $ingredientiProdotto,$imgProdotto);
 
