@@ -190,13 +190,13 @@ class DatabaseHelper{
     // MESSAGES
 
     public function deleteAllMessages($UserID){
-        $stmt = $this->db->prepare("DELETE from messaggi WHERE UserID = ?"); // qui mi serve UserID perchè devo cancellare tutti i messaggi di un utente.
+        $stmt = $this->db->prepare("DELETE * from messaggi WHERE UserID = ?"); // qui mi serve UserID perchè devo cancellare tutti i messaggi di un utente.
         $stmt->bind_param("i", $UserID);
         $stmt->execute();
     }
 
     public function deleteMessageById($codice_messaggio, $UserID){
-        $stmt = $this->db->prepare("DELETE from messaggi WHERE codice_messaggio = ? AND UserID = ?"); 
+        $stmt = $this->db->prepare("DELETE * from messaggi WHERE codice_messaggio = ? AND UserID = ?"); 
         $stmt->bind_param("ii", $codice_messaggio, $UserID);
         $stmt->execute(); 
     }

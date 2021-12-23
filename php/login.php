@@ -24,6 +24,10 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 
 if(isUserLoggedIn()){
     header("Refresh:0; url=carrello.php");
+    // Qui mi servirebbe, per via delle notifiche, un
+    // $templateParams["messaggi"] = $dbh->getAllMessages($_SESSION["UserID"]);
+    // ma se usi l'header non va, non mi vede la variabile $templateParams["messaggi"];
+    // guarda qui sotto come ho fatto per l'admin per $templateParams["prodotti"] per reference.
 } else {
     if(isAdminLoggedIn()){
         $templateParams["nome"] = "login-home-admin.php";
