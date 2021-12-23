@@ -147,8 +147,11 @@
     float: right;
 
     position: relative; 
-    bottom: 33px;
+    bottom: 29px;
     right: 12px;
+
+    color: #fa1505;
+    filter: opacity(0.5);
 
     overflow: auto;
     max-height: 100%;

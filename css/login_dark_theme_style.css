@@ -150,12 +150,15 @@
     height: 24px;
 
     opacity: 0.7;
-    filter: invert();
+    /*filter: invert(); TODO: remove */
+
+    color: #f3360c;
+    filter: opacity(0.5);
 
     float: right;
 
     position: relative; 
-    bottom: 33px;
+    bottom: 29px;
     right: 12px;
 
     overflow: auto;
