@@ -237,6 +237,7 @@
 
     opacity: 0.7;
     /*filter: invert(); TODO: remove*/
+    filter: opacity(0.5);
 
     color: #f3360c;
 
@@ -257,6 +258,7 @@
 
     opacity: 0.7;
     /*filter: invert(); TODO: remove*/
+    filter: opacity(0.5);
 
     color: #f3360c;
 
