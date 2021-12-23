@@ -1,7 +1,7 @@
 <?php
 require_once 'bootstrap.php';
 
-if(!isUserLoggedIn() || !isset($_GET["action"]) || ($_GET["action"]!=1 && $_GET["action"]!=2 || ($_GET["action"]!=1 && !isset($_GET["id"]))){
+if(!isUserLoggedIn() || !isset($_GET["action"]) || ($_GET["action"]!=1 && $_GET["action"]!=2 || ($_GET["action"]!=1 && !isset($_GET["id"])))){
     header("location: login.php");
 }
 
