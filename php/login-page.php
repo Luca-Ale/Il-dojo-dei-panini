@@ -35,10 +35,7 @@
                             <div class="mb-3">
                                 <input type="password" class="form-control password-input" id="password" placeholder="Password" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
-                                <img src="../icons/signup/eye-regular.svg" class="password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()" />
-                                <!-- <span id="password-visibility" class="password-visibility">
-                                    <i class="fas fa-eye"></i>
-                                </span> -->
+                                <i class="fas fa-eye password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()"></i>
                             </div>
                             <input class="btn btn-login" type="submit" value="Login" alt="" />
                         </form>
