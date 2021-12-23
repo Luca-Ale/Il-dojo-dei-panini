@@ -170,5 +170,34 @@ class DatabaseHelper{
         $stmt->bind_param("iii", $codice_prodotto, $codice_ordine, $quantita_ordine);
         $stmt->execute();
     }
+
+    // MESSAGES
+
+    public function deleteAllMessages($UserID){
+        $stmt = $this->db->prepare("DELETE from messaggi WHERE UserID = ?"); // qui mi serve UserID perchè devo cancellare tutti i messaggi di un utente.
+        $stmt->bind_param("i", $UserID);
+        $stmt->execute();
+    }
+
+    public function deleteMessageById($codice_messaggio, $UserID){
+        $stmt = $this->db->prepare("DELETE from messaggi WHERE codice_messaggio = ? AND UserID = ?"); 
+        $stmt->bind_param("ii", $codice_messaggio, $UserID);
+        $stmt->execute(); 
+    }
+
+    public function getAllMessages($UserID){
+        $stmt = $this->db->prepare("SELECT codice_messaggio, titolo, testo, UserID FROM messaggi WHERE UserID = ?");
+        $stmt->bind_param("i", $UserID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function insertNewMessageForUser($titolo, $testo, $UserID){
+        $stmt = $this->db->prepare("INSERT INTO messaggi VALUES (NULL, ?, ?, ?)");
+        $stmt->bind_param('ssi', $titolo, $testo, $UserID);
+        return $stmt->execute();
+    }
 }
 ?>
