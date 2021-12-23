@@ -1,11 +1,17 @@
 <section>
     <table>
         <tr>
-            <th id="product">Prodotto</th><th id="quantita">Quantita'</th><th id="costo">Costo(per unità)</th><th id="remove"></th>
+            <th id="product">Prodotto</th><th id="quantita">Quantita'</th><th id="costo">Costo(per unità)</th>
         </tr>
         <?php foreach($templateParams["product"] as $prod): ?>
         <tr>
-            <th id="<?php echo $prod["nome"]; ?>"><?php echo $prod["nome"]; ?><th id="<?php echo $prod["quantita"]; ?>"><?php echo $prod["quantita"]; ?><th id="<?php echo $prod["prezzo"]; ?>"><?php echo $prod["prezzo"]; ?><th><a href="rimozione.php?id=<?php echo $prod["codice_prodotto"]; ?>">Rimuovi dal carrello</th></td>
+            <th id="<?php echo $prod["nome"]; ?>"><?php echo $prod["nome"]; ?>
+            <th id="<?php echo $prod["quantita"]; ?>"><?php echo $prod["quantita"]; ?>
+            <th id="<?php echo $prod["prezzo"]; ?>"><?php echo $prod["prezzo"]; ?>
+            <th><a href="aggiungiSingoloProdotto.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="+" /></a></th>
+            <th><a href="rimuoviSingoloProdotto.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="-" /></a></th>
+            <th><a href="rimozione.php?id=<?php echo $prod["codice_prodotto"]; ?>">Rimuovi dal carrello</th></td>
+            
         </tr>
         <?php endforeach; ?>
     </table>
