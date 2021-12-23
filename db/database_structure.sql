@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 20, 2021 alle 22:11
+-- Creato il: Dic 23, 2021 alle 16:35
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -50,6 +50,21 @@ CREATE TABLE IF NOT EXISTS `carrello` (
   `quantita` int(5) NOT NULL,
   KEY `cod_utente` (`cod_utente`),
   KEY `cod_prodotto` (`cod_prodotto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `messaggi`
+--
+
+CREATE TABLE IF NOT EXISTS `messaggi` (
+  `codice_messaggio` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `titolo` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `testo` varchar(360) COLLATE utf8_unicode_ci NOT NULL,
+  `UserID` int(10) NOT NULL,
+  PRIMARY KEY (`codice_messaggio`),
+  KEY `UserID` (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -137,6 +152,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 ALTER TABLE `carrello`
   ADD CONSTRAINT `cod_prodotto` FOREIGN KEY (`cod_prodotto`) REFERENCES `prodotti` (`codice_prodotto`),
   ADD CONSTRAINT `cod_utente` FOREIGN KEY (`cod_utente`) REFERENCES `users` (`UserID`);
+
+--
+-- Limiti per la tabella `messaggi`
+--
+ALTER TABLE `messaggi`
+  ADD CONSTRAINT `messaggi_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`);
 
 --
 -- Limiti per la tabella `ordini`
