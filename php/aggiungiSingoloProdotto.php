@@ -9,7 +9,7 @@ if(isUserLoggedIn()) {
         //Il prodotto non è nel carrello, va aggiunto da 0
         $dbh->addToShoppingCart($_GET["id"], $_SESSION["UserID"], 1);
     }
-    header("Refresh:0; url=shop.php");
+    header("Refresh:0; url=carrello.php");
 } else {
     header("Refresh:0; url=login.php");
 }
