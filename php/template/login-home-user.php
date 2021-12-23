@@ -11,7 +11,7 @@
         <?php foreach($templateParams["messaggi"] as $messaggio): ?>
         <tr>
             <td><?php echo $messaggio["titolo"]; ?></td>
-            <td><?php echo $messaggio["testo"]; ?></td>
+            <td><textarea rows="4" cols="50" readonly><?php echo $messaggio["testo"]; ?></textarea></td> <!-- TODO: metto temporaneamente readonly che va fatto con un controllo behind the scene e non client-side. -->
             <td>
                 <a href="gestisci-messaggi.php?action=2&id=<?php echo $messaggio["codice_messaggio"]; ?>">Cancella</a>
             </td>
