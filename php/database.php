@@ -84,7 +84,7 @@ class DatabaseHelper{
         } else {
             $table = "users";
         }
-        $stmt = $this->db->prepare("SELECT * FROM ? WHERE username = ? OR email = ? AND password = ? AND attivo = 0");  // ATTIVO = 0 per assicurarci che non era già loggato.
+        $stmt = $this->db->prepare("SELECT * FROM ? WHERE username = ? OR email = ? AND password = ? AND attivo = 0");
         $stmt->bind_param("ssss", $table, $username, $username, $password); // metto username due volte perchè posso usare sia la username che l'email per loggare. (però c'è solo un campo nel login sia per uno che per l'altro)
         $stmt->execute();
         $result = $stmt->get_result();
@@ -119,7 +119,7 @@ class DatabaseHelper{
     public function registerNewUser($username, $email, $password) {
         $stmt = $this->db->prepare("INSERT INTO users (UserID, username, email, password, attivo) VALUES (NULL, ?, ?, ?, 1)");
         $stmt->bind_param("sss", $username, $email, $password);
-        $stmt->execute(); 
+        return $stmt->execute(); 
     }
 
     public function getShoppingCartTotal($userID) {
@@ -190,13 +190,13 @@ class DatabaseHelper{
     // MESSAGES
 
     public function deleteAllMessages($UserID){
-        $stmt = $this->db->prepare("DELETE * from messaggi WHERE UserID = ?"); // qui mi serve UserID perchè devo cancellare tutti i messaggi di un utente.
+        $stmt = $this->db->prepare("DELETE from messaggi WHERE UserID = ?"); // qui mi serve UserID perchè devo cancellare tutti i messaggi di un utente.
         $stmt->bind_param("i", $UserID);
         $stmt->execute();
     }
 
     public function deleteMessageById($codice_messaggio, $UserID){
-        $stmt = $this->db->prepare("DELETE * from messaggi WHERE codice_messaggio = ? AND UserID = ?"); 
+        $stmt = $this->db->prepare("DELETE from messaggi WHERE codice_messaggio = ? AND UserID = ?"); 
         $stmt->bind_param("ii", $codice_messaggio, $UserID);
         $stmt->execute(); 
     }
