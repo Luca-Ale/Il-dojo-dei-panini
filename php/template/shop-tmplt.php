@@ -11,13 +11,13 @@
                     </div>
                     <div class="row pt-5">
                         <?php foreach($templateParams["products"] as $prod):?>
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                            <div class="card">
-                            <img src=<?php echo IMG_DIR.$prod["img"]?> alt="" class="img-fluid" /> 
+                        <div class="col-lg-4 col-md-8 mb-lg-10 mb-5">
+                            <div class="card card-img-top">
+                            <img src=<?php echo IMG_DIR.$prod["img"]?> alt="" class="thumbnail img-fluid"/> 
                             <div class="pt-3">
-                                <h4><?php echo $prod["nome"]?></h4> 
+                                <h4><?php echo $prod["nome"]?></h4>
                                 <p>Ingredienti : <?php echo $prod["ingredienti"]?></p>
-                                <p class="prezzo">Prezzo : <?php echo $prod["prezzo"]?>$</p>
+                                <p>Prezzo : <?php echo $prod["prezzo"]?>$</p>
                                 <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="Aggiungi al carrello" /></a>
                             </div>
                             </div>

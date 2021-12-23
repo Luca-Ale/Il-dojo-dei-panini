@@ -1,11 +1,11 @@
 
-<section class="table-responsive{10 |20 |30 |50}">
-    <table class="table table-sm table-striped table-dark table-hover">
-        <tr>
+<section class="table-responsive-sm">
+    <table class="table table-sm table-striped table-dark table-hover fw-light text-center">
+        <tr class="fst-italic">
             <th id="product">Prodotto</th><th id="quantita">Quantita'</th><th id="costo">Costo(per unità)</th><th></th><th></th><th></th>
         <?php foreach($templateParams["product"] as $prod): ?>
         </tr>
-        <tr>
+        <tr class="text-lowercase">
             <td id="<?php echo $prod["nome"]; ?>"><?php echo $prod["nome"]; ?></td>
             <td id="<?php echo $prod["quantita"]; ?>"><?php echo $prod["quantita"]; ?></td>
             <td id="<?php echo $prod["prezzo"]; ?>"><?php echo $prod["prezzo"]; ?>€</td>
