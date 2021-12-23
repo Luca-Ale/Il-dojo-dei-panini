@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <title><?php echo $templateParams["titolo"];?></title>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <header>
         <!-- NAVIGATION BAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- TODO: md , bg-dark o bg-light -->
@@ -65,7 +65,7 @@
         </main>
 
         <!-- TODO: FOOTER -->
-        <footer class="page-footer bg-dark"> <!-- TODO: aggiungere una colonna per delle informazioni generali? -->
+        <footer class="page-footer bg-dark mt-auto"> <!-- TODO: aggiungere una colonna per delle informazioni generali? -->
             <div class="bg-dark">
             <div class="container">
                 <div class="row py-4 d-flex align-items-center">

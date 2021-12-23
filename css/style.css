@@ -192,6 +192,10 @@ body {
 
 /* ======================== INIZIO FOOTER ======================== */
 
+footer{
+    position:absolute;
+}
+
 .hr {
     width: 125px;
     height: 125px;
