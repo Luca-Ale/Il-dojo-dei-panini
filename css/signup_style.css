@@ -223,8 +223,10 @@
     float: right;
 
     position: relative; 
-    bottom: 76px;
+    bottom: 72px;
     right: 12px;
+
+    color: #fa1505;
 
     /*overflow: auto;
     max-height: 100%;*/
@@ -242,8 +244,10 @@
     float: right;
 
     position: relative;
-    bottom: 33px; 
+    bottom: 29px; 
     right: 12px;
+
+    color: #fa1505;
 
     /*overflow: auto;
     max-height: 100%;*/
