@@ -1,13 +1,19 @@
 <?php 
 require_once 'bootstrap.php';
-$dbh->createOrder($_SESSION["UserID"]);
-$numero_ordine=$dbh->getLastOrderID();
+$orderID = $dbh->getLastOrderID();
+if ($orderID[0]["lastOrder"] === NULL){
+    $dbh->createOrder(1, $_SESSION["UserID"]);
+} else {
+    $dbh->createOrder($orderID[0]["lastOrder"] + 1, $_SESSION["UserID"]); 
+}
+
 $shoppingCart=$dbh->getShoppingCartProducts($_SESSION["UserID"]);
 
 for($i = 0; $i<count($shoppingCart); $i++) {
-    $dbh->addProductToOrder($shoppingCart[$i]["codice_prodotto"], $numero_ordine[0], $shoppingCart[$i]["quantita_ordinata"]);
+    $dbh->addProductToOrder($shoppingCart[$i]["codice_prodotto"], $dbh->getLastOrderID()[0]["lastOrder"], $shoppingCart[$i]["quantita"]);
 }
 
-//$dbh->deleteAllFromShoppingCart($_GET["UserID"]);
+$dbh->deleteAllFromShoppingCart($_SESSION["UserID"]);
 header("Refresh:0; url=carrello.php");
+
 ?>

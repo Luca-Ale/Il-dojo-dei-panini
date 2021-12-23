@@ -152,21 +152,21 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function createOrder($UserID) {
-        $stmt = $this->db->prepare("INSERT INTO ordini VALUES(NULL, ?, CURRENT_TIMESTAMP)");
-        $stmt->bind_param("i", $UserID);
+    public function createOrder($orderID, $UserID) {
+        $stmt = $this->db->prepare("INSERT INTO ordini VALUES(?, ?, CURRENT_TIMESTAMP)");
+        $stmt->bind_param("ii", $orderID, $UserID);
         $stmt->execute(); 
     }
 
     public function getLastOrderID() {
-        $stmt = $this -> db -> prepare("SELECT MAX(codice_prodotto) from ordini");
+        $stmt = $this -> db -> prepare("SELECT MAX(codice_ordine) as lastOrder from ordini");
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function addProductToOrder($codice_prodotto, $codice_ordine, $quantita_ordine) {
-        $stmt = $this->db->prepare("INSERT INTO prod-ordine VALUES(?, ?, ?)");
+        $stmt = $this->db->prepare("INSERT INTO `prod-ordine` VALUES(?, ?, ?)");
         $stmt->bind_param("iii", $codice_prodotto, $codice_ordine, $quantita_ordine);
         $stmt->execute();
     }
