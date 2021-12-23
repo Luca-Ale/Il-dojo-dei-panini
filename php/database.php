@@ -123,7 +123,7 @@ class DatabaseHelper{
     }
 
     public function getShoppingCartTotal($userID) {
-        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo) as totale from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prodotto AND c.cod_utente = ?;");
+        $stmt = $this -> db -> prepare("SELECT SUM(p.prezzo * c.quantita) as totale from carrello as c, prodotti as p where p.codice_prodotto = c.cod_prodotto AND c.cod_utente = ?;");
         $stmt -> bind_param('i', $userID);
         $stmt->execute();
         $result = $stmt->get_result();
