@@ -14,11 +14,11 @@ body {
 }
 
 .navbar {
-    padding: .999rem;
+    padding: 15.984px;
 }
 
 .navbar li {
-    padding-right: 1.2em;
+    padding-right: 19.2px;
 }
 
 .carousel-inner img {
@@ -57,14 +57,14 @@ body {
 .presentazione {
     width: 77%;
     margin: 0 auto;
-    padding: top 3rem;
+    padding: top 48px;
 }
 
 .presentazione hr {
     border-top: 2px solid rgb(34, 34, 34);
     width: 88%;
-    margin-top: 0.333rem;
-    margin-bottom: 0.999rem;
+    margin-top: 5.328px;
+    margin-bottom: 15.984px;
 }
 
 /* ======================== FINE PRESENTAZIONE ======================== */
@@ -84,11 +84,11 @@ body {
 }
 
 .about-section .card .img {
-    border-radius: 0.666rem;
+    border-radius: 10.656px;
 }
 
 .about-food {
-    padding-top: 3.33rem;
+    padding-top: 53.28px;
 }
 
 .about-food h2{
@@ -101,7 +101,7 @@ body {
 }
 
 .about-food {
-    font-size: 0.9rem;
+    font-size: 14.4px;
     color: white;
     line-height: 33px;
     position: relative;
@@ -121,8 +121,8 @@ body {
 }
 
 .just-content-start img {
-    width: 5rem;
-    height: 5rem;
+    width: 80px;
+    height: 80px;
     border-radius: 75%;
 }
 
@@ -143,7 +143,7 @@ body {
 }
 
 .review .fa-quote-left {
-    font-size: 3rem;
+    font-size: 48px;
 }
 
 /* ======================== FINE RECENSIONI ======================== */
@@ -168,26 +168,26 @@ body {
 .food .card{
     border: none;
     background-color: transparent;
-    border-radius: 0.999rem;
+    border-radius: 15.984px;
 }
 
 .food .card img {
-    border-radius: 0.999rem;
+    border-radius: 15.984px;
     object-fit: cover;
 }
 
 .food .card p {
     display: block;
-    font-size: 1.222rem;
+    font-size: 19.552px;
     font-weight: 777;
     color: white;
-    padding-bottom: 0.999rem;
-    border-bottom: 0.0666rem solid white;
+    padding-bottom: 15.984px;
+    border-bottom: 1.0656px solid white;
 }
 
 .food .card .prezzo del {
     color: red;
-    margin-left: 0.555rem;
+    margin-left: 8.88px;
 }
 
 .food .card .prezzo {
