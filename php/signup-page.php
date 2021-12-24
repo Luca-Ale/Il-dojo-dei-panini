@@ -26,7 +26,7 @@
                         <h3 class="signup-title">Sign up</h3>
                         <form action="../php/signup.php" method="POST">
                             <?php if(isset($templateParams["msgsignup"])): ?>
-                                <p style="color:red"><?php echo $templateParams["msgsignup"]; ?></p>
+                                <p class="text-danger"><?php echo $templateParams["msgsignup"]; ?></p>
                             <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control username-input" placeholder="Username" name="username"/>

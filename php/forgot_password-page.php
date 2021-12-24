@@ -26,7 +26,7 @@
                         <h3 class="signup-title">Password dimenticata</h3>
                         <form action="../php/forgot-password.php" method="POST">
                             <?php if(isset($templateParams["msgforgotpassword"])): ?>
-                                <p style="color:red"><?php echo $templateParams["msgforgotpassword"]; ?></p>
+                                <p class="text-danger"><?php echo $templateParams["msgforgotpassword"]; ?></p>
                             <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control username-input" placeholder="Username" name="username"/>
