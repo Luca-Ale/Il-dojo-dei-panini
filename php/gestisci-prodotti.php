@@ -13,7 +13,6 @@ if($_GET["action"]!=1){
     else{
         // ACTION 2
         $templateParams["prodotto"] = $risultato[0];
-        var_dump($risultato[0]); //TODO: remove
     }
 }
 else{

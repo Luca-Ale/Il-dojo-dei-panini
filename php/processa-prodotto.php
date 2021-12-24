@@ -17,6 +17,11 @@ if($_POST["action"] == 1){
         $id = $dbh->insertProductOnMenu($nomeProdotto, $prezzoProdotto, $quantitaProdotto, $ingredientiProdotto, $imgprodotto); //TODO: rename id
         
     }
+    
+    $oggetto = "Inserimento";
+	$testo_messaggio = "Il prodotto: ". "$nomeProdotto". " al prezzo di ". "$prezzoProdotto, alla quantità: "."$quantitaProdotto". " con gli ingredienti: "."$ingredientiProdotto è stato inserito correttamente! dal admin ". $_SESSION["AdminID"] . " : " . $_SESSION["username"];
+	$dbh->insertNewMessageForAdmin($oggetto, $testo_messaggio);
+
     header("location: login.php?formmsg=".$msg);
 }
 // MODIFICA
@@ -40,6 +45,10 @@ if($_POST["action"] == 2){
     }
     $dbh->updateProduct($codiceProdotto, $nomeProdotto, $prezzoProdotto, $quantitaProdotto, $ingredientiProdotto,$imgProdotto);
 
+    $oggetto = "Modifica";
+	$testo_messaggio = "Il prodotto: ". "$nomeProdotto". " al prezzo di ". "$prezzoProdotto, alla quantità: "."$quantitaProdotto". " con gli ingredienti: "."$ingredientiProdotto è stato modificato correttamente! dal admin ". $_SESSION["AdminID"] . " : " . $_SESSION["username"];
+	$dbh->insertNewMessageForAdmin($oggetto, $testo_messaggio);
+
     $msg = "Modifica completata correttamente!";
     header("location: login.php?formmsg=".$msg);
 }
@@ -49,6 +58,10 @@ if($_POST["action"] == 3){
     echo "entro";
     $codiceProdotto = $_POST["codice_prodotto"];
     $dbh->deleteProductOnMenuByCode($codiceProdotto);
+
+    $oggetto = "Rimozione";
+	$testo_messaggio = "Il prodotto: ". "$codiceProdotto ". htmlspecialchars($_POST["nome"]) . " di prezzo " . htmlspecialchars($_POST["prezzo"]) . ", quantità: " . htmlspecialchars($_POST["quantita_disponibile"]) . " ed ingredienti: " . htmlspecialchars($_POST["ingredienti"]) . " è stato cancellato correttamente dall'admin " . $_SESSION["AdminID"] . " : " . $_SESSION["username"];
+	$dbh->insertNewMessageForAdmin($oggetto, $testo_messaggio);
     
     $msg = "Cancellazione completata correttamente!";
     header("location: login.php?formmsg=".$msg);
