@@ -1,6 +1,6 @@
 
 <section class="table-responsive-sm">
-    <table class="table table-sm table-striped table-dark table-hover fw-light text-center">
+    <table class="table table-responsive-sm table-striped table-dark table-hover fw-light text-center font-monospace">
         <tr class="fst-italic">
             <th id="product">Prodotto</th><th id="quantita">Quantita'</th><th id="costo">Costo(per unità)</th><th></th><th></th><th></th>
         <?php foreach($templateParams["product"] as $prod): ?>
@@ -32,22 +32,19 @@
         </tr>
     </table>
 </section>
-    <head><h2>Area Notifiche</h2></head>
-    <body>
-        <table>
-            <tr class="fst-italic">
+    <head><h2 class="font-monospace">Area Notifiche</h2></head>
+    <body class="table">
+        <table class="table table-responsive-sm table-striped table-dark table-hover fw-light text-center font-monospace">
+            <tr class="fst-italic bg-light">
                 <th id="idOrdine">Numero ordine</th><th id="data">Data ricezione</th><th id="oggetto">Oggetto</th><th id="testo">Testo</th>
             <?php foreach($templateParams["notifiche"] as $notifica): ?>            </tr>
             <tr class="text-lowercase">
                  <td id="<?php echo $notifica["codice_ordine"]; ?>"><?php echo $notifica["codice_ordine"]; ?></td>
                  <td id="<?php echo $notifica["DataOra"]; ?>"><?php echo $notifica["DataOra"]; ?></td>
                  <td id="<?php echo $notifica["oggetto"]; ?>"><?php echo $notifica["oggetto"]; ?></td>
-                 <td><a href="articolo-completo.php?id=<?php echo $notifica["testo"]; ?>"><input type="button" class="btn btn-danger btn-lg" value="leggi" /></a></td>
+                 <td><a href="articolo-completo.php?id=<?php echo $notifica["testo"]; ?>"><input type="button" class="btn btn-success btn-lg" value="leggi" /></a></td>
             <?php endforeach;?>
             </tr>
         </table>
     </body>
-    <footer>
-
-    </footer>
 </div>

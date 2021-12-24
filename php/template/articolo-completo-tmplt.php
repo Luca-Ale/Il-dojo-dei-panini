@@ -1,1 +1,1 @@
-<p><?php echo $templateParams["testo"]?></p>
+<p class="font-monospace fs-1"><?php echo $templateParams["testo"]?></p>
