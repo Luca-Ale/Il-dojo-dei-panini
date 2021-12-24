@@ -43,14 +43,15 @@
 
 \makeindex
 
-\title{\textbf{Progetto di tecnologie web report}}
-\author{Luca Rengo, Alessandro Pioggia}
+\title{\textbf{Progetto di Tecnologie Web Report}}
+\author{Luca Rengo | Alessandro Pioggia}
 
 \begin{document}
 	
 	\makeatletter
 	\begin{titlepage}
 		\begin{center}
+			\includegraphics[width=0.7\linewidth]{Images/logo/alma_mater_studiorum_cesena_logo.png}\\[4ex]
 			{\Huge  \@title }\\[3ex] 
 			{\large  \@author}\\[3ex] 
 			{\large \@date}
@@ -240,8 +241,54 @@
 		\caption{Pagina dell'Admin}
 		\label{fig:admin}
 	\end{figure}
+
+	\begin{figure}[H]
+		\begin{subfigure}{.6\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{./Images/Admin_inserimento.png}
+			\caption{Pagina di inserimento del prodotto}
+			\label{fig:inserimento1}
+		\end{subfigure}
+		\begin{subfigure}{.6\textwidth}
+			\centering
+			%TODO: 
+			\includegraphics[width=1\linewidth]{./Images/Admin_inserimento2.png}
+			\caption{Prodotto inserito in lista}
+			\label{fig:inserimento2}
+		\end{subfigure}
+		%\caption{a}
+		\label{fig:inserimenti}
+	\end{figure}
+
+	\begin{figure}[H]
+		\begin{subfigure}{.6\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{./Images/Admin_modifica_prodotto.png}
+			\caption{Pagina di modifica del prodotto}
+			\label{fig:modifica}
+		\end{subfigure}
+		\begin{subfigure}{.6\textwidth}
+			\centering
+			%TODO: 
+			\includegraphics[width=1\linewidth]{./Images/Admin_cancella_prodotto.png}
+			\caption{Prodotto cancellato dalla lista}
+			\label{fig:cancella}
+		\end{subfigure}
+		%\caption{a}
+		\label{fig:operazioni_sul_prodotto}
+	\end{figure}
+
+	\textsf{Una volta aggiunto, modificato o cancellato un prodotto, l'admin riceverà una notifica nella sua sezione \emph{Area Notifiche}.}\\
+	
+	\begin{figure}[H] 
+		\centering
+		\includegraphics[width=1.2\textwidth, height=1.2\textheight, keepaspectratio]{./Images/Admin_area_notifiche.png}
+		\caption{Area Notifiche}
+		\label{fig:notifiche}
+	\end{figure}
 	
 	% ======================== DOMINIO APPLICATIVO ===================================
+	%TODO: decidere se questa parte la vogliamo tenere o modificare, ecc..
 	
 	\newpage
 	
@@ -286,6 +333,7 @@
 	\end{itemize}
 
 	% ================= GUIDA UTENTE =================================================
+	%TODO: la guida utente è da tenere.
 	
 	\newpage
 
