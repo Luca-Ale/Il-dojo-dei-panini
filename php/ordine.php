@@ -31,7 +31,7 @@ $testoArticolo = "Signor " . $userName[0]["username"]
 . $elencoProdotti
 . "il quale costo totale è: "
 . $shoppingCartTotal[0]["totale"]
-. "€ buona giornata.";
+. "€, il delivery partirà fra 15 minuti, buona giornata.";
 if ($orderID[0]["lastOrder"] === NULL){
     $dbh->insertNewUserNotification(1, "Conferma avvenuto ordine", $testoArticolo, $dbh->getLastOrderID()[0]["lastOrder"]);
 } else {
