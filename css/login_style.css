@@ -1,41 +1,37 @@
-.page-content{
+body > div:nth-of-type(1) { /* prima era .page-content */
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(45deg, rgb(234, 234, 234), white); /* TODO: modify color */
 }
 
-.login{
-    background-color: white; /* TODO: modify color */
+body > div > div > div > div { /* prima era .login; qui sarebbe nth-of-type(4) ma non mi andava */
+    background-color: white;
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.333);
     border-radius: 21px;
     padding: 9px 9%;
 }
 
-.logo-section{
-    padding: 21px 33%; /* TODO: modify padding and margin */
+body > div > div > div > div > div{ /* Qui era .logo-section, ho provato con nth-of-type(5) ma non mi andava */
+    padding: 21px 33%; 
     margin-top: 66px;
 }
 
-.logo{
+body > div > div > div > div > div > img { /* Qui era .logo; nth-of-type(5) > img */
     width: 100%;
     height: auto;
 }
 
-.login-title{
+body h3 { /* prima era .login-title */
     text-align: center;
     color: red;
 }
 
-.login-type {
-    text-align: center;
-}
-
-.hr-separator{
+hr{ /* prima era .hr-separator */
     width: 100%;
     color: #212121;
 }
 
-.email-username-input{
+body form > div:nth-of-type(1) > input{ /* prima era .email-username-input */
     background-color: white;
     height: 45px;
     border: 3px solid rgb(222, 222, 222);
@@ -45,12 +41,17 @@
     text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
 }
 
-.email-username-input::-webkit-input-placeholder {
+body form > div:nth-of-type(1) > input::-webkit-input-placeholder {
     position: relative;
     right: 55px;
 }
 
-.img-email {
+body form > div:nth-of-type(1) > input:focus {
+    color: #fa1505;
+    border: 1px solid red;
+}
+
+body form > div:nth-of-type(1) > img { /* prima era .img-email */
     width: 24px;
     height: 24px;
 
@@ -59,21 +60,26 @@
     left: 12px;
 }
 
-.password-input{
+body form > div:nth-of-type(2) > input{ /* .password-input */
     background-color: white;
     height: 45px;
     border: 3px solid rgb(222, 222, 222);
-    /*color: #fa1505;*/ /* TODO: remove */
+    color: #fa1505; 
 
     text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
 }
 
-.password-input::-webkit-input-placeholder {
+body form > div:nth-of-type(2) > input::-webkit-input-placeholder {
     position: relative;
     right: 81px;
 }
 
-.img-password {
+body form > div:nth-of-type(2) > input:focus {
+    color: #fa1505; /* TODO: remove? */
+    border: 1px solid red;
+}
+
+body form > div:nth-of-type(2) > img { /* .img-password */
     width: 24px;
     height: 24px;
 
@@ -82,17 +88,7 @@
     left: 12px;
 }
 
-.email-username-input:focus {
-    color: #fa1505; /* TODO: remove? */
-    border: 1px solid red;
-}
-
-.password-input:focus {
-    color: #fa1505; /* TODO: remove? */
-    border: 1px solid red;
-}
-
-.btn-login{
+body form > input:nth-of-type(1){ /* .btn-login */
     background-color: #fa1505;
     color: white;
     height: 45px;
@@ -101,30 +97,30 @@
     box-shadow: none;
 }
 
-.btn-login:hover{
-    background: black; /* TODO: modify color */
+body form > input:nth-of-type(1):hover{
+    background: black; 
     color: white;
 }
 
-.forgot-password-link{
-    text-align: center; /* TODO: fix align */
+body a:nth-of-type(2){ /* .forgot-password-link */
+    text-align: center; 
     color: #359eca;
 }
 
-.forgot-password-link:hover{
+body a:nth-of-type(2):hover{
     color: #fa1505;
 }
 
-.signup-link{
-    text-align: center; /* TODO: fix align */
+body a:nth-of-type(1){ /* .signup-link */
+    text-align: center; 
     color: #359eca;
 }
 
-.signup-link:hover{
+body a:nth-of-type(1):hover{
     color: #fa1505;
 }
 
-.img-theme {
+ body > input:nth-of-type(1){ /* .img-theme */
     background-color: rgb(53, 53, 53);
     color: white;
     box-shadow: none;
@@ -138,7 +134,7 @@
 }
 
 /* TODO: fix issue with positioning when typing password */
-.password-visibility {
+ body form > div:nth-of-type(2) > i{ /* .password-visibility */
     width: 24px;
     height: 24px;
 
