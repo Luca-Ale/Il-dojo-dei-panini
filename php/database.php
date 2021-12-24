@@ -189,34 +189,30 @@ class DatabaseHelper{
 
     // MESSAGES
 
-    public function deleteAllMessages($UserID){
-        $stmt = $this->db->prepare("DELETE from messaggi WHERE UserID = ?"); // qui mi serve UserID perchè devo cancellare tutti i messaggi di un utente.
-        $stmt->bind_param("i", $UserID);
+    public function deleteAllMessages(){
+        $stmt = $this->db->prepare("DELETE from messaggi"); // Qui non metto AdminID perchè non serve.
         $stmt->execute();
     }
 
-    public function deleteMessageById($codice_messaggio, $UserID){
-        $stmt = $this->db->prepare("DELETE from messaggi WHERE codice_messaggio = ? AND UserID = ?"); 
-        $stmt->bind_param("ii", $codice_messaggio, $UserID);
+    public function deleteMessageById($codice_messaggio){
+        $stmt = $this->db->prepare("DELETE from messaggi WHERE codice_messaggio = ?"); // Non uso AdminID perchè le notifiche degli admin sono condivise. (ammeno che non vogliamo cambiare questa cosa)
+        $stmt->bind_param("i", $codice_messaggio);
         $stmt->execute(); 
     }
 
-    public function getAllMessages($UserID){
-        $stmt = $this->db->prepare("SELECT codice_messaggio, titolo, testo, UserID FROM messaggi WHERE UserID = ?");
-        $stmt->bind_param("i", $UserID);
+    public function getAllMessages(){
+        $stmt = $this->db->prepare("SELECT codice_messaggio, oggetto, testo FROM messaggi");
         $stmt->execute();
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    /*
-    public function insertNewMessageForUser($titolo, $testo, $UserID){
-        $stmt = $this->db->prepare("INSERT INTO messaggi VALUES (NULL, ?, ?, ?)");
-        $stmt->bind_param('ssi', $titolo, $testo, $UserID);
-        return $stmt->execute();
+    public function insertNewMessageForAdmin($oggetto, $testo){
+        $stmt = $this->db->prepare("INSERT INTO messaggi VALUES (NULL, ?, ?)");
+        $stmt->bind_param('ss', $oggetto, $testo);
+        $stmt->execute();
     }
-    */
 
     public function insertNewUserNotification($codice_notifica, $oggetto, $testo_articolo, $codice_ordine) {
         $stmt = $this->db->prepare("INSERT INTO notifiche VALUES(?, ?, ?, ?)"); 
