@@ -12,9 +12,9 @@ function passwordStrengthChecker(){
     password.addEventListener("input", () => {
         if(password.value.length > 0){
             statusLevel.style.display = "block";
-        } else {
-            statusLevel.style.display = "none";
-        }
+        } /*else {
+            //statusLevel.style.display = "none"; // Questo lo rimuovo perchè altrimenti mi scombina l'immagine dell'occhio.
+        }*/
     
         if(password.value.length < 5){
             statusLevel.textContent = "La tua password è molto debole.";

@@ -111,20 +111,26 @@ body form > div:nth-of-type(2) > input:nth-of-type(1):focus {
     border: 1px solid #fa1505;
 }
 
-.new-password-input {
+/* .new-password-input */ /* TODO: remove */
+/*body form > div:nth-of-type(2) > input:nth-of-type(1){ 
     background-color: white;
     height: 45px;
-    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
+    border: 3px solid rgb(222, 222, 222); 
     
-    /*color: #fa1505;*/ /* TODO: remove */
+    color: #fa1505;
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 .new-password-input::-webkit-input-placeholder {
     position: relative;
     right: 75px;
-}
+}*/
+
+/*.new-password-input:focus {
+    color: #fa1505; 
+    border: 1px solid #fa1505;
+}*/
 
 body form > div:nth-of-type(2) > img:nth-of-type(1) { /* .img-password */
     width: 24px;
@@ -165,12 +171,7 @@ body form > div:nth-of-type(3) > img:nth-of-type(1){ /* .img-password-confirmati
 body form > div:nth-of-type(2) > p:nth-of-type(1){ /* .password-strength-status */
     width: 100%;
     text-align: center;
-    margin-top: 3px;
-}
-
-.new-password-input:focus {
-    color: #fa1505; /* TODO: remove? */
-    border: 1px solid #fa1505;
+    margin-bottom: -6px;
 }
 
 body form > input:nth-of-type(1){ /* .btn-signup */
