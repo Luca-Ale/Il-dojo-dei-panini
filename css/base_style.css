@@ -10,37 +10,37 @@ body {
 
 /* ======================== INIZIO NAVBAR ======================== */
 
-.logo-img {
+body nav div img {
     width: 48px;
     height: 48px;
 }
 
-.navbar {
+body nav { /* prima era .navbar e si vedeva un po' più grande */
     padding: .999rem;
 }
 
-.navbar li {
+nav li {
     padding-right: 1.2em;
 }
 
-.carousel-inner img {
+body div:nth-of-type(2) > div > img { /* .carousel-inner img */
     width: 100%;
     height: 100%;
 }
 
-.carousel-caption {
+body > div:nth-of-type(1) > div:nth-of-type(2) > div > div { /* .carousel-caption */
     position: absolute;
     top: 55%;
     transform: translateY(-55%);
 }
 
-.carousel-caption h1 {
+body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h1 { /* .carousel-caption h1 */
     font-size: 555%; /* TODO: prima era 333 */
     text-transform: capitalize;
     text-shadow: 3px 3px 9px rgb(0, 0, 0);
 }
 
-.carousel-caption h3 {
+body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h3 {
     font-size: 333%; /* TODO: prima era 222 */
     font-weight: 333;
     text-shadow: 1px 1px 9px rgb(0, 0, 0);
@@ -51,16 +51,16 @@ body {
 
 /* ======================== INIZIO FOOTER ======================== */
 
-.hr {
+footer hr {
     width: 125px;
     height: 125px;
 }
 
-.page-footer {
+footer {
     color: white;
 }
 
-.footer-copyright {
+footer > div:nth-of-type(3) {
     background-color: black;
 }
 
