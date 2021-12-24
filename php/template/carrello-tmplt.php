@@ -32,3 +32,22 @@
         </tr>
     </table>
 </section>
+    <head><h2>Area Notifiche</h2></head>
+    <body>
+        <table>
+            <tr class="fst-italic">
+                <th id="idOrdine">Numero ordine</th><th id="data">Data ricezione</th><th id="oggetto">Oggetto</th><th id="testo">Testo</th>
+            <?php foreach($templateParams["notifiche"] as $notifica): ?>            </tr>
+            <tr class="text-lowercase">
+                 <td id="<?php echo $notifica["codice_ordine"]; ?>"><?php echo $notifica["codice_ordine"]; ?></td>
+                 <td id="<?php echo $notifica["DataOra"]; ?>"><?php echo $notifica["DataOra"]; ?></td>
+                 <td id="<?php echo $notifica["oggetto"]; ?>"><?php echo $notifica["oggetto"]; ?></td>
+                 <td><a href="articolo-completo.php?id=<?php echo $notifica["testo"]; ?>"><input type="button" class="btn btn-danger btn-lg" value="leggi" /></a></td>
+            <?php endforeach;?>
+            </tr>
+        </table>
+    </body>
+    <footer>
+
+    </footer>
+</div>

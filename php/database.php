@@ -210,10 +210,58 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    /*
     public function insertNewMessageForUser($titolo, $testo, $UserID){
         $stmt = $this->db->prepare("INSERT INTO messaggi VALUES (NULL, ?, ?, ?)");
         $stmt->bind_param('ssi', $titolo, $testo, $UserID);
         return $stmt->execute();
+    }
+    */
+
+    public function insertNewUserNotification($codice_notifica, $oggetto, $testo_articolo, $codice_ordine) {
+        $stmt = $this->db->prepare("INSERT INTO notifiche VALUES(?, ?, ?, ?)"); 
+        $stmt->bind_param("issi", $codice_notifica, $oggetto, $testo_articolo, $codice_ordine);
+        $stmt->execute();
+    }
+
+    public function getNotificationFromUser($UserID) {
+        $stmt = $this->db->prepare("SELECT n.codice_ordine, n.oggetto, n.testo, o.DataOra FROM users as u, ordini as o, notifiche as n WHERE n.codice_ordine = o.codice_ordine AND o.UserID = ? AND o.UserID = u.UserID");
+        $stmt->bind_param("i", $UserID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getLastNotificationID() {
+        $stmt = $this -> db -> prepare("SELECT MAX(codice_notifica) as lastNotification from notifiche");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    
+    public function getOrderWithID($orderID) {
+        $stmt = $this -> db -> prepare("SELECT * FROM ordini where codice_ordine = ?");
+        $stmt->bind_param('i', $orderID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getUserNameByID($UserID) {
+        $stmt = $this -> db -> prepare("SELECT * from users where UserID = ?");
+        $stmt->bind_param('i', $UserID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getOrderProducts($orderID) {
+        $stmt = $this -> db -> prepare("select nome from `prod-ordine` as po, ordini as o, prodotti as p where po.codice_ordine = o.codice_ordine and o.codice_ordine=? and p.codice_prodotto = po.codice_prodotto");
+        $stmt->bind_param('i', $orderID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 ?>
