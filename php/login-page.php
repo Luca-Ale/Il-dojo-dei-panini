@@ -24,10 +24,10 @@
                             <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
                         </div>
                         <h3 class="login-title">Login</h3>
-                        <form action="login.php" method="POST">
-                        <?php if(isset($templateParams["errorelogin"])): ?>
-                            <p style="color:red"><?php echo $templateParams["errorelogin"]; ?></p>
-                        <?php endif; ?>
+                        <form action="../php/login.php" method="POST">
+                            <?php if(isset($templateParams["errorelogin"])): ?>
+                                <p style="color:red"><?php echo $templateParams["errorelogin"]; ?></p>
+                            <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control email-username-input" placeholder="Username | Email" name="username"/>
                                 <img src="../icons/envelope-open-solid.svg" alt="Email Icon" class="img-email" />
@@ -43,7 +43,7 @@
 
                         <a href="../html/signup.html" class="link signup-link mb-1">Non hai un account? Registrati ora!</a>
                         <br>
-                        <a href="" class="link forgot-password-link mb-2">Hai dimenticato la password?</a> <!-- TODO: aggiungere il link per poter recuperare la password. -->
+                        <a href="../html/forgot_password.html" class="link forgot-password-link mb-2">Hai dimenticato la password?</a>
                     </div>
                 </div>
             </div>

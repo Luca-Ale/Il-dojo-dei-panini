@@ -24,10 +24,10 @@
                             <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
                         </div>
                         <h3 class="signup-title">Sign up</h3>
-                        <form action="signup.php" method="POST">
-                        <?php if(isset($templateParams["msgsignup"])): ?>
-                            <p style="color:red"><?php echo $templateParams["msgsignup"]; ?></p>
-                        <?php endif; ?>
+                        <form action="../php/signup.php" method="POST">
+                            <?php if(isset($templateParams["msgsignup"])): ?>
+                                <p style="color:red"><?php echo $templateParams["msgsignup"]; ?></p>
+                            <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control username-input" placeholder="Username" name="username"/>
                                 <img src="../icons/user-solid.svg" alt="User icon" class="img-user" />
@@ -38,13 +38,13 @@
                                 <input type="password" class="form-control password-input" placeholder="Password" id="password" oninput="passwordStrengthChecker()" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
                                 <i class="fas fa-exclamation-circle exclamation-icon" id="exclamation-circle"></i>
-                                <p class="password-strength-status" id="password-strength-status"></p> 
-                                <img src="../icons/signup/eye-regular.svg" class="password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()" />
+                                <p class="password-strength-status" id="password-strength-status">{Password Strength Level}</p> 
+                                <i class="fas fa-eye password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()"></i>
                             </div>
                             
                             <div class="mb-3">
                                 <input type="password" class="form-control password-reinput" placeholder="Confirm Password" id="confirm-password" oninput="passwordMatching()" name="confirm-password"/>
-                                <img src="../icons/signup/eye-regular.svg" class="password-visibility-confirmation" id="password-visibility-confirmation" alt="Password-visibility-confirmation" onclick="toggleVisibilityConfirmation()" />
+                                <i class="fas fa-eye password-visibility-confirmation" id="password-visibility-confirmation" alt="Password-visibility-confirmation" onclick="toggleVisibilityConfirmation()"></i>
                                 <img src="../icons/unlock-alt-solid.svg" alt="Passowrd Confirmation Icon" class="img-password-confirmation" />
                                 <i class="fas fa-exclamation-circle exclamation-confirmation-icon" id="exclamation-circle-confirmation"></i>
                             </div>

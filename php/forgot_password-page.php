@@ -24,10 +24,10 @@
                             <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
                         </div>
                         <h3 class="signup-title">Password dimenticata</h3>
-                        <form action="forgot-password.php" method="POST">
-                        <?php if(isset($templateParams["msgforgotpassword"])): ?>
-                            <p style="color:red"><?php echo $templateParams["msgforgotpassword"]; ?></p>
-                        <?php endif; ?>
+                        <form action="../php/forgot-password.php" method="POST">
+                            <?php if(isset($templateParams["msgforgotpassword"])): ?>
+                                <p style="color:red"><?php echo $templateParams["msgforgotpassword"]; ?></p>
+                            <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control username-input" placeholder="Username" name="username"/>
                                 <img src="../icons/user-solid.svg" alt="User icon" class="img-user" />
@@ -38,7 +38,7 @@
                                 <input type="password" class="form-control new-password-input" placeholder="New Password" id="password" oninput="passwordStrengthChecker()" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
                                 <i class="fas fa-exclamation-circle exclamation-icon" id="exclamation-circle"></i>
-                                <p class="password-strength-status" id="password-strength-status"></p> 
+                                <p class="password-strength-status" id="password-strength-status">Password Level</p> 
                                 <i class="fas fa-eye password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()"></i>
                             </div>
                             
