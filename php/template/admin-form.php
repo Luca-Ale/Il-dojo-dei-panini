@@ -22,15 +22,15 @@ $azione = getAction($templateParams["azione"])
         </li>
         <li>
             <?php if($templateParams["azione"]!=3): ?>
-            <label for="imgprodotto">Immagine Prodotto</label><input type="file" name="img" id="imgprodotto" />
+            <label for="imgprodotto">Immagine Prodotto</label><input type="file" class="btn btn-primary" name="img" id="imgprodotto" />
             <?php endif; ?>
             <?php if($templateParams["azione"]!=1): ?>
             <img width="360" height="360" src="<?php echo IMG_DIR.$prodotto["img"]; ?>" alt="" />
             <?php endif; ?>
         </li>
         <li>
-            <input type="submit" name="submit" value="<?php echo $azione; ?> Prodotto" />
-            <a href="login.php">Annulla</a>
+            <input type="submit" name="submit" class="btn btn-success" value="<?php echo $azione; ?> Prodotto" />
+            <a href="login.php" class="btn btn-secondary">Annulla</a>
         </li>
     </ul>
         <?php if($templateParams["azione"]!=1): ?>
