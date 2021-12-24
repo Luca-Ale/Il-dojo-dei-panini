@@ -5,10 +5,10 @@ Il progetto verte sulla progettazione di un sito web riguardante un risstorante 
 ![Lines of code](https://img.shields.io/tokei/lines/github.com/Luca-Ale/Il-dojo-dei-panini?style=plastic)
 [![GitHub issues](https://img.shields.io/github/issues/Luca-Ale/Il-dojo-dei-panini?style=plastic)](https://github.com/Luca-Ale/Il-dojo-dei-panini/issues)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Luca-Ale/Il-dojo-dei-panini?style=plastic)
+![GitHub repo size](https://img.shields.io/github/repo-size/Luca-Ale/Il-dojo-dei-panini?style=plastic)
 
 <!-- ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Luca-Ale/Il-dojo-dei-panini) questo è flat -->
 <!-- ![Lines of code](https://img.shields.io/tokei/lines/github.com/Luca-Ale/Il-dojo-dei-panini) -->
-![GitHub repo size](https://img.shields.io/github/repo-size/Luca-Ale/Il-dojo-dei-panini?style=plastic)
 <!-- ![GitHub repo size](https://img.shields.io/github/repo-size/Luca-Ale/Il-dojo-dei-panini) -->
 <!-- [![GitHub issues](https://img.shields.io/github/issues/Luca-Ale/Il-dojo-dei-panini)](https://github.com/Luca-Ale/Il-dojo-dei-panini/issues) -->
 <!-- ![GitHub last commit](https://img.shields.io/github/last-commit/Luca-Ale/Il-dojo-dei-panini) -->
