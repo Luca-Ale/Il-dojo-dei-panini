@@ -6,12 +6,12 @@ if(!isUserLoggedIn() || !isset($_GET["action"]) || ($_GET["action"]!=1 && $_GET[
 }
 
 if($_GET["action"] == 1){
-    $dbh->deleteAllMessages($_SESSION["UserID"]);
+    $dbh->deleteAllMessages();
     $msg = "Cancellazione di tutti i messaggi eseguita correttamente!";
 
 } else if($_GET["action"] == 2){
 
-    $dbh->deleteMessageById($_GET["id"], $_SESSION["UserID"]);
+    $dbh->deleteMessageById($_GET["id"]);
     $msg = "Cancellazione del messaggio: " . $_GET["id"] . " eseguita con successo!";
 }
 
