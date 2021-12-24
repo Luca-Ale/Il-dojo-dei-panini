@@ -21,24 +21,24 @@ body {
     padding-right: 19.2px;
 }
 
-.carousel-inner img {
+body div:nth-of-type(2) > div > img {
     width: 100%;
     height: 100%;
 }
 
-.carousel-caption {
+body > div:nth-of-type(1) > div:nth-of-type(2) > div > div {
     position: absolute;
     top: 55%;
     transform: translateY(-55%);
 }
 
-.carousel-caption h1 {
+body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h1 {
     font-size: 555%; /* TODO: prima era 333 */
     text-transform: capitalize;
     text-shadow: 3px 3px 9px rgb(0, 0, 0);
 }
 
-.carousel-caption h3 {
+body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h3 {
     font-size: 333%; /* TODO: prima era 222 */
     font-weight: 333;
     text-shadow: 1px 1px 9px rgb(0, 0, 0);
@@ -49,18 +49,18 @@ body {
 
 /* ======================== INIZIO PRESENTAZIONE ======================== */
 
-.section-presentazione{
+body > section:nth-of-type(1){
     background-color: rgb(33, 33, 33); /* TODO: cambiare tipo di rosso o mettere bianco */
     color: white; /* TODO: RGB(33, 33, 33) OPPURE WHITE */
 }
 
-.presentazione {
+body > section:nth-of-type(1) > div > div {
     width: 77%;
     margin: 0 auto;
     padding: top 48px;
 }
 
-.presentazione hr {
+body > section:nth-of-type(1) > div > div > hr {
     border-top: 2px solid rgb(34, 34, 34);
     width: 88%;
     margin-top: 5.328px;
@@ -71,36 +71,36 @@ body {
 
 /* ======================== INIZIO ABOUT SECTION ======================== */
 
-.about {
+body > section:nth-of-type(2) {
     background-color: #e11c11; /* TODO: oppure bianco */
 }
 
-.about h2 {
+body > section:nth-of-type(2) h2 {
     color: white; /* TODO: oppure rgb(33, 33, 33) */
 }
 
-.about p {
+body > section:nth-of-type(2) p {
     color: white; /* TODO: oppure rgb(33, 33, 33) */
 }
 
-.about-section .card .img {
+body > section:nth-of-type(2) > div > div > div > div > img {
     border-radius: 10.656px;
 }
 
-.about-food {
+body > section:nth-of-type(2) > div:nth-of-type(2) {
     padding-top: 53.28px;
 }
 
-.about-food h2{
+body > section:nth-of-type(2) > div:nth-of-type(2) h2{
     color: white;
 }
 
-.about-food p{
+body > section:nth-of-type(2) > div:nth-of-type(2) p{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.about-food {
+body > section:nth-of-type(2) > div:nth-of-type(2) {
     font-size: 14.4px;
     color: white;
     line-height: 33px;
@@ -108,41 +108,42 @@ body {
     margin-left: 99px;
 }
 
-.about-food li {
+body > section:nth-of-type(2) > div:nth-of-type(1) li {
     font-size: large;
+    color: white;
 }
 
 /* ======================== FINE ABOUT SECTION ======================== */
 
 /* ======================== INIZIO RECENSIONI ======================== */
 
-.jumbotron p {
+body > div:nth-of-type(3) p { /* .jumbotron p */
     color: white;
 }
 
-.just-content-start img {
+body > div:nth-of-type(3) > div > div > div > div > img {
     width: 80px;
     height: 80px;
     border-radius: 75%;
 }
 
-.card {
+body > div:nth-of-type(3) > div > div > div{ /* .card */
     background-color: rgb(33, 33, 33);
 }
 
-.review p {
+body > div:nth-of-type(3) > div > div > div > div > div p{ /* .review p */
     color: white;
 }
 
-.card-body p {
+body > div:nth-of-type(3) blockquote{ /* .card-body p */
     color: white;
 }
 
-.review .fa-star, .fa-star-half-alt {
+body > div:nth-of-type(3) > div > div > div > div > div i {
     color: #ffbf00;
 }
 
-.review .fa-quote-left {
+body > div:nth-of-type(3) > blockquote {
     font-size: 48px;
 }
 
@@ -157,26 +158,26 @@ body {
     /* background-color: red; */
 /*}*/
 
-.food h2 {
+body > section:nth-of-type(3) h2 {
     color: white;
 }
 
-.food p {
+body > section:nth-of-type(3) p {
     color: white;
 }
 
-.food .card{
+body > section:nth-of-type(3) .card{
     border: none;
     background-color: transparent;
     border-radius: 15.984px;
 }
 
-.food .card img {
+body > section:nth-of-type(3) .card img {
     border-radius: 15.984px;
     object-fit: cover;
 }
 
-.food .card p {
+body > section:nth-of-type(3) .card p {
     display: block;
     font-size: 19.552px;
     font-weight: 777;
@@ -185,12 +186,12 @@ body {
     border-bottom: 1.0656px solid white;
 }
 
-.food .card .prezzo del {
+body > section:nth-of-type(3) .card .prezzo del {
     color: red;
     margin-left: 8.88px;
 }
 
-.food .card .prezzo {
+body > section:nth-of-type(3) .card .prezzo {
     color: green;
 }
 
@@ -200,11 +201,11 @@ body {
 
 /* TODO: settare il paragrafo next to the map. */
 
-.map h2{
+body > div:nth-of-type(4) h2{
     text-align: center;
 }
 
-.p-map {
+body > div:nth-of-type(4) p {
     text-align: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif; /* TODO: scegliere una font-family */
@@ -215,16 +216,16 @@ body {
 
 /* ======================== INIZIO FOOTER ======================== */
 
-.hr {
+footer hr {
     width: 125px;
     height: 125px;
 }
 
-.page-footer {
+footer {
     color: white;
 }
 
-.footer-copyright {
+footer > div:nth-of-type(3) {
     background-color: black;
 }
 
