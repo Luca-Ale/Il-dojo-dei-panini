@@ -9,16 +9,16 @@ body {
 
 /* ======================== INIZIO NAVBAR ======================== */
 
-.logo-img { /* prima era .logo-img; Qui non sono riuscito!*/
+body nav div img { /* prima era .logo-img; Qui non sono riuscito!*/
     width: 48px;
     height: 48px;
 }
 
-.navbar { /* .navbar; Qui dovrebbe essere nav, ma da un risultato differente */
+body nav { /* .navbar; Qui dovrebbe essere nav, ma da un risultato differente */
     padding: 15.984px;
 }
 
-.navbar li { /* .navbar li ; Qui dovrebbe essere nav li, ma da un risultato differente*/
+nav li { /* .navbar li ; Qui dovrebbe essere nav li, ma da un risultato differente*/
     padding-right: 19.2px;
 }
 

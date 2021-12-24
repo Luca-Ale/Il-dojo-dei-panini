@@ -8,16 +8,16 @@ body {
 
 /* ======================== INIZIO NAVBAR ======================== */
 
-.logo-img {
+body nav div img {
     width: 48px;
     height: 48px;
 }
 
-.navbar {
+body nav {
     padding: 15.984px;
 }
 
-.navbar li {
+nav li {
     padding-right: 19.2px;
 }
 
