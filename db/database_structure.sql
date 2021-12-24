@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Creato il: Dic 23, 2021 alle 16:35
+-- Creato il: Dic 24, 2021 alle 17:35
 -- Versione del server: 10.4.21-MariaDB
 -- Versione PHP: 8.0.12
 
@@ -60,11 +60,24 @@ CREATE TABLE IF NOT EXISTS `carrello` (
 
 CREATE TABLE IF NOT EXISTS `messaggi` (
   `codice_messaggio` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `titolo` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `testo` varchar(360) COLLATE utf8_unicode_ci NOT NULL,
-  `UserID` int(10) NOT NULL,
-  PRIMARY KEY (`codice_messaggio`),
-  KEY `UserID` (`UserID`)
+  `oggetto` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `testo` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`codice_messaggio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `notifiche`
+--
+
+CREATE TABLE IF NOT EXISTS `notifiche` (
+  `codice_notifica` int(8) NOT NULL,
+  `oggetto` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `testo` text COLLATE utf8_unicode_ci NOT NULL,
+  `codice_ordine` int(8) NOT NULL,
+  PRIMARY KEY (`codice_notifica`),
+  KEY `codice_ordine` (`codice_ordine`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -154,10 +167,10 @@ ALTER TABLE `carrello`
   ADD CONSTRAINT `cod_utente` FOREIGN KEY (`cod_utente`) REFERENCES `users` (`UserID`);
 
 --
--- Limiti per la tabella `messaggi`
+-- Limiti per la tabella `notifiche`
 --
-ALTER TABLE `messaggi`
-  ADD CONSTRAINT `messaggi_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`);
+ALTER TABLE `notifiche`
+  ADD CONSTRAINT `codice_ordine` FOREIGN KEY (`codice_ordine`) REFERENCES `ordini` (`codice_ordine`);
 
 --
 -- Limiti per la tabella `ordini`
