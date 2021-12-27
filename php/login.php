@@ -25,15 +25,11 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 
 }
 
-if(isUserLoggedIn()){
-    header("Refresh:0; url=carrello.php");
+if(isAdminLoggedIn()){
 
-} else {
-    if(isAdminLoggedIn()){
-
-        header("Refresh:0; url=login-admin.php");
-    }
+    header("Refresh:0; url=login-admin.php");
 }
+
 
 require 'login-page.php'; //TODO: sarebbe quasi meglio chiamare ../html/login.html perchè la sua versione php, ovvero "login-page.php" non va molto bene.
 ?>
