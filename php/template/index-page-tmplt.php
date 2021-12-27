@@ -23,28 +23,25 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../html/index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../html/shop.html">Shop</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../html/about.html">About</a> 
+                    <a class="nav-link" href="shop.php">Shop</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="../html/contatti.html">Contatti</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Menù</a> <!-- TODO: add link -->
+                    <a class="nav-link" href="shop.php">Menù</a> <!-- TODO: add link -->
                   </li>
                 </ul>
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- TODO: metterli sulla destra -->
                   <li class="nav-item">
-                    <a href="../html/carrello.html"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
+                    <a href="carrello.php"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="../html/login.html"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
+                    <a href="login.php"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
                   </li>
                   <li class="nav-item">
                     <a href="#"><i class="fas fa-lightbulb" id="icon_theme" onclick="swapTheme()"></i><span class="sr-only">Theme</span></a> <!-- TODO: meglio usare l'immagine. -->
