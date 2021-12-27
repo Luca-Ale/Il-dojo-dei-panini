@@ -127,7 +127,6 @@
               </div>
               <div class="container about-food">
                 <div class="row align-items-center">
-<<<<<<< HEAD
                   <div class="col-lg-5 col-md-12 text-section mg-lg-0 mb-5">
                     <h2>Le nostre pietanze</h2> 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
@@ -162,15 +161,12 @@
                           Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
                           Proin egestas ut diam vel tincidunt. 
                           Aliquam id sollicitudin leo, commodo pretium metus.s</p>
-
-=======
                   <div class="col-lg-5 col-md-12 text-section mg-lg-0 mb-5 fs-3">
                     <h2>Le nostre pietanze</h2> <!-- TODO: chiamarle in modo migliore -->
                       <p>Il dojo ha qualsiasi tipo di pietanza, in modo da andare incontro alle necessità alimentari di chiunque. Si pone molta attenzione
                         alle pietanze plant-based, le quali permettono di avere una fonte proteica superiore rispetto al consumo di carne, in modo da condurre
                         uno stile di vita sano.
                       </p>
->>>>>>> 7beba5c33da4673d6468a0223955240b79e9617e
                       <h2>I nostri ingredienti speciali: </h2>
                     <ul class="py-1 fs-3">
                       <li class="fs-3">Tanto amore</li>
@@ -203,7 +199,6 @@
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div class="row pt-5">
                   <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
                     <div class="card">
@@ -236,7 +231,6 @@
                         <p class="prezzo">$3.99 <del>$7.99</del> <input type="button" class="btn btn-success" value="Ordina" /></p>
                       </div>
                     </div>
-=======
                 <div class="row pt-3">
                         <?php foreach($templateParams["products"] as $prod):?>
                         <div class="col-lg-4 col-md-8 mb-lg-10 mb-5">
@@ -251,7 +245,6 @@
                             </div>
                         </div>
                       <?php endforeach;?>
->>>>>>> 7beba5c33da4673d6468a0223955240b79e9617e
                   </div>
                 </div>
               </div>
