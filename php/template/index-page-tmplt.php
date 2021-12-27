@@ -161,7 +161,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="text-content text-center">
-                      <h2>I nostri Panini</h2>
+                      <h2>I nostri prodotti</h2>
                     </div>
                   </div>
                 </div>
