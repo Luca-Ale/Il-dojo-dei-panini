@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td><a href="svuota_carrello.php"><input type="button" class="btn btn-danger btn-lg" value="svuota il carrello" /></a></td>
-            <td><a href="ordine.php"><input type="button" class="btn btn-success btn-lg" value="esegui l'ordine" /></a></td>
+            <td><a href="pagamento.php"><input type="button" class="btn btn-success btn-lg" value="esegui l'ordine" /></a></td>
             <td></td>
             <td></td>
             <td></td>
@@ -32,6 +32,7 @@
         </tr>
     </table>
 </section>
+<div>
     <head><h2 class="font-monospace">Area Notifiche</h2></head>
     <body class="table">
         <table class="table table-responsive-sm table-striped table-dark table-hover fw-light text-center font-monospace">
