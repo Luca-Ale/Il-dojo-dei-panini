@@ -8,7 +8,7 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-        <script type="text/javascript" src="../js/index/index_theme.js"></script> 
+        <script src="../js/index/index_theme.js"></script> 
 
         <title>Il Dojo dei Panini | Homepage</title>
     </head>
@@ -93,7 +93,7 @@
             <div class="container-fluid padding">
               <div class="row presentazione text-center">
                 <div class="col-12">
-                  <h1 class="display-4">Il Dojo dei Panini</h1>
+                  <h2 class="display-4">Il Dojo dei Panini</h2>
                 </div>
                 <hr>
                 <div class="col-12">
@@ -361,7 +361,6 @@
                 <h2>Dove ci troviamo? <i class="fas fa-map-marked-alt"></i></h2>
                 <iframe class="well well-sm col-xs-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1238.9642814976892!2d12.234307279230064!3d44.14768737363995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4c8a9e0b5cb%3A0xbbd5902e81162eed!2sUniversit%C3%A0%20di%20Bologna%20-%20Dipartimento%20di%20Informatica%20-%20Ingegneria%20E%20Scienze%20Informatiche!5e0!3m2!1sit!2sit!4v1638652999771!5m2!1sit!2sit" width="680" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 <div class="col-xs-8">
-                </div>
                 </div>
               </div>
             </section>
