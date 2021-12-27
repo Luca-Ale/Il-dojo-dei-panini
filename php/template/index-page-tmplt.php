@@ -165,38 +165,20 @@
                     </div>
                   </div>
                 </div>
-                <div class="row pt-5">
-                  <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="card">
-                      <img src="../imgs/Food/panino_gourmet.png" alt="Panino Gourmet" class="img fluid" /> 
-                      <div class="pt-3">
-                        <h4>Panino Gourmet</h4> 
-                        <p>Tempo: 5 - 10 minuti</p>
-                        <p class="prezzo">9.99€ <input type="button" class="btn btn-success" value="Ordina" /></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="card">
-                      <img src="../imgs/Food/sandwich_vegetariano.jpg" alt="Sandwich Vegetariano" class="img fluid" /> 
-                      <div class="pt-3">
-                        <h4>Sandwich Vegetariano</h4> 
-                        <p>Tempo: 7 - 9 minuti</p>
-                        <p class="prezzo">7.99€ <input type="button" class="btn btn-success" value="Ordina" /></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="card">
-                      <img src="../imgs/Food/panino_con_spalla.jpg" alt="Panino con spalla" class="img fluid" />
-                      <div class="pt-3">
-                        <h4>Panino con spalla</h4> 
-                        <p>Tempo: 3 - 7 minuti</p>
-                        <p class="prezzo">3.99€ <input type="button" class="btn btn-success" value="Ordina" /></p>
-                      </div>
-                    </div>
+                <div class="row pt-3">
+                        <?php foreach($templateParams["products"] as $prod):?>
+                        <div class="col-lg-4 col-md-8 mb-lg-10 mb-5">
+                            <div class="card card-img-top">
+                            <img src=<?php echo IMG_DIR.$prod["img"]?> alt="" class="thumbnail img-fluid"/> 
+                            <div class="pt-3">
+                                <h4><?php echo $prod["nome"]?></h4>
+                                <p>Ingredienti : <?php echo $prod["ingredienti"]?></p>
+                                <p>Prezzo : <?php echo $prod["prezzo"]?>$</p>
+                                <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="Aggiungi al carrello" /></a>
+                            </div>
+                            </div>
+                        </div>
+                      <?php endforeach;?>
                   </div>
                 </div>
               </div>

@@ -9,6 +9,15 @@ class DatabaseHelper{
         }
     }
 
+    public function getThreeRandomProducts() {
+        $query = "SELECT codice_prodotto, nome, prezzo, quantita_disponibile, ingredienti, img FROM prodotti LIMIT 3";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    
     public function getMenuByPriceOrder() {
         $stmt = $this -> db -> prepare("SELECT * FROM prodotti ORDER BY prezzo ASC");
         $stmt->execute();
