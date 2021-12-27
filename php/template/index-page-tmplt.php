@@ -413,10 +413,10 @@
                   <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
 
                   <ul class="list-unstyled">
-                    <li class="my-2"><a href="../html/shop.html">Panini</a></li>
-                    <li class="my-2"><a href="../html/shop.html">Bibite</a></li>
-                    <li class="my-2"><a href="../html/shop.html">Pizze</a></li>
-                    <li class="my-2"><a href="../html/shop.html">Vegetariano</a></li>
+                    <li class="my-2"><a href="login.php">Panini</a></li>
+                    <li class="my-2"><a href="login.php">Bibite</a></li>
+                    <li class="my-2"><a href="login.php">Pizze</a></li>
+                    <li class="my-2"><a href="login.php">Vegetariano</a></li>
                   </ul>
                 </div>
 
