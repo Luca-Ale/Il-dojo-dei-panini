@@ -5,14 +5,14 @@ body > div:nth-of-type(1){
 }
 
 body > div > div > div > div{
-    background-color: rgb(252, 252, 252, 0.09); /* TODO: modify color */
+    background-color: rgb(252, 252, 252, 0.09); 
     box-shadow: 0 3px 15px rgb(0 0 0 / 0.666);
     border-radius: 21px;
     padding: 9px 9%;
 }
 
 body > div > div > div > div > div{
-    padding: 21px 33%; /* TODO: modify padding and margin */
+    padding: 21px 33%; 
     margin-top: 66px;
 }
 
@@ -35,12 +35,11 @@ body form > div:nth-of-type(1) > input:nth-of-type(1){
     background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
     border: none;
-    /*color: #fa1505;*/ /* TODO: remove */
     color: #f3360c;
     box-shadow: none;
-    margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+    margin-bottom: 3px; 
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(1) > input:nth-of-type(1)::-webkit-input-placeholder {
@@ -69,12 +68,11 @@ body form > div:nth-of-type(1) > input:nth-of-type(2){
     background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
     border: none;
-    /*color: #fa1505;*/ /* TODO: remove */
     color: #f3360c;
     box-shadow: none;
-    margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+    margin-bottom: 3px; 
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(1) > input:nth-of-type(2)::-webkit-input-placeholder {
@@ -103,11 +101,10 @@ body form > div:nth-of-type(2) > input:nth-of-type(1) {
     background-color: rgb(0, 0, 0, 0.333);
     height: 45px;
     border: none;
-    /*color: #fa1505;*/ /* TODO: remove */
     color: #f3360c;
     box-shadow: none;
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(2) > input:nth-of-type(1)::-webkit-input-placeholder {
@@ -120,28 +117,6 @@ body form > div:nth-of-type(2) > input:nth-of-type(1):focus {
     background: rgb(0, 0, 0, 0.444);
     border: 1px solid #f3360c;
 }
-
-/* TODO: remove */
-/*.new-password-input {
-    background-color: rgb(0, 0, 0, 0.333);
-    height: 45px;
-    border: none;
-    color: #f3360c;
-    box-shadow: none;
-
-    text-align: center; 
-}
-
-.new-password-input::-webkit-input-placeholder {
-    position: relative;
-    right: 75px;
-}*/
-
-/*.new-password-input:focus {
-    color: #fa1505;
-    background: rgb(0, 0, 0, 0.444);
-    border: 1px solid #f3360c;
-}*/
 
 body form > div:nth-of-type(2) > img:nth-of-type(1) {
     width: 24px;
@@ -160,7 +135,7 @@ body form > div:nth-of-type(3) > input:nth-of-type(1){
     border: none;
     color: #f3360c;
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(3) > input:nth-of-type(1)::-webkit-input-placeholder {
@@ -201,17 +176,17 @@ body form > input:nth-of-type(1){
 }
 
 body form > input:nth-of-type(1):hover{
-    background: rgb(0, 0, 0, 0.333); /* TODO: modify color */
+    background: rgb(0, 0, 0, 0.333); 
     color: #f3360c;
 }
 
 body a:nth-of-type(1){
-    text-align: center; /* TODO: fix align */
+    text-align: center; 
     color: #f3360c;
 }
 
 body a:nth-of-type(1):hover{
-    color: #be2e20; /* TODO: cambiare colore? */
+    color: #be2e20; 
 }
 
 body > input:nth-of-type(1) {
@@ -232,7 +207,6 @@ body form > div:nth-of-type(2) > i:nth-of-type(2) {
     height: 24px;
 
     opacity: 0.7;
-    /*filter: invert(); TODO: remove*/
     filter: opacity(0.5);
 
     color: #f3360c;
@@ -247,13 +221,11 @@ body form > div:nth-of-type(2) > i:nth-of-type(2) {
 
 }
 
-/* TODO: controllare se è alla stessa altezza dell'altro */
 body form > div:nth-of-type(3) > i:nth-of-type(1) {
     width: 24px;
     height: 24px;
 
     opacity: 0.7;
-    /*filter: invert(); TODO: remove*/
     filter: opacity(0.5);
 
     color: #f3360c;

@@ -1,6 +1,4 @@
 body {
-    /* background-color: orange; */
-    /* TODO: font-family */
     background-color: white;
     width: 100%;
     height: 100%;
@@ -9,16 +7,16 @@ body {
 
 /* ======================== INIZIO NAVBAR ======================== */
 
-body nav div img { /* prima era .logo-img; Qui non sono riuscito!*/
+body nav div img { /* prima era .logo-img*/
     width: 48px;
     height: 48px;
 }
 
-body nav { /* .navbar; Qui dovrebbe essere nav, ma da un risultato differente */
+body nav { /* .navbar; */
     padding: 15.984px;
 }
 
-nav li { /* .navbar li ; Qui dovrebbe essere nav li, ma da un risultato differente*/
+nav li { /* .navbar li */
     padding-right: 19.2px;
 }
 
@@ -34,13 +32,13 @@ body > div:nth-of-type(1) > div:nth-of-type(2) > div > div{ /* .carousel-caption
 }
 
 body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h1 { /* .carousel-caption h1 */
-    font-size: 555%; /* TODO: prima era 333 */
+    font-size: 555%; 
     text-transform: capitalize;
     text-shadow: 3px 3px 9px rgb(0, 0, 0);
 }
 
 body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h3 { /* .carousel-caption h1 */
-    font-size: 333%; /* TODO: prima era 222 */
+    font-size: 333%; 
     font-weight: 333;
     text-shadow: 1px 1px 9px rgb(0, 0, 0);
     text-transform: lowercase;
@@ -51,8 +49,8 @@ body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h3 { /* .carousel-c
 /* ======================== INIZIO PRESENTAZIONE ======================== */
 
 body > section:nth-of-type(1){ /* .section-presentazione */
-    background-color: white; /* TODO: cambiare tipo di rosso o mettere bianco */
-    color: rgb(33, 33, 33); /* TODO: RGB(33, 33, 33) OPPURE WHITE */
+    background-color: white; 
+    color: rgb(33, 33, 33); 
 }
 
 body > section:nth-of-type(1) > div > div{ /* .presentazione */
@@ -77,11 +75,11 @@ body > section:nth-of-type(2) { /* .about */
 }
 
 body > section:nth-of-type(2) h2 {
-    color: white; /* TODO: oppure rgb(33, 33, 33) */
+    color: white; 
 }
 
 body > section:nth-of-type(2) p {
-    color: white; /* TODO: oppure rgb(33, 33, 33) */
+    color: white; 
 }
 
 body > section:nth-of-type(2) > div > div > div > div > img{ /* .about-section .card .img */
@@ -136,13 +134,6 @@ body > div:nth-of-type(3) > blockquote{ /* .review .fa-quote-left */
 
 /* ======================== CARDS PANINI ======================== */
 
-/* TODO: allinearle sulla sinistra (una card affianco all'altra) */
-/* TODO: cambiare colore pulsanti */
-
-/*.food {*/
-    /* background-color: red; */
-/*}*/
-
 body > section:nth-of-type(3) .card { /* .food .card */
     border: none;
     background-color: transparent;
@@ -176,16 +167,14 @@ body > section:nth-of-type(3) .card .prezzo { /* .food .card .prezzo */
 
 /* ======================== INIZIO MAPPA ======================== */
 
-/* TODO: settare il paragrafo next to the map. */
-
 body > div:nth-of-type(4) h2{ /* .map h2 */
     text-align: center;
 }
 
 body > div:nth-of-type(4) p { /* .p-map */
     text-align: center;
-    color: rgb(33, 33, 33); /* TODO: white */
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* TODO: scegliere una font-family */
+    color: rgb(33, 33, 33); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
     font-size: medium;
 }
 
@@ -193,9 +182,7 @@ body > div:nth-of-type(4) p { /* .p-map */
 
 /* ======================== INIZIO FOOTER ======================== */
 
-/* TODO: Quel footer position: absolute non lo fa vedere correttamente. */
-
-footer hr{ /* prima era .hr ed era infatti sbagliato perchè non puntava al footer*/
+footer hr{ 
     width: 125px;
     height: 125px;
 }

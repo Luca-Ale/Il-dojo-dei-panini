@@ -5,14 +5,14 @@ body > div:nth-of-type(1){
 }
 
 body > div > div > div > div{
-    background-color: rgb(252, 252, 252, 0.09); /* TODO: modify color */
+    background-color: rgb(252, 252, 252, 0.09); 
     box-shadow: 0 3px 15px rgb(0 0 0 / 0.666);
     border-radius: 21px;
     padding: 9px 9%;
 }
 
 body > div > div > div > div > div{
-    padding: 21px 33%; /* TODO: modify padding and margin */
+    padding: 21px 33%; 
     margin-top: 66px;
 }
 
@@ -38,7 +38,7 @@ body form > div:nth-of-type(1) > input{
     color: #fa1505;
     box-shadow: none;
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(1) > input::-webkit-input-placeholder {
@@ -70,7 +70,7 @@ body form > div:nth-of-type(2) > input{
     color: #fa1505;
     box-shadow: none;
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(2) > input::-webkit-input-placeholder {
@@ -118,12 +118,12 @@ body a:nth-of-type(2):hover{
 }
 
 body a:nth-of-type(1){
-    text-align: center; /* TODO: fix align */
+    text-align: center; 
     color: #f3360c;
 }
 
 body a:nth-of-type(1):hover{
-    color: #be2e20; /* TODO: cambiare colore? */
+    color: #be2e20; 
 }
 
 body > input:nth-of-type(1) {
@@ -139,13 +139,11 @@ body > input:nth-of-type(1) {
     width: 42px;
 }
 
-/* TODO: fix issue with positioning when typing password */
 body form > div:nth-of-type(2) > i {
     width: 24px;
     height: 24px;
 
     opacity: 0.7;
-    /*filter: invert(); TODO: remove */
 
     color: #f3360c;
     filter: opacity(0.5);

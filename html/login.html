@@ -9,29 +9,27 @@
         <link id="theme-style-login" rel="stylesheet" type="text/css" href="../css/login_style.css" />
 
         <!-- FONTAWESOME -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-        <!-- TODO: link al file js. per il login -->
-        <script type="text/javascript" src="../js/login/login_theme.js"></script> <!-- TODO: cercare di utilizzare un singolo script sia per il login che per il signup. -->
+        <script type="text/javascript" src="../js/login/login_theme.js"></script> 
     </head>
     <body>
         <div class="page-content d-flex align-items-center">
             <div class="container d-flex justify-content-center">
-                <div class="col-9 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-xxl-5"> <!-- TODO: fix cols -->
+                <div class="col-9 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-xxl-5"> 
                     <div class="login">
                         <div class="logo-section">
-                            <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
+                            <img class="logo" src="../imgs/logo.png" alt="" />
                         </div>
                         <h3 class="login-title">Login</h3>
                         <form action="../php/login.php" method="POST">
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control email-username-input" placeholder="Username | Email" name="username"/>
-                                <img src="../icons/envelope-open-solid.svg" alt="Email Icon" class="img-email" />
+                                <img src="../icons/envelope-open-solid.svg" alt="" class="img-email" />
                             </div>
                             <div class="mb-3">
                                 <input type="password" class="form-control password-input" id="password" placeholder="Password" name="password"/>
-                                <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
+                                <img src="../icons/key-solid.svg" alt="" class="img-password" />
                                 <i class="fas fa-eye password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()"></i>
                             </div>
                             <input class="btn btn-login" type="submit" value="Login" alt="" />

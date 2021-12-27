@@ -1,11 +1,11 @@
 body > div:nth-of-type(1){
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, rgb(234, 234, 234), white); /* TODO: modify color */
+    background: linear-gradient(45deg, rgb(234, 234, 234), white); 
 }
 
 body > div > div > div > div{ /* .signup, qui non mi va nth-of-type(4) sul div */
-    background-color: white; /* TODO: modify color */
+    background-color: white; 
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.333);
     border-radius: 21px;
     padding: 9px 9%;
@@ -34,12 +34,11 @@ body hr{
 body form > div:nth-of-type(1) > input:nth-of-type(1){ /* .username-input */
     background-color: white;
     height: 45px;
-    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
-    /*color: #fa1505;*/ /* TODO: remove */
+    border: 3px solid rgb(222, 222, 222); 
     box-shadow: none;
-    margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+    margin-bottom: 3px; 
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(1) > input:nth-of-type(1)::-webkit-input-placeholder {
@@ -48,7 +47,7 @@ body form > div:nth-of-type(1) > input:nth-of-type(1)::-webkit-input-placeholder
 }
 
 body form > div:nth-of-type(1) > input:nth-of-type(1):focus {
-    color: #fa1505; /* TODO: remove? */
+    color: #fa1505; 
     border: 1px solid #fa1505;
 }
 
@@ -64,12 +63,11 @@ body form > div:nth-of-type(1) > img:nth-of-type(1){ /* .img-user */
 body form > div:nth-of-type(1) > input:nth-of-type(2){ /* era .email-input */
     background-color: white;
     height: 45px;
-    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
-    /*color: #fa1505;*/ /* TODO: remove */
+    border: 3px solid rgb(222, 222, 222); 
     box-shadow: none;
-    margin-bottom: 3px; /* TODO: fix distanza tra email e username */
+    margin-bottom: 3px; 
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(1) > input:nth-of-type(2)::-webkit-input-placeholder {
@@ -78,7 +76,7 @@ body form > div:nth-of-type(1) > input:nth-of-type(2)::-webkit-input-placeholder
 }
 
 body form > div:nth-of-type(1) > input:nth-of-type(2):focus {
-    color: #fa1505; /* TODO: remove? */
+    color: #fa1505; 
     border: 1px solid #fa1505;
 }
 
@@ -94,11 +92,9 @@ body form > div:nth-of-type(1) > img:nth-of-type(2) { /* .img-email */
 body form > div:nth-of-type(2) > input:nth-of-type(1){ /* .password-input */
     background-color: white;
     height: 45px;
-    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
-    
-    /*color: #fa1505;*/ /* TODO: remove */
+    border: 3px solid rgb(222, 222, 222); 
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(2) > input:nth-of-type(1)::-webkit-input-placeholder {
@@ -107,30 +103,9 @@ body form > div:nth-of-type(2) > input:nth-of-type(1)::-webkit-input-placeholder
 }
 
 body form > div:nth-of-type(2) > input:nth-of-type(1):focus {
-    color: #fa1505; /* TODO: remove? */
-    border: 1px solid #fa1505;
-}
-
-/* .new-password-input */ /* TODO: remove */
-/*body form > div:nth-of-type(2) > input:nth-of-type(1){ 
-    background-color: white;
-    height: 45px;
-    border: 3px solid rgb(222, 222, 222); 
-    
-    color: #fa1505;
-
-    text-align: center; 
-}
-
-.new-password-input::-webkit-input-placeholder {
-    position: relative;
-    right: 75px;
-}*/
-
-/*.new-password-input:focus {
     color: #fa1505; 
     border: 1px solid #fa1505;
-}*/
+}
 
 body form > div:nth-of-type(2) > img:nth-of-type(1) { /* .img-password */
     width: 24px;
@@ -144,9 +119,9 @@ body form > div:nth-of-type(2) > img:nth-of-type(1) { /* .img-password */
 body form > div:nth-of-type(3) > input:nth-of-type(1){ /* .password-reinput */
     background-color: white;
     height: 45px;
-    border: 3px solid rgb(222, 222, 222); /* TODO: 1px? */
+    border: 3px solid rgb(222, 222, 222); 
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(3) > input:nth-of-type(1)::-webkit-input-placeholder {
@@ -155,7 +130,7 @@ body form > div:nth-of-type(3) > input:nth-of-type(1)::-webkit-input-placeholder
 }
 
 body form > div:nth-of-type(3) > input:nth-of-type(1):focus {
-    color: #fa1505; /* TODO: remove? */
+    color: #fa1505; 
     border: 1px solid #fa1505;
 }
 
@@ -184,12 +159,12 @@ body form > input:nth-of-type(1){ /* .btn-signup */
 }
 
 body form > input:nth-of-type(1):hover{
-    background: black; /* TODO: modify color */
+    background: black; 
     color: white;
 }
 
 body a:nth-of-type(1){ /* .login-link */
-    text-align: center; /* TODO: fix align */
+    text-align: center; 
     color: #359eca;
 }
 
@@ -198,7 +173,7 @@ body a:nth-of-type(1):hover{
 }
 
 body > input:nth-of-type(1){ /* .img-theme */
-    background-color: rgb(53, 53, 53); /* TODO: mettere black */
+    background-color: rgb(53, 53, 53); 
     color: white;
     box-shadow: none;
 
@@ -210,7 +185,6 @@ body > input:nth-of-type(1){ /* .img-theme */
     width: 42px;
 }
 
-/* TODO: fix issue with positioning when typing password */
 body form > div:nth-of-type(2) > i:nth-of-type(2){ /* .password-visibility */
     width: 24px;
     height: 24px;
@@ -225,7 +199,7 @@ body form > div:nth-of-type(2) > i:nth-of-type(2){ /* .password-visibility */
 
     color: #fa1505;
 
-    filter: opacity(0.5); /* TODO: di default a 0.5 per significare che la password non è visibile */
+    filter: opacity(0.5); 
 
     /*overflow: auto;
     max-height: 100%;*/
@@ -275,28 +249,3 @@ body form > div:nth-of-type(3) > i:nth-of-type(2){ /* .exclamation-confirmation-
 
     right: 50px;
 }
-
-/* TODO: remove */
-
-/*.password-visibility {
-    width: 24px;
-    height: 24px;
-
-    opacity: 0.7;
-
-    position: fixed;
-
-
-}
-
-.password-visibility-confirmation {
-    width: 24px;
-    height: 24px;
-
-    opacity: 0.7;
-
-    float: right;
-
-    position: fixed;
-
-}*/

@@ -9,19 +9,17 @@
         <link id="theme-style-signup" rel="stylesheet" type="text/css" href="../css/signup_style.css" />
 
         <!-- FONTAWESOME -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-        <!-- TODO: link al file js per il signup. -->
-        <script type="text/javascript" src="../js/signup/signup_theme.js"></script> <!-- TODO: cercare di utilizzare un singolo script sia per il login che per il signup. -->
+        <script type="text/javascript" src="../js/signup/signup_theme.js"></script> 
     </head>
     <body>
         <div class="page-content d-flex align-items-center">
             <div class="container d-flex justify-content-center">
-                <div class="col-9 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-xxl-5"> <!-- TODO: fix cols -->
+                <div class="col-9 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-xxl-5"> 
                     <div class="signup">
                         <div class="logo-section">
-                            <img class="logo" src="../imgs/logo.png" alt="Dojo Logo" />
+                            <img class="logo" src="../imgs/logo.png" alt="" />
                         </div>
                         <h3 class="signup-title">Sign up</h3>
                         <form action="../php/signup.php" method="POST">
@@ -30,13 +28,13 @@
                             <?php endif; ?>
                             <div class="mb-2 mt-5">
                                 <input type="text" class="form-control username-input" placeholder="Username" name="username"/>
-                                <img src="../icons/user-solid.svg" alt="User icon" class="img-user" />
+                                <img src="../icons/user-solid.svg" alt="" class="img-user" />
                                 <input type="email" class="form-control email-input" placeholder="Email" name="email"/>
-                                <img src="../icons/envelope-open-solid.svg" alt="Email Icon" class="img-email" />
+                                <img src="../icons/envelope-open-solid.svg" alt="" class="img-email" />
                             </div>
                             <div class="mb-3">
                                 <input type="password" class="form-control password-input" placeholder="Password" id="password" oninput="passwordStrengthChecker()" name="password"/>
-                                <img src="../icons/key-solid.svg" alt="Password Icon" class="img-password" />
+                                <img src="../icons/key-solid.svg" alt="" class="img-password" />
                                 <i class="fas fa-exclamation-circle exclamation-icon" id="exclamation-circle"></i>
                                 <p class="password-strength-status" id="password-strength-status">{Password Strength Level}</p> 
                                 <i class="fas fa-eye password-visibility" id="password-visibility" alt="Password-visibility" onclick="toggleVisibility()"></i>
@@ -45,7 +43,7 @@
                             <div class="mb-3">
                                 <input type="password" class="form-control password-reinput" placeholder="Confirm Password" id="confirm-password" oninput="passwordMatching()" name="confirm-password"/>
                                 <i class="fas fa-eye password-visibility-confirmation" id="password-visibility-confirmation" alt="Password-visibility-confirmation" onclick="toggleVisibilityConfirmation()"></i>
-                                <img src="../icons/unlock-alt-solid.svg" alt="Passowrd Confirmation Icon" class="img-password-confirmation" />
+                                <img src="../icons/unlock-alt-solid.svg" alt="" class="img-password-confirmation" />
                                 <i class="fas fa-exclamation-circle exclamation-confirmation-icon" id="exclamation-circle-confirmation"></i>
                             </div>
 
@@ -60,7 +58,7 @@
         </div>
         <input type="image" src="../icons/theme/lightbulb-solid.svg" class="btn img-theme" id="icon_theme" onclick="swapTheme()" alt="Theme" />
 
-        <script type="text/javascript" src="../js/signup/password_strength_checker.js"></script> <!-- !Questo deve stare in fondo al file, altrimenti non funziona perchè non trova il div. -->
+        <script type="text/javascript" src="../js/signup/password_strength_checker.js"></script> 
         <script type="text/javascript" src="../js/signup/password_matching.js"></script>
         <script type="text/javascript" src="../js/password_visibility.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

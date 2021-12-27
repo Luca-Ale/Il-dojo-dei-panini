@@ -1,7 +1,7 @@
 body > div:nth-of-type(1) { /* prima era .page-content */
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, rgb(234, 234, 234), white); /* TODO: modify color */
+    background: linear-gradient(45deg, rgb(234, 234, 234), white);
 }
 
 body > div > div > div > div { /* prima era .login; qui sarebbe nth-of-type(4) ma non mi andava */
@@ -35,10 +35,9 @@ body form > div:nth-of-type(1) > input{ /* prima era .email-username-input */
     background-color: white;
     height: 45px;
     border: 3px solid rgb(222, 222, 222);
-    /*color: #fa1505;*/ /* TODO: remove */
     box-shadow: none;
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(1) > input::-webkit-input-placeholder {
@@ -66,7 +65,7 @@ body form > div:nth-of-type(2) > input{ /* .password-input */
     border: 3px solid rgb(222, 222, 222);
     color: #fa1505; 
 
-    text-align: center; /* TODO: mostrarlo più a sinistra che al centro. */
+    text-align: center; 
 }
 
 body form > div:nth-of-type(2) > input::-webkit-input-placeholder {
@@ -75,7 +74,7 @@ body form > div:nth-of-type(2) > input::-webkit-input-placeholder {
 }
 
 body form > div:nth-of-type(2) > input:focus {
-    color: #fa1505; /* TODO: remove? */
+    color: #fa1505; 
     border: 1px solid red;
 }
 
@@ -133,7 +132,7 @@ body a:nth-of-type(1):hover{
     width: 42px;
 }
 
-/* TODO: fix issue with positioning when typing password */
+
  body form > div:nth-of-type(2) > i{ /* .password-visibility */
     width: 24px;
     height: 24px;
@@ -155,11 +154,3 @@ body a:nth-of-type(1):hover{
     cursor: pointer;
 
 }
-
-/* TODO: remove */
-/*.password-visibility {
-    position: relative;
-
-    bottom: 30px;
-    left: 270px;
-}*/
