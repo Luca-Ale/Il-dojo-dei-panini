@@ -48,7 +48,7 @@
                   </li>
                 </ul>
 
-                <form class="d-flex"> <!-- TODO: remove -->
+                <form class="d-flex"> <!-- TODO: remove? -->
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
@@ -127,42 +127,8 @@
               </div>
               <div class="container about-food">
                 <div class="row align-items-center">
-                  <div class="col-lg-5 col-md-12 text-section mg-lg-0 mb-5">
-                    <h2>Le nostre pietanze</h2> 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-                      Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
-                      Proin facilisis ligula fringilla laoreet eleifend. 
-                      Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
-                      Fusce id sapien non orci pellentesque venenatis quis ac magna.
-                      Nullam dictum aliquet nibh, nec aliquam ligula gravida at. <br>
-                      Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui. <br>
-                      Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
-                      Proin egestas ut diam vel tincidunt. 
-                      Aliquam id sollicitudin leo, commodo pretium metus.s</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
-                        Proin facilisis ligula fringilla laoreet eleifend. 
-                        Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
-                        Fusce id sapien non orci pellentesque venenatis quis ac magna.
-                        Nullam dictum aliquet nibh, nec aliquam ligula gravida at. <br>
-                        Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui. <br>
-                        Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
-                        Proin egestas ut diam vel tincidunt. 
-                        Aliquam id sollicitudin leo, commodo pretium metus.s</p>
-
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                          Duis sed ipsum fermentum, mollis elit non, rutrum turpis. 
-                          Proin facilisis ligula fringilla laoreet eleifend. 
-                          Sed porttitor rutrum eleifend. Aliquam interdum eget augue a sollicitudin. 
-                          Fusce id sapien non orci pellentesque venenatis quis ac magna.
-                          Nullam dictum aliquet nibh, nec aliquam ligula gravida at. <br>
-                          Sed mattis, nisi in commodo consequat, quam elit facilisis libero, at euismod dui urna non turpis. Duis metus velit, rhoncus eu ante nec, fringilla scelerisque dui. <br>
-                          Fusce et lacinia sem, a facilisis nisi. Sed at sapien efficitur, porttitor libero vitae, vestibulum sapien. Morbi vitae vulputate libero. 
-                          Proin egestas ut diam vel tincidunt. 
-                          Aliquam id sollicitudin leo, commodo pretium metus.s</p>
                   <div class="col-lg-5 col-md-12 text-section mg-lg-0 mb-5 fs-3">
-                    <h2>Le nostre pietanze</h2> <!-- TODO: chiamarle in modo migliore -->
+                    <h2>Le nostre pietanze</h2> 
                       <p>Il dojo ha qualsiasi tipo di pietanza, in modo da andare incontro alle necessità alimentari di chiunque. Si pone molta attenzione
                         alle pietanze plant-based, le quali permettono di avere una fonte proteica superiore rispetto al consumo di carne, in modo da condurre
                         uno stile di vita sano.
@@ -199,38 +165,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="row pt-5">
-                  <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="card">
-                      <img src="../imgs/Food/panino_gourmet.png" alt="" class="img fluid" /> 
-                      <div class="pt-3">
-                        <h4>Panino Gourmet</h4> 
-                        <p>Tempo: 5 - 10 minuti</p>
-                        <p class="prezzo">$9.99 <del>$12.99</del> <input type="button" class="btn btn-success" value="Ordina" /></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="card">
-                      <img src="../imgs/Food/sandwich_vegetariano.jpg" alt="" class="img fluid" /> 
-                      <div class="pt-3">
-                        <h4>Sandwich Vegetariano</h4> 
-                        <p>Tempo: 7 - 9 minuti</p>
-                        <p class="prezzo">$7.99 <del>$9.99</del> <input type="button" class="btn btn-success" value="Ordina" /></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="card">
-                      <img src="../imgs/Food/panino_con_spalla.jpg" alt="" class="img fluid" />
-                      <div class="pt-3">
-                        <h4>Panino con spalla</h4> 
-                        <p>Tempo: 3 - 7 minuti</p>
-                        <p class="prezzo">$3.99 <del>$7.99</del> <input type="button" class="btn btn-success" value="Ordina" /></p>
-                      </div>
-                    </div>
                 <div class="row pt-3">
                         <?php foreach($templateParams["products"] as $prod):?>
                         <div class="col-lg-4 col-md-8 mb-lg-10 mb-5">
