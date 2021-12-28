@@ -19,7 +19,7 @@ class DatabaseHelper{
     }
     
     public function getMenuByPriceOrder() {
-        $stmt = $this -> db -> prepare("SELECT * FROM prodotti ORDER BY prezzo ASC");
+        $stmt = $this -> db -> prepare("SELECT * FROM prodotti WHERE quantita_disponibile > 0 ORDER BY prezzo ASC");
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -30,8 +30,16 @@ class DatabaseHelper{
         $stmt = $this -> db -> prepare("INSERT INTO prodotti VALUES (NULL, ?, ?, ?, ?, ?)");
         $stmt -> bind_param('siiss', $nome, $prezzo, $quantitaDisponibile, $ingredienti, $img);
         return $stmt->execute();
-        //$result = $stmt->get_result();
-        //return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function isProductStillAvaiable($cod_prodotto) {
+        $query = "SELECT * FROM prodotti WHERE codice_prodotto = ? AND quantita_disponibile > 0";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $cod_prodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function getProductById($codProdotto){
@@ -45,7 +53,7 @@ class DatabaseHelper{
     }
 
     public function getProductByIdFromShoppingCart($cod_prodotto, $cod_utente) {
-        $query = "SELECT * FROM carrello WHERE cod_prodotto = ? GROUP BY cod_utente = ?";
+        $query = "SELECT * FROM carrello WHERE cod_prodotto = ? AND cod_utente = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('ii', $cod_prodotto, $cod_utente);
         $stmt->execute();
@@ -75,8 +83,6 @@ class DatabaseHelper{
         $stmt = $this -> db -> prepare("DELETE FROM prodotti WHERE codice_prodotto = ?");
         $stmt->bind_param('i', $codice);
         return $stmt->execute();
-        //$result = $stmt->get_result();
-        //return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function getShoppingCartProducts($userID) {
@@ -98,7 +104,6 @@ class DatabaseHelper{
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
-
     }
 
     public function checkUserLogin($username, $password){
@@ -268,5 +273,32 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function increaseProductQuantity($cod_prodotto) {
+        $stmt = $this->db->prepare("UPDATE prodotti SET quantita_disponibile = (quantita_disponibile + 1) WHERE codice_prodotto=?");
+        $stmt->bind_param("i", $cod_prodotto);
+        $stmt->execute(); 
+    }
+
+    public function decreaseProductQuantity($cod_prodotto) {
+        $stmt = $this->db->prepare("UPDATE prodotti SET quantita_disponibile = (quantita_disponibile - 1) WHERE codice_prodotto=?");
+        $stmt->bind_param("i", $cod_prodotto);
+        $stmt->execute();
+    }
+
+    public function setProductQuantity($quantity, $cod_prodotto) {
+        $stmt = $this->db->prepare("UPDATE prodotti SET quantita_disponibile = (quantita_disponibile + ?) WHERE codice_prodotto=?");
+        $stmt->bind_param("ii", $quantity, $cod_prodotto);
+        $stmt->execute();
+    }
+
+    public function getShoppingCartProductByID($cod_prodotto, $UserID) {
+        $stmt = $this -> db -> prepare("SELECT * FROM prodotti WHERE cod_prodotto = ? AND cod_utente = ?");
+        $stmt->bind_param('ii', $cod_prodotto, $UserID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
 }
 ?>
