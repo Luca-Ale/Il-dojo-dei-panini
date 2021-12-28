@@ -8,9 +8,10 @@
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <title>Il Dojo dei Panini | Base</title>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <header>
         <!-- NAVIGATION BAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- TODO: md , bg-dark o bg-light -->
@@ -60,11 +61,57 @@
         </header>
 
         <main>
-            <p>Lorem ipsum.</p>
+          <section class="table-responsive-sm">
+            <table class="table table-responsive-sm table-striped table-dark table-hover fw-light text-center font-monospace">
+                <tr class="fst-italic">
+                    <th id="product">Prodotto</th><th id="quantita">Quantita'</th><th id="costo">Costo(per unita')</th><th></th><th></th><th></th>
+                </tr>
+                <tr class="text-lowercase">
+                    <td id=""></td>
+                    <td</td>
+                    <td></td>
+                    <td><input type="button" class="btn btn-success btn-lg" value="+" /></td>
+                    <td><input type="button" class="btn btn-danger btn-lg" value="-" /></td>
+                    <td><input type="button" class="btn btn-danger btn-lg" value="rimuovi dal carrello" /></td>
+                </tr>
+                <tr>
+                    <td>Totale: </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="svuota_carrello.php"><input type="button" class="btn btn-danger btn-lg" value="svuota il carrello" /></a></td>
+                    <td><a href="pagamento.php"><input type="button" class="btn btn-success btn-lg" value="esegui l'ordine" /></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+        <div>
+            <head><h2 class="font-monospace">Area Notifiche</h2></head>
+            <body class="table">
+                <table class="table table-responsive-sm table-striped table-dark table-hover fw-light text-center font-monospace">
+                    <tr class="fst-italic bg-light">
+                        <th id="idOrdine">Numero ordine</th><th id="data">Data ricezione</th><th id="oggetto">Oggetto</th><th id="testo">Testo</th>
+                    </tr>
+                    <tr class="text-lowercase">
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                    </tr>
+                </table>
+            </body>
+        </div>
         </main>
 
         <!-- TODO: FOOTER -->
-        <footer class="page-footer bg-dark"> <!-- TODO: aggiungere una colonna per delle informazioni generali? -->
+        <footer class="page-footer bg-dark mt-auto"> <!-- TODO: aggiungere una colonna per delle informazioni generali? -->
             <div class="bg-dark">
             <div class="container">
                 <div class="row py-4 d-flex align-items-center">
@@ -129,5 +176,4 @@
 
         </footer>    
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
