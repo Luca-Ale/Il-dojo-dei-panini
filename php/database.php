@@ -300,5 +300,13 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getNotificationByOrderID($codice_ordine) {
+        $stmt = $this -> db -> prepare("SELECT * FROM notifiche WHERE codice_ordine = ?");
+        $stmt->bind_param('i', $codice_ordine);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
 }
 ?>

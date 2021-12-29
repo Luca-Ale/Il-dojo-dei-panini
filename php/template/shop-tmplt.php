@@ -19,7 +19,7 @@
                                 <p>Ingredienti : <?php echo $prod["ingredienti"]?></p>
                                 <p>Prezzo : <?php echo $prod["prezzo"]?>€</p>
                                 <p>Quantità disponibile: <?php echo $prod["quantita_disponibile"]?></p>
-                                <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="Aggiungi al carrello" /></a>
+                                <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>" class="btn btn-success">Aggiungi al carrello</a>
                             </div>
                             </div>
                         </div>

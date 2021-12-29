@@ -24,8 +24,8 @@ $elencoProdotti = " ";
 foreach($products as $prod) {
     $elencoProdotti = $elencoProdotti . $prod["nome"] . ", ";
 }
-$testoArticolo = "Signor " . $userName[0]["username"]
-. ", la confermiamo che in data " . $orderData[0]["DataOra"] 
+$testoArticolo = "Signor/a " . $userName[0]["username"]
+. ", le confermiamo che in data " . $orderData[0]["DataOra"] 
 . " lei ha effettuato l'ordine " . $orderData[0]["codice_ordine"] 
 . " in cui ha acquistato i prodotti: "
 . $elencoProdotti
