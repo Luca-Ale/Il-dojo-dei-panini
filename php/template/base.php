@@ -44,15 +44,12 @@
                   </li>
                 </ul>
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- TODO: metterli sulla destra -->
+                <ul class="navbar-nav mb-2 mb-lg-0"> <!-- TODO: metterli sulla destra -->
                   <li class="nav-item">
                     <a href="carrello.php"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
                   </li>
                   <li class="nav-item">
                     <a href="login.php"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#"><i class="fas fa-lightbulb"></i><span class="sr-only">Theme</span></a> <!-- TODO: meglio usare l'immagine. -->
                   </li>
                 </ul>
               </div>

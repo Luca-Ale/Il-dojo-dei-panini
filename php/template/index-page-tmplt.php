@@ -36,7 +36,7 @@
                   </li>
                 </ul>
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                <ul class="navbar-nav mb-2 mb-lg-0"> 
                   <li class="nav-item">
                     <a href="carrello.php"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
                   </li>
