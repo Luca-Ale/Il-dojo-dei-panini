@@ -173,8 +173,8 @@
                             <div class="pt-3">
                                 <h4><?php echo $prod["nome"]?></h4>
                                 <p>Ingredienti : <?php echo $prod["ingredienti"]?></p>
-                                <p>Prezzo : <?php echo $prod["prezzo"]?>$</p>
-                                <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="Aggiungi al carrello" /></a>
+                                <p>Prezzo : <?php echo $prod["prezzo"]?>€</p>
+                                <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="Acquista!" /></a>
                             </div>
                             </div>
                         </div>

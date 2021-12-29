@@ -10,7 +10,7 @@ class DatabaseHelper{
     }
 
     public function getThreeRandomProducts() {
-        $query = "SELECT codice_prodotto, nome, prezzo, quantita_disponibile, ingredienti, img FROM prodotti LIMIT 3";
+        $query = "SELECT codice_prodotto, nome, prezzo, quantita_disponibile, ingredienti, img FROM prodotti WHERE quantita_disponibile > 0 LIMIT 3";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
