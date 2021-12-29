@@ -25,7 +25,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 
 }
 
-if(isAdminLoggedIn()){
+if( isAdminLoggedIn() ){
 
     header("Refresh:0; url=login-admin.php");
 }
