@@ -1,6 +1,6 @@
 
 body {
-    background: linear-gradient(-100deg, white 50%, red 50%); /* TODO: oppure -120deg? oppure usare altri gradi? ; invertire il rosso ed il bianco? */
+    background: linear-gradient(-100deg, white 50%, red 50%); 
 
     font-family: century-gothic, sans-serif;
     font-weight: 400;
@@ -15,16 +15,12 @@ body nav div img {
     height: 48px;
 }
 
-body nav { /* prima era .navbar e si vedeva un po' più grande */
-    padding: .999rem;
-}
-
-body nav {
-    background-color: aqua;
+body nav { 
+    padding: 15.984px;
 }
 
 nav li {
-    padding-right: 1.2em;
+    padding-right: 19.2px;
 }
 
 body div:nth-of-type(2) > div > img { /* .carousel-inner img */
@@ -39,13 +35,13 @@ body > div:nth-of-type(1) > div:nth-of-type(2) > div > div { /* .carousel-captio
 }
 
 body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h1 { /* .carousel-caption h1 */
-    font-size: 555%; /* TODO: prima era 333 */
+    font-size: 555%; 
     text-transform: capitalize;
     text-shadow: 3px 3px 9px rgb(0, 0, 0);
 }
 
 body > div:nth-of-type(1) > div:nth-of-type(2) > div > div > h3 {
-    font-size: 333%; /* TODO: prima era 222 */
+    font-size: 333%; 
     font-weight: 333;
     text-shadow: 1px 1px 9px rgb(0, 0, 0);
     text-transform: lowercase;
