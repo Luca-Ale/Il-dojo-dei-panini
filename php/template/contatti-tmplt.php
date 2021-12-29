@@ -1,7 +1,5 @@
-<header>
-                <h1>Contatti</h1>
-            </header>
             <section>
+                <h2>Contatti</h2>
                 <ul>
                     <li>
                         PDF : Scarica qui il menù
@@ -24,11 +22,11 @@
                 </ul>
             </section>
             <article>
-                <header><h3>Descrizione fondazione benefica</h3></header>
-                <body>
+                <h2>Descrizione fondazione benefica</h2>
+                <p>
                     Il nostro ristorante da tempo collabora con la società benefica save-a-kid.
                     La società, attraverso la raccolta di fondi, offre delle dimore e borse di studio ai bambini che appartengono al terzo mondo.
                     In caso si voglia collaborare occorre inviare un bonifico all'iban indicato in questa pagina.
-                </body>
-                <footer>Con affetto da Alessandro e Luca(i proprietari)</footer>
+                </p>
+                <p>Con affetto da Alessandro e Luca(i proprietari)</p>
             </article>
