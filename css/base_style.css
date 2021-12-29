@@ -19,6 +19,10 @@ body nav { /* prima era .navbar e si vedeva un po' più grande */
     padding: .999rem;
 }
 
+body nav {
+    background-color: aqua;
+}
+
 nav li {
     padding-right: 1.2em;
 }

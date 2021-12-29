@@ -47,11 +47,6 @@
                     <a href="#"><i class="fas fa-lightbulb" id="icon_theme" onclick="swapTheme()"></i><span class="sr-only">Theme</span></a> 
                   </li>
                 </ul>
-
-                <form class="d-flex"> <!-- TODO: remove? -->
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
               </div>
             </div>
           </nav>
@@ -98,7 +93,7 @@
                 <hr>
                 <div class="col-12">
                   <p class="lead fs-4">
-                    Il dojo dei panini è un fantastico ristorante che opera nel settore dal lontano 1907.
+                    Il dojo dei panini è un fantastico ristorante che opera nel settore dal lontano 1924.
                   </p>
                 </div>
               </div>
@@ -106,7 +101,7 @@
           </section>
 
           <!-- ABOUT US SECTION -->
-          <section class="about">
+          <section>
             <div class="about-section wrapper">
               <div class="container">
                 <div class="row align-items-center">
