@@ -183,7 +183,7 @@
           <div class="jumbotron jumbotron-fluid bg-light" id="jumbotron-recensioni">
             <div class="container text-center">
               <h1 class="display-4 text-danger">Recensioni</h1>
-              <p class="lead">Buono</p>
+              <p class="lead">Le recensioni dei nostri preziosi clienti</p>
             </div>
           </div>
 

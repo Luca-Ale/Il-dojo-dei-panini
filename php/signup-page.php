@@ -29,7 +29,7 @@
                             <div class="mb-2 mt-5">
                                 <label for="username">Username:</label><input type="text" class="form-control username-input" placeholder="Username" name="username" id="username"/>
                                 <img src="../icons/user-solid.svg" alt="" class="img-user" />
-                                <label for="mail">Mail:</label><input type="email" class="form-control email-input" placeholder="Email" name="email" id="mail"/>
+                                <label for="email">Email:</label><input type="email" class="form-control email-input" placeholder="Email" name="email" id="email"/>
                                 <img src="../icons/envelope-open-solid.svg" alt="" class="img-email" />
                             </div>
                             <div class="mb-3">

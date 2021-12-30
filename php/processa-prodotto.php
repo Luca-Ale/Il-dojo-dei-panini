@@ -15,7 +15,6 @@ if($_POST["action"] == 1){
     if($result != 0){
         $imgprodotto = $msg;
         $id = $dbh->insertProductOnMenu($nomeProdotto, $prezzoProdotto, $quantitaProdotto, $ingredientiProdotto, $imgprodotto); //TODO: rename id
-        
     }
     
     $oggetto = "Inserimento";
