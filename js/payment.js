@@ -30,17 +30,3 @@ $(document).ready(function() {
     $("main").append(code);
     $("#b1").each(handleClick);
 });
-
-
-/*
-<form class="form-group" action="POST">
-    <label for="nome">Inserire il nome dell'intestatario</label><input type="text" name="nome">
-    <label for="cognome">Inserire il cognome dell'intestatario</label><input type="text" name="cognome">
-    <label for="numero_carta">Inserire il numero della carta</label><input type="text" name="numero_carta">
-    <select class="form-control form-control-lg">
-        <option value="credito">Carta di credito</option>
-        <option value="prepagata">Carta prepagata</option>
-    </select>
-</form>
-<a href="ordine.php">Esegui pagamento</a>
-*/
