@@ -1,6 +1,6 @@
 ## Il Dojo dei Panini
 Progetto di Tecnologie Web per l'università _Alma Mater Studiorum di Bologna_.
-Il progetto verte sulla progettazione di un sito web riguardante un risstorante in tema giapponese. \
+Il progetto verte sulla progettazione di un sito web riguardante un ristorante in tema giapponese. \
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Luca-Ale/Il-dojo-dei-panini?style=plastic)
 ![Lines of code](https://img.shields.io/tokei/lines/github.com/Luca-Ale/Il-dojo-dei-panini?style=plastic)
 [![GitHub issues](https://img.shields.io/github/issues/Luca-Ale/Il-dojo-dei-panini?style=plastic)](https://github.com/Luca-Ale/Il-dojo-dei-panini/issues)
