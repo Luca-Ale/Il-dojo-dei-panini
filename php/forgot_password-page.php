@@ -27,13 +27,13 @@
                                 <p class="text-danger"><?php echo $templateParams["msgforgotpassword"]; ?></p>
                             <?php endif; ?>
                             <div class="mb-2 mt-5">
-                                <label for="username">Username:</label><input type="text" class="form-control username-input" placeholder="Username" name="username" id="username"/>
+                                <label for="username" hidden>Username:</label><input type="text" class="form-control username-input" placeholder="Username" name="username" id="username"/>
                                 <img src="../icons/user-solid.svg" alt="" class="img-user" />
-                                <label for="email">Email:</label><input type="email" class="form-control email-input" placeholder="Email" name="email" id="email"/>
+                                <label for="email" hidden>Email:</label><input type="email" class="form-control email-input" placeholder="Email" name="email" id="email"/>
                                 <img src="../icons/envelope-open-solid.svg" alt="" class="img-email" />
                             </div>
                             <div class="mb-3">
-                                <label for="password">New password:</label><input type="password" class="form-control new-password-input" placeholder="New Password" id="password" oninput="passwordStrengthChecker()" name="password"/>
+                                <label for="password" hidden>New password:</label><input type="password" class="form-control new-password-input" placeholder="New Password" id="password" oninput="passwordStrengthChecker()" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="" class="img-password" />
                                 <i class="fas fa-exclamation-circle exclamation-icon" id="exclamation-circle"></i>
                                 <p class="password-strength-status" id="password-strength-status">Password Level</p> 
@@ -41,7 +41,7 @@
                             </div>
                             
                             <div class="mb-3">
-                                <label for="confirm-password">Confirm password:</label><input type="password" class="form-control password-reinput" placeholder="Confirm Password" id="confirm-password" oninput="passwordMatching()" name="confirm-password"/>
+                                <label for="confirm-password" hidden>Confirm password:</label><input type="password" class="form-control password-reinput" placeholder="Confirm Password" id="confirm-password" oninput="passwordMatching()" name="confirm-password"/>
                                 <i class="fas fa-eye password-visibility-confirmation" id="password-visibility-confirmation" onclick="toggleVisibilityConfirmation()"></i>
                                 <img src="../icons/unlock-alt-solid.svg" alt="" class="img-password-confirmation" />
                                 <i class="fas fa-exclamation-circle exclamation-confirmation-icon" id="exclamation-circle-confirmation"></i>
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <label for="icon_theme">swap theme</label><input type="image" src="../icons/theme/lightbulb-solid.svg" class="btn img-theme" id="icon_theme" onclick="swapTheme()" alt="Theme" />
+        <label for="icon_theme" hidden>swap theme</label><input type="image" src="../icons/theme/lightbulb-solid.svg" class="btn img-theme" id="icon_theme" onclick="swapTheme()" alt="Theme" />
 
         <script src="../js/signup/password_strength_checker.js"></script> 
         <script src="../js/signup/password_matching.js"></script>
