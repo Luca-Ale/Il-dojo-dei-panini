@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Creato il: Dic 29, 2021 alle 16:09
--- Versione del server: 10.4.21-MariaDB
--- Versione PHP: 8.0.12
+-- Host: 127.0.0.1
+-- Creato il: Dic 30, 2021 alle 16:05
+-- Versione del server: 10.4.22-MariaDB
+-- Versione PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -127,22 +127,6 @@ CREATE TABLE IF NOT EXISTS `prodotti` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `recensioni`
---
-
-CREATE TABLE IF NOT EXISTS `recensioni` (
-  `ID_recensione` int(8) NOT NULL,
-  `UserID` int(10) UNSIGNED NOT NULL,
-  `Testo` text COLLATE utf8_unicode_ci NOT NULL,
-  `Punteggio` int(1) NOT NULL,
-  `DataOra` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`ID_recensione`),
-  KEY `UserID` (`UserID`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Struttura della tabella `users`
 --
 
@@ -184,12 +168,6 @@ ALTER TABLE `ordini`
 ALTER TABLE `prod-ordine`
   ADD CONSTRAINT `prod-ordine_ibfk_1` FOREIGN KEY (`codice_prodotto`) REFERENCES `prodotti` (`codice_prodotto`),
   ADD CONSTRAINT `prod-ordine_ibfk_2` FOREIGN KEY (`codice_ordine`) REFERENCES `ordini` (`codice_ordine`);
-
---
--- Limiti per la tabella `recensioni`
---
-ALTER TABLE `recensioni`
-  ADD CONSTRAINT `recensioni_ibfk_1` FOREIGN KEY (`ID_recensione`) REFERENCES `users` (`UserID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
