@@ -39,9 +39,9 @@
                         </form>
                         <hr class="hr-separator" />
 
-                        <a href="../html/signup.html" class="link signup-link mb-1">Non hai un account? Registrati ora!</a>
+                        <a href="signup.php" class="link signup-link mb-1">Non hai un account? Registrati ora!</a>
                         <br>
-                        <a href="../html/forgot_password.html" class="link forgot-password-link mb-2">Hai dimenticato la password?</a>
+                        <a href="forgot-password.php" class="link forgot-password-link mb-2">Hai dimenticato la password?</a>
                     </div>
                 </div>
             </div>

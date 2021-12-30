@@ -18,14 +18,10 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
         } else {
             registerLoggedUser($login_result[0]);
             header("Refresh:0; url=carrello.php");
-            //TODO: boh qualcosa
-            // MESSAGGIO PER L'UTENTE CHE SI E' APPENA LOGGATO.
-            //$messaggio = "Sei stato tu a connetterti alle " . date("h:i:sa") . " il " . date("d/m/Y") . " " . "\r\n" . "Con il sistema operativo: " . PHP_OS . " e il browser: " . $_SERVER['HTTP_USER_AGENT'] . "?";
-		    //$dbh->insertNewMessageForUser("Login", $messaggio, $_SESSION["UserID"]);
         }
     }
 
 }
 
-require 'login-page.php'; //TODO: sarebbe quasi meglio chiamare ../html/login.html perchè la sua versione php, ovvero "login-page.php" non va molto bene.
+require 'login-page.php';
 ?>
