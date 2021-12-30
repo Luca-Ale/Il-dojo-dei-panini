@@ -27,11 +27,11 @@
                                 <p class="text-danger"><?php echo $templateParams["errorelogin"]; ?></p>
                             <?php endif; ?>
                             <div class="mb-2 mt-5">
-                                <input type="text" class="form-control email-username-input" placeholder="Username | Email" name="username"/>
+                                <label for="username">Username:</label><input type="text" class="form-control email-username-input" placeholder="Username | Email" name="username" id="username"/>
                                 <img src="../icons/envelope-open-solid.svg" alt="" class="img-email" />
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control password-input" id="password" placeholder="Password" name="password"/>
+                                <label for="password">Password:</label><input type="password" class="form-control password-input" id="password" placeholder="Password" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="" class="img-password" />
                                 <i class="fas fa-eye password-visibility" id="password-visibility" onclick="toggleVisibility()"></i>
                             </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <input type="image" src="../icons/theme/lightbulb-regular.svg" class="btn img-theme" id="icon_theme" alt="Theme" onclick="swapTheme()" />
+        <label for="icon_theme">Switch for dark/light mode</label><input type="image" src="../icons/theme/lightbulb-regular.svg" class="btn img-theme" id="icon_theme" alt="Theme" onclick="swapTheme()" />
 
         <script src="../js/password_visibility.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
