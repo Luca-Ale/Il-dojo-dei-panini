@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Creato il: Dic 29, 2021 alle 16:09
--- Versione del server: 10.4.21-MariaDB
--- Versione PHP: 8.0.12
+-- Host: 127.0.0.1
+-- Creato il: Dic 30, 2021 alle 16:04
+-- Versione del server: 10.4.22-MariaDB
+-- Versione PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,7 +37,15 @@ INSERT INTO `admin` (`AdminID`, `username`, `email`, `password`, `attivo`) VALUE
 
 INSERT INTO `carrello` (`cod_prodotto`, `cod_utente`, `quantita`) VALUES
 (1, 1, 10),
-(5, 1, 1);
+(5, 1, 1),
+(3, 4, 1);
+
+--
+-- Dump dei dati per la tabella `messaggi`
+--
+
+INSERT INTO `messaggi` (`codice_messaggio`, `oggetto`, `testo`) VALUES
+(1, 'Inserimento', 'Il prodotto: paninozoico al prezzo di 15 €, alla quantità: 2 con gli ingredienti: pane, caciocavallo, bietole, pollo è stato inserito correttamente! dal admin 1 : admin Ale');
 
 --
 -- Dump dei dati per la tabella `notifiche`
@@ -52,7 +60,11 @@ INSERT INTO `notifiche` (`codice_notifica`, `oggetto`, `testo`, `codice_ordine`)
 (6, 'Conferma avvenuto ordine', 'Signor george1984, la confermiamo che in data 2021-12-24 12:03:29 lei ha effettuato l\'ordine 15 in cui ha acquistato i prodotti:  Cola, katanaburger, il quale costo totale è: 10€ buona giornata.', 15),
 (7, 'Conferma avvenuto ordine', 'Signor george1984, la confermiamo che in data 2021-12-24 12:03:40 lei ha effettuato l\'ordine 16 in cui ha acquistato i prodotti:  Cola, patatine fritte, katanaburger, il quale costo totale è: 14€ buona giornata.', 16),
 (8, 'Conferma avvenuto ordine', 'Signor george1984, la confermiamo che in data 2021-12-27 17:16:05 lei ha effettuato l\'ordine 17 in cui ha acquistato i prodotti:  Cola, patatine fritte, Pizza, katanaburger, PANINOZZO, il quale costo totale è: 34€, il delivery partirà fra 15 minuti, buona giornata.', 17),
-(9, 'Conferma avvenuto ordine', 'Signor spera_carmela, la confermiamo che in data 2021-12-28 15:30:13 lei ha effettuato l\'ordine 18 in cui ha acquistato i prodotti:  Cola, patatine fritte, il quale costo totale è: 6€, il delivery partirà fra 15 minuti, buona giornata.', 18);
+(9, 'Conferma avvenuto ordine', 'Signor spera_carmela, la confermiamo che in data 2021-12-28 15:30:13 lei ha effettuato l\'ordine 18 in cui ha acquistato i prodotti:  Cola, patatine fritte, il quale costo totale è: 6€, il delivery partirà fra 15 minuti, buona giornata.', 18),
+(10, 'Conferma avvenuto ordine', 'Signor spera_carmela, la confermiamo che in data 2021-12-29 15:12:05 lei ha effettuato l\'ordine 19 in cui ha acquistato i prodotti:  patatine fritte, il quale costo totale è: 4€, il delivery partirà fra 15 minuti, buona giornata.', 19),
+(11, 'Conferma avvenuto ordine', 'Signor spera_carmela, la confermiamo che in data 2021-12-29 15:24:39 lei ha effettuato l\'ordine 20 in cui ha acquistato i prodotti:  patatine fritte, Pizza, il quale costo totale è: 24€, il delivery partirà fra 15 minuti, buona giornata.', 20),
+(12, 'Conferma avvenuto ordine', 'Signor/a spera_carmela, le confermiamo che in data 2021-12-29 16:34:29 lei ha effettuato l\'ordine 21 in cui ha acquistato i prodotti:  katanaburger, Cola, paninozoico, il quale costo totale è: 48€, il delivery partirà fra 15 minuti, buona giornata.', 21),
+(13, 'Conferma avvenuto ordine', 'Signor/a spera_carmela, le confermiamo che in data 2021-12-29 16:35:51 lei ha effettuato l\'ordine 22 in cui ha acquistato i prodotti:  samurai treccia, il quale costo totale è: 16€, il delivery partirà fra 15 minuti, buona giornata.', 22);
 
 --
 -- Dump dei dati per la tabella `ordini`
@@ -76,7 +88,11 @@ INSERT INTO `ordini` (`codice_ordine`, `UserID`, `DataOra`) VALUES
 (15, 5, '2021-12-24 11:03:29'),
 (16, 5, '2021-12-24 11:03:40'),
 (17, 5, '2021-12-27 16:16:05'),
-(18, 4, '2021-12-28 14:30:13');
+(18, 4, '2021-12-28 14:30:13'),
+(19, 4, '2021-12-29 14:12:05'),
+(20, 4, '2021-12-29 14:24:39'),
+(21, 4, '2021-12-29 15:34:29'),
+(22, 4, '2021-12-29 15:35:51');
 
 --
 -- Dump dei dati per la tabella `prod-ordine`
@@ -126,19 +142,27 @@ INSERT INTO `prod-ordine` (`codice_prodotto`, `codice_ordine`, `quantita_ordinat
 (5, 17, 1),
 (6, 17, 1),
 (1, 18, 1),
-(3, 18, 1);
+(3, 18, 1),
+(3, 19, 1),
+(3, 20, 1),
+(4, 20, 4),
+(5, 21, 2),
+(1, 21, 1),
+(7, 21, 2),
+(2, 22, 2);
 
 --
 -- Dump dei dati per la tabella `prodotti`
 --
 
 INSERT INTO `prodotti` (`codice_prodotto`, `nome`, `prezzo`, `quantita_disponibile`, `ingredienti`, `img`) VALUES
-(1, 'Cola', 2, 1, 'segreto', 'cocacola.jpg'),
-(2, 'samurai treccia', 8, 100, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai', 'panino_con_spalla.jpg'),
-(3, 'patatine fritte', 4, 20, 'patate, olio di semi, sale, pepe', 'patatinefritte.jpg'),
-(4, 'Pizza', 5, 124, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva', 'pizze_classiche_gourmet.jpg\r\n'),
-(5, 'katanaburger', 8, 10, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini', 'panino_gourmet.png\r\n'),
-(6, 'PANINOZZO', 10, 194, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d', 'toasts.jpg');
+(1, 'Cola', 2, 0, 'segreto', 'cocacola.jpg'),
+(2, 'samurai treccia', 8, 98, 'pane(treccia), hamburger, melanzane gratinate, salsa samurai', 'panino_con_spalla.jpg'),
+(3, 'chips', 4, 17, 'patate, olio di semi, sale, pepe', 'patatinefritte.jpg'),
+(4, 'Pizza', 5, 120, 'Impasto con farina 00, mozzarella, pomodoro, basilico, olio extravergine d\'oliva', 'pizze_classiche_gourmet.jpg\r\n'),
+(5, 'katanaburger', 8, 8, 'pane giapponese, hamburger, mozzarella di bufala, salsa alla mortadella, rucola, cetriolini', 'panino_gourmet.png\r\n'),
+(6, 'PANINOZZO', 10, 194, 'Panino con semola, carne di chianina, bacon croccante, guanciale, pomodoro fresco, insalata, salsa d', 'toasts.jpg'),
+(7, 'paninozoico', 15, 0, 'pane, caciocavallo, bietole, pollo', 'il_panino_buono_2.jpg');
 
 --
 -- Dump dei dati per la tabella `users`
