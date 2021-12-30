@@ -38,10 +38,10 @@
                             <input class="btn btn-login" type="submit" value="Login" />
                         </form>
                         <hr class="hr-separator" />
-
-                        <a href="signup.php" class="link signup-link mb-1">Non hai un account? Registrati ora!</a>
-                        <br>
-                        <a href="forgot-password.php" class="link forgot-password-link mb-2">Hai dimenticato la password?</a>
+                        <ul class="list-style:none">
+                            <li class="list-style:none"><a href="signup.php" class="link signup-link mb-1">Non hai un account? Registrati ora!</a></li>
+                            <li class="list-style:none"><a href="forgot-password.php" class="link forgot-password-link mb-2">Hai dimenticato la password?</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

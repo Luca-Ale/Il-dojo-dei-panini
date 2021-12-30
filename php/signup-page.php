@@ -50,8 +50,7 @@
                             <input type="submit" class="btn btn-signup mt-3 bm-3" value="Sign up" />
                         </form>
                         <hr class="hr-separator" />
-                        <br>
-                        <a href="../html/login.html" class="link login-link mb-2">Hai già un account?</a>
+                        <a href="login.php" class="link login-link mb-2">Hai già un account?</a>
                     </div>
                 </div>
             </div>
