@@ -46,10 +46,10 @@
 
                 <ul class="navbar-nav mb-2 mb-lg-0"> <!-- TODO: metterli sulla destra -->
                   <li class="nav-item">
-                    <a href="carrello.php"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
+                    <a href="carrello.php"><span class="fas fa-shopping-cart"></span><span class="sr-only">Shop</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="login.php"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
+                    <a href="login.php"><span class="fas fa-user-circle"></span><span class="sr-only">Account</span></a>
                   </li>
                 </ul>
               </div>
@@ -80,10 +80,10 @@
                 <h6 class="text-uppercase font-weight-bold">Contattateci</h6>
                 <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
                 <ul class="list-unstyled">
-                    <li class="my-2"><i class="fas fa-home">Via Cesare Pavese, 50, Cesena (Italy)</i></li>
-                    <li class="my-2"><i class="fas fa-envelope"> dojopanini@gmail.com</i></li> <!-- <img src="../icons/envelope-open-solid.svg" width="24" height="24" alt="" /> -->
-                    <li class="my-2"><i class="fas fa-phone">(+39) 333 666 999</i></li>
-                    <li class="my-2"><i class="fas fa-fax"></i>1-333-222-6666</li>
+                    <li class="my-2"><span class="fas fa-home">Via Cesare Pavese, 50, Cesena (Italy)</span></li>
+                    <li class="my-2"><span class="fas fa-envelope"> dojopanini@gmail.com</span></li> <!-- <img src="../icons/envelope-open-solid.svg" width="24" height="24" alt="" /> -->
+                    <li class="my-2"><span class="fas fa-phone">(+39) 333 666 999</span></li>
+                    <li class="my-2"><span class="fas fa-fax"></span>1-333-222-6666</li>
                 </ul>
                 </div>
 
@@ -104,10 +104,10 @@
                 <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
 
                 <ul class="list-unstyled">
-                    <li class="my-2"><a href="https://github.com/Luca-Ale/Il-dojo-dei-panini"><i class="fab fa-github"></i></a></li>
-                    <li class="my-2"><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li class="my-2"><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li class="my-2"><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li class="my-2"><a href="https://github.com/Luca-Ale/Il-dojo-dei-panini" title="github"><span class="fab fa-github"></span></a></li>
+                    <li class="my-2"><span class="fab fa-twitter"></span></li>
+                    <li class="my-2"><span class="fab fa-instagram"></span></li>
+                    <li class="my-2"><span class="fab fa-facebook"></span></li>
                 </ul>
                 </div>
 
@@ -116,10 +116,10 @@
                 <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
 
                 <ul class="list-unstyled">
-                    <li class="my-2"><i class="fab fa-paypal"></i></li>
-                    <li class="my-2"><i class="fab fa-cc-visa"></i></li>
-                    <li class="my-2"><i class="fab fa-cc-mastercard"></i></li>
-                    <li class="my-2"><i class="fab fa-bitcoin"></i></li>
+                    <li class="my-2"><span class="fab fa-paypal"></span></li>
+                    <li class="my-2"><span class="fab fa-cc-visa"></span></li>
+                    <li class="my-2"><span class="fab fa-cc-mastercard"></span></li>
+                    <li class="my-2"><span class="fab fa-bitcoin"></span></li>
                 </ul>
                 </div>
             </div>
