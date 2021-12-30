@@ -1,6 +1,6 @@
 
 <section class="table-responsive-sm">
-    <h1>Carrello</h1>
+    <h1 class="text-center fw-bold font-monospace">Carrello</h1>
     <table class="table table-responsive-sm table-striped table-dark table-hover fw-light text-center font-monospace">
         <tr class="fst-italic">
             <th id="product">Prodotto</th><th id="quantita">Quantita'</th><th id="costo">Costo(per unità)</th><th></th><th></th><th></th>
@@ -34,7 +34,7 @@
     </table>
 </section>
 <div>
-        <h2>Area notifiche</h2>
+        <h2 class="text-center fw-bold font-monospace">Area notifiche</h2>
         <table class="table table-responsive-sm table-striped table-dark table-hover fw-light text-center font-monospace">
             <tr class="fst-italic bg-light">
                 <th id="idOrdine">Numero ordine</th><th id="data">Data ricezione</th><th id="oggetto">Oggetto</th><th id="testo">Testo</th>

@@ -1,5 +1,5 @@
 <section class="food"> 
-  <h1>Shop</h1>
+  <h1 class="text-center fw-bold font-monospace">Shop</h1>
   <div class="food-card wrapper">
     <div class="container">
       <div class="row">
