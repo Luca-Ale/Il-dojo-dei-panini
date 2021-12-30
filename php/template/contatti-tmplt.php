@@ -1,5 +1,5 @@
             <section>
-                <h2>Contatti</h2>
+                <h1>Contatti</h1>
                 <ul>
                     <li>
                         PDF : Scarica qui il menù

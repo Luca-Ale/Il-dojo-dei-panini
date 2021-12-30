@@ -77,7 +77,7 @@
             <div class="container text-center text-md-left mt-5">
             <div class="row">
                 <div class="col-md-3 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">Contattateci</h6>
+                <p class="text-uppercase font-weight-bold">Contattateci</p>
                 <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
                 <ul class="list-unstyled">
                     <li class="my-2"><span class="fas fa-home">Via Cesare Pavese, 50, Cesena (Italy)</span></li>
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="col-md-2 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">Menù</h6>
+                <p class="text-uppercase font-weight-bold">Menù</p>
                 <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
 
                 <ul class="list-unstyled">
@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="col-md-2 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">I nostri social</h6>
+                <p class="text-uppercase font-weight-bold">I nostri social</p>
                 <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
 
                 <ul class="list-unstyled">
@@ -112,7 +112,7 @@
                 </div>
 
                 <div class="col-md-3 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">Metodi di pagamento</h6>
+                <p class="text-uppercase font-weight-bold">Metodi di pagamento</p>
                 <hr class="bg-danger mb-4 mt-0 d-inline-block mx-auto" />
 
                 <ul class="list-unstyled">

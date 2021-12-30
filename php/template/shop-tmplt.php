@@ -1,12 +1,9 @@
 <section class="food"> 
+  <h1>Shop</h1>
   <div class="food-card wrapper">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <div class="text-content text-center">
-            <h1><?php echo $templateParams["titolo"]?></h1>
-            <p>Ecco qui la nostra fantastica selezione completa di panini</p>
-          </div>
         </div>
       </div>
       <div class="row pt-5">
@@ -15,7 +12,7 @@
               <div class="card card-img-top">
               <img src=<?php echo IMG_DIR.$prod["img"]?> alt="" class="thumbnail img-fluid"/> 
               <div class="pt-3">
-                  <h4><?php echo $prod["nome"]?></h4>
+                  <p class="fs-3 fw-bold"><?php echo $prod["nome"]?></p>
                   <p>Ingredienti : <?php echo $prod["ingredienti"]?></p>
                   <p>Prezzo : <?php echo $prod["prezzo"]?>€</p>
                   <p>Quantità disponibile: <?php echo $prod["quantita_disponibile"]?></p>
