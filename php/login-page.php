@@ -33,7 +33,7 @@
                             <div class="mb-3">
                                 <label for="password" hidden>Password:</label><input type="password" class="form-control password-input" id="password" placeholder="Password" name="password"/>
                                 <img src="../icons/key-solid.svg" alt="" class="img-password" />
-                                <i class="fas fa-eye password-visibility" id="password-visibility" alt="Password Visibility" onclick="toggleVisibility()"></i>
+                                <i class="fas fa-eye password-visibility" id="password-visibility" onclick="toggleVisibility()"></i>
                             </div>
                             <input class="btn btn-login" type="submit" value="Login" />
                         </form>
