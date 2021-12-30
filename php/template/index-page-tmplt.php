@@ -16,7 +16,7 @@
         <!-- NAVIGATION BAR -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar"> 
             <div class="container-fluid">
-              <a class="navbar-brand" href="../html/index.html"><img src="../imgs/logo.png" class="d-inline-block align-top logo-img" alt="" /></a>
+              <a class="navbar-brand" href="index.php"><img src="../imgs/logo.png" class="d-inline-block align-top logo-img" alt="homepage" /></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -169,7 +169,7 @@
                                 <h4><?php echo $prod["nome"]?></h4>
                                 <p>Ingredienti : <?php echo $prod["ingredienti"]?></p>
                                 <p>Prezzo : <?php echo $prod["prezzo"]?>€</p>
-                                <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>"><input type="button" class="btn btn-success" value="Acquista!" /></a>
+                                <a href="aggiunta_al_carrello.php?id=<?php echo $prod["codice_prodotto"]; ?>" class="btn btn-success">Acquista!</a>
                             </div>
                             </div>
                         </div>
