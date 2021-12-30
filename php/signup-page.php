@@ -37,12 +37,12 @@
                                 <img src="../icons/key-solid.svg" alt="" class="img-password" />
                                 <i class="fas fa-exclamation-circle exclamation-icon" id="exclamation-circle"></i>
                                 <p class="password-strength-status" id="password-strength-status">{Password Strength Level}</p> 
-                                <i class="fas fa-eye password-visibility" id="password-visibility" onclick="toggleVisibility()"></i>
+                                <i class="fas fa-eye password-visibility" id="password-visibility" alt="Password Visibility" onclick="toggleVisibility()"></i>
                             </div>
                             
                             <div class="mb-3">
                                 <label for="confirm-password" hidden>Confirm Password:</label><input type="password" class="form-control password-reinput" placeholder="Confirm Password" id="confirm-password" oninput="passwordMatching()" name="confirm-password"/>
-                                <i class="fas fa-eye password-visibility-confirmation" id="password-visibility-confirmation" onclick="toggleVisibilityConfirmation()"></i>
+                                <i class="fas fa-eye password-visibility-confirmation" id="password-visibility-confirmation" alt="Password Confirmation Visibility" onclick="toggleVisibilityConfirmation()"></i>
                                 <img src="../icons/unlock-alt-solid.svg" alt="" class="img-password-confirmation" />
                                 <i class="fas fa-exclamation-circle exclamation-confirmation-icon" id="exclamation-circle-confirmation"></i>
                             </div>

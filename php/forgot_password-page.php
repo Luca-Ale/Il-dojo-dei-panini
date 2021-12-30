@@ -42,9 +42,9 @@
                             
                             <div class="mb-3">
                                 <label for="confirm-password" hidden>Confirm password:</label><input type="password" class="form-control password-reinput" placeholder="Confirm Password" id="confirm-password" oninput="passwordMatching()" name="confirm-password"/>
-                                <i class="fas fa-eye password-visibility-confirmation" id="password-visibility-confirmation" onclick="toggleVisibilityConfirmation()"></i>
+                                <i class="fas fa-eye password-visibility-confirmation" id="password-visibility-confirmation" alt="Password visibility" onclick="toggleVisibilityConfirmation()"></i>
                                 <img src="../icons/unlock-alt-solid.svg" alt="" class="img-password-confirmation" />
-                                <i class="fas fa-exclamation-circle exclamation-confirmation-icon" id="exclamation-circle-confirmation"></i>
+                                <i class="fas fa-exclamation-circle exclamation-confirmation-icon" alt="Confirmation Password visibility" id="exclamation-circle-confirmation"></i>
                             </div>
                             <input type="submit" class="btn btn-signup mt-3 bm-3" value="Cambia Password" />
                         </form>
