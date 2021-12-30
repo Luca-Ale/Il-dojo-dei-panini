@@ -38,13 +38,13 @@
 
                 <ul class="navbar-nav mb-2 mb-lg-0"> 
                   <li class="nav-item">
-                    <a href="carrello.php"><i class="fas fa-shopping-cart"></i><span class="sr-only">Shop</span></a>
+                    <a href="carrello.php"><span class="fas fa-shopping-cart"></span><span class="sr-only">Shop</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="login.php"><i class="fas fa-user-circle"></i><span class="sr-only">Account</span></a>
+                    <a href="login.php"><span class="fas fa-user-circle"></span><span class="sr-only">Account</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#"><i class="fas fa-lightbulb" id="icon_theme" onclick="swapTheme()"></i><span class="sr-only">Theme</span></a> 
+                    <a href="#"><span class="fas fa-lightbulb" id="icon_theme" onclick="swapTheme()"></span><span class="sr-only">Theme</span></a> 
                   </li>
                 </ul>
               </div>
@@ -62,7 +62,7 @@
               <div class="carousel-item active">
                 <img src="../mockup/img/dojo_4.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h1 class="display-2">Il Dojo dei Panini</h1>
+                    <h2 class="display-2">Il Dojo dei Panini</h2>
                     <h3>dal 1924</h3> 
                 </div>
               </div>
@@ -156,7 +156,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="text-content text-center">
-                      <h2>I nostri prodotti</h2>
+                      <h3>I nostri prodotti</h3>
                     </div>
                   </div>
                 </div>
