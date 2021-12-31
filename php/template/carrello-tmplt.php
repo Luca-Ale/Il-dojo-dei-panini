@@ -1,5 +1,5 @@
 
-<section class="table-responsive-sm">
+<section class="table-responsive-sm" id="s">
     <h1 class="text-center fw-bold font-monospace">Carrello</h1>
     <table class="table table-sm table-responsive table-striped table-dark table-hover fw-light font-monospace text-center">
         <thead>

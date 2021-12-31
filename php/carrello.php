@@ -1,4 +1,4 @@
-<?php
+<?php   
 require_once 'bootstrap.php';
 
 //Base Template
@@ -10,6 +10,7 @@ if (isUserLoggedIn()) {
     $templateParams["product"] = $dbh->getShoppingCartProducts($_SESSION["UserID"]);
     $templateParams["total"] = $dbh->getShoppingCartTotal($_SESSION["UserID"]);
     $templateParams["notifiche"] = $dbh->getNotificationFromUser($_SESSION["UserID"]);
+    $templateParams["js"] = array("../js/jquery-3.4.1.min.js","../js/notifiche.js");
 } else if (isAdminLoggedIn()) {
     header("Refresh:0; url=login-admin.php");
 } else {
