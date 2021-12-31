@@ -42,11 +42,6 @@ body form > div:nth-of-type(1) > input:nth-of-type(1){
     text-align: center; 
 }
 
-body form > div:nth-of-type(1) > input:nth-of-type(1)::-webkit-input-placeholder {
-    position: relative;
-    right: 89px;
-}
-
 body form > div:nth-of-type(1) > input:nth-of-type(1):focus {
     color: #fa1505;
     background: rgb(0, 0, 0, 0.444);
@@ -73,11 +68,6 @@ body form > div:nth-of-type(1) > input:nth-of-type(2){
     margin-bottom: 3px; 
 
     text-align: center; 
-}
-
-body form > div:nth-of-type(1) > input:nth-of-type(2)::-webkit-input-placeholder {
-    position: relative;
-    right: 105px;
 }
 
 body form > div:nth-of-type(1) > input:nth-of-type(2):focus {
@@ -107,11 +97,6 @@ body form > div:nth-of-type(2) > input:nth-of-type(1) {
     text-align: center; 
 }
 
-body form > div:nth-of-type(2) > input:nth-of-type(1)::-webkit-input-placeholder {
-    position: relative;
-    right: 89px;
-}
-
 body form > div:nth-of-type(2) > input:nth-of-type(1):focus {
     color: #fa1505;
     background: rgb(0, 0, 0, 0.444);
@@ -136,11 +121,6 @@ body form > div:nth-of-type(3) > input:nth-of-type(1){
     color: #f3360c;
 
     text-align: center; 
-}
-
-body form > div:nth-of-type(3) > input:nth-of-type(1)::-webkit-input-placeholder {
-    position: relative;
-    right: 59px;
 }
 
 body form > div:nth-of-type(3) > input:nth-of-type(1):focus {

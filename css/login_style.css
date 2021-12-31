@@ -40,11 +40,6 @@ body form > div:nth-of-type(1) > input{ /* prima era .email-username-input */
     text-align: center; 
 }
 
-body form > div:nth-of-type(1) > input::-webkit-input-placeholder {
-    position: relative;
-    right: 55px;
-}
-
 body form > div:nth-of-type(1) > input:focus {
     color: #fa1505;
     border: 1px solid red;
@@ -66,11 +61,6 @@ body form > div:nth-of-type(2) > input{ /* .password-input */
     color: #fa1505; 
 
     text-align: center; 
-}
-
-body form > div:nth-of-type(2) > input::-webkit-input-placeholder {
-    position: relative;
-    right: 81px;
 }
 
 body form > div:nth-of-type(2) > input:focus {

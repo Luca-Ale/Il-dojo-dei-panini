@@ -41,11 +41,6 @@ body form > div:nth-of-type(1) > input:nth-of-type(1){ /* .username-input */
     text-align: center; 
 }
 
-body form > div:nth-of-type(1) > input:nth-of-type(1)::-webkit-input-placeholder {
-    position: relative;
-    right: 85px;
-}
-
 body form > div:nth-of-type(1) > input:nth-of-type(1):focus {
     color: #fa1505; 
     border: 1px solid #fa1505;
@@ -70,11 +65,6 @@ body form > div:nth-of-type(1) > input:nth-of-type(2){ /* era .email-input */
     text-align: center; 
 }
 
-body form > div:nth-of-type(1) > input:nth-of-type(2)::-webkit-input-placeholder {
-    position: relative;
-    right: 105px;
-}
-
 body form > div:nth-of-type(1) > input:nth-of-type(2):focus {
     color: #fa1505; 
     border: 1px solid #fa1505;
@@ -97,11 +87,6 @@ body form > div:nth-of-type(2) > input:nth-of-type(1){ /* .password-input */
     text-align: center; 
 }
 
-body form > div:nth-of-type(2) > input:nth-of-type(1)::-webkit-input-placeholder {
-    position: relative;
-    right: 89px;
-}
-
 body form > div:nth-of-type(2) > input:nth-of-type(1):focus {
     color: #fa1505; 
     border: 1px solid #fa1505;
@@ -122,11 +107,6 @@ body form > div:nth-of-type(3) > input:nth-of-type(1){ /* .password-reinput */
     border: 3px solid rgb(222, 222, 222); 
 
     text-align: center; 
-}
-
-body form > div:nth-of-type(3) > input:nth-of-type(1)::-webkit-input-placeholder {
-    position: relative;
-    right: 59px;
 }
 
 body form > div:nth-of-type(3) > input:nth-of-type(1):focus {

@@ -41,11 +41,6 @@ body form > div:nth-of-type(1) > input{
     text-align: center; 
 }
 
-body form > div:nth-of-type(1) > input::-webkit-input-placeholder {
-    position: relative;
-    right: 55px;
-}
-
 body form > div:nth-of-type(1) > input:focus {
     color: #fa1505;
     background: rgb(0, 0, 0, 0.444);
@@ -71,11 +66,6 @@ body form > div:nth-of-type(2) > input{
     box-shadow: none;
 
     text-align: center; 
-}
-
-body form > div:nth-of-type(2) > input::-webkit-input-placeholder {
-    position: relative;
-    right: 81px;
 }
 
 body form > div:nth-of-type(2) > img {
