@@ -1,5 +1,6 @@
 <?php 
 require_once 'bootstrap.php';
+
 $shoppingCartTotal = $dbh->getShoppingCartTotal($_SESSION["UserID"]);
 $orderID = $dbh->getLastOrderID();
 $shoppingCart=$dbh->getShoppingCartProducts($_SESSION["UserID"]);
@@ -38,9 +39,7 @@ if(!empty($shoppingCart)) {
     } else {
         $dbh->insertNewUserNotification($dbh->getLastNotificationID()[0]["lastNotification"] + 1, "Conferma avvenuto ordine", $testoArticolo, $dbh->getLastOrderID()[0]["lastOrder"]);
     }
-    echo "sono nell'if";
 }
-echo "sono fuori dall'if";
 
 header("Refresh:0; url=carrello.php");
 
