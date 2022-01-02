@@ -4,7 +4,7 @@
     <table class="table table-sm table-responsive table-striped table-dark table-hover fw-light font-monospace text-center">
         <thead>
             <tr class="fst-italic">
-                <th id="product">Prodotto</th><th id="quantita">Quantita'</th><th id="costo">Costo(per unità)</th><th colspan="2">Modifica</th>
+                <th id="product" scope="col">Prodotto</th><th id="quantita" scope="col">Quantita'</th><th id="costo" scope="col">Costo(per unità)</th><th colspan="2" scope="colgroup">Modifica</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
     <table class="table table-sm table-responsive-sm table-striped table-dark table-hover fw-light text-center font-monospace">
         <thead>
             <tr class="fst-italic bg-light">
-                <th id="idOrdine">Numero ordine</th><th id="data">Data ricezione</th><th id="oggetto">Oggetto</th><th id="testo">Testo</th>
+                <th id="idOrdine" scope="col">Numero ordine</th><th id="data" scope="col">Data ricezione</th><th id="oggetto" scope="col">Oggetto</th><th id="testo" scope="col">Testo</th>
         </tr>
         </thead>
         <tbody>
