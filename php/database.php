@@ -5,7 +5,7 @@ class DatabaseHelper{
     public function __construct($servername, $username, $password, $dbname, $port){
         $this->db = new mysqli($servername, $username, $password, $dbname, $port);
         if($this->db->connect_error){
-            //die("Connection failed: " . $db->connect_error);
+            die("Connection failed: " . $db->connect_error);
         }
     }
 
@@ -125,9 +125,7 @@ class DatabaseHelper{
 	public function updatePassword($username, $email, $newPassword){
         $stmt = $this->db->prepare("UPDATE users SET password = ? WHERE username = ? AND email = ?");
         $stmt->bind_param("sss", $newPassword, $username, $email); 
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_all(MYSQLI_ASSOC);
+        return $stmt->execute();
 	}
 
     public function registerNewUser($username, $email, $password) {
