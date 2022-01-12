@@ -23,5 +23,13 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 
 }
 
+if(isUserLoggedIn()){
+	header("Refresh:0; url=carrello.php");
+} else {
+	if(isAdminLoggedIn()){
+		header("Refresh:0; url=login-admin.php");
+	}
+}
+
 require 'login-page.php';
 ?>
